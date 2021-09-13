@@ -1,0 +1,442 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033\deflangfe1033{\fonttbl{\f0\froman\fprq2\fcharset0 Times New Roman;}{\f1\froman\fprq2\fcharset238{\*\fname Times New Roman;}Times New Roman CE;}}
+{\colortbl ;\red0\green0\blue0;}
+{\stylesheet{ Normal;}{\s1 heading 1;}}
+{\*\generator Msftedit 5.41.15.1515;}\viewkind4\uc1\pard\f0\fs28\tab Polimorfism \lang1048\f1\'ee\lang1033\f0 n C++\par
+\par
+\pard\fi721\sl360\slmult1\lang1048\f1\fs24\'cen C++ nu exist\'e3 implementat tipul de polimorfism 1 dar \'eent\'e2lnim polimorfism de tipurile 2 \'bai 3.\par
+Polimorfismul de tipul 2 (realizat prin supra\'eenc\'e3rcare (overloading)) \'eel \'eent\'e2lnim implementat \'een urm\'e3toarele forme:\par
+\pard{\pntext\f1 1)\tab}{\*\pn\pnlvlbody\pnf1\pnindent360\pnstart1\pndec{\pntxta)}}
+\fi721\li568\sl360\slmult1\tx1800 Polimorfism realizat prin supra\'eenc\'e3rcarea func\'feiilor \'een programarea \ldblquote clasic\'e3\rdblquote ( adic\'e3 programarea care nu este orientat\'e3 obiect).\par
+{\pntext\f1 2)\tab}Polimorfism realizat prin supra\'eenc\'e3rcarea func\'feiilor \'een cadrul defini\'feiei unei clase.\par
+{\pntext\f1 3)\tab}Polimorfism realizat prin supra\'eenc\'e3rcarea operatorilor \'een programarea orientat\'e3 obiect.\par
+\lang1033\f0{\pntext\f1 4)\tab}P\lang1048\f1 olimorfismul \lang1033\f0 realizat prin constr\'e2ngere, care \lang1048\f1 const\'e3 \'een conversia implicit\'e3 de tipuri c\'e3tre tipul a\'bateptat de c\'e3tre o metod\'e3 sau un operator.\par
+\pard\fi721\sl360\slmult1 Aceste tipuri de polimorfism poart\'e3 denumirea \'bai de \lang1033\b\f0 polimorfism ad-hoc\b0 . \par
+Polimorfismu\lang1048\f1 l de tipul 3 este \'bai el implementat \'een C++, \'een \lang1033\f0 unele \lang1048\f1 lucr\'e3ri fiind denumit  \b polimorfism de mo\'batenire\b0 .\lang1033\b\f0\par
+\par
+1 Polimorfismul ad-hoc\par
+\b0\par
+\lang1048\ul\f1 1.1 Polimorfism realizat prin supra\'eenc\'e3rcarea func\'feiilor (operatorilor) \'een programarea \ldblquote clasic\'e3\rdblquote\par
+\par
+\lang1033\ulnone\f0 O e\lang1048\f1 ntitate (func\'feie sau operator) supra\'eenc\'e3rcat\'e3 este aceea care are cel pu\'fein dou\'e3 defini\'feii, de tipuri diferite.\par
+\lang1033\f0 Ex. 1:\par
+int a=3,b=5;float c=3.4,d=2.1;\par
+cout<<a+b;\par
+cout<<c+d;\par
+\lang1048\f1\'cen exemplul: 1, operatorul \ldblquote +\rdblquote  adun\'e3 prima dat\'e3 dou\'e3 numere de tip \'eentreg apoi dou\'e3 de tip float. Aici supra\'eenc\'e3rcarea nu este realizat\'e3 de c\'e3tre programator, nu programatorul d\'e3 cele dou\'e3 defini\'feii ale operatorului \ldblquote +\rdblquote  folosite, defini\'feiile se g\'e3sesc \'een bibliotecile limbajului C++. \par
+\'cen programarea \ldblquote clasic\'e3\rdblquote  nu este permis\'e3 supra\'eenc\'e3rcarea operatorilor de c\'e3tre programator.\par
+Ex. 2 : Func\'feia \ldblquote interschimb\rdblquote  interschimb\'e3 valorile variabilelor date  ca parametri. Pentru a putea lucra cu mai multe tipuri de date func\'feia este supra\'eenc\'e3rcat\'e3. \'cen acest exemplu func\'feia este supra\'eenc\'e3rcat\'e3 pentru tipurile int, double \'bai char.\par
+\par
+\lang1033\f0 void interschimb(int &a,int &b)\par
+\{   int aux;\par
+aux=a;a=b;b=aux;\}\par
+void interschimb(double &a,double &b)\par
+\{ double aux;\par
+ aux=a;a=b;b=aux;\}\par
+void interschimb(char &a, char &b)\par
+\{ char aux;\par
+ aux=a;a=b;b=aux;\}\par
+\par
+La apelare compilatorul v\lang1048\f1 a alege varianta de func\'feie potrivit\'e3 pentru tipul argumentelor date ca argumente. Dac\'e3 argumentele sunt de tipul \ldblquote int\rdblquote  se alege prima variant\'e3, pentru \rdblquote double\rdblquote  a doua varianta iar pentru \ldblquote char\rdblquote  cea de-a treia.\par
+Numele unei func\'feii \'eempreuna cu num\'e3rul, tipurile argumentelor \'bai tipul returnat  formeaz\'e3 \lang1033\b\f0 signatura\lang1048\b0\f1 , care identific\'e3 \'een mod unic func\'feia. Folosindu-se de acest lucru compilatorul, prin procesul de legare static\'e3 leag\'e3 fiecare apel de func\'feie de versiunea dorit\'e3 a \lang1033\f0 acesteia. \b  \par
+\lang1048\b0\f1 C++ permite s\'e3 nu existe o coinciden\'fe\'e3 absolut\'e3 \'eentre parametri efectivi (cei cu care apelez func\'feia) \'bai cei formali (cei din defini\'feia func\'feiei). Astfel de multe ori, valorile parametrilor efectivi se convertesc c\'e3tre tipul celor formali, fiind \'eens\'e3 necesar ca num\'e3rul parametrilor efectivi s\'e3 coincid\'e3 cu num\'e3rul parametrilor formali.\par
+ Pot s\'e3 ap\'e3r\'e3 probleme \'een cazul \'een care trebuie aleas\'e3 o func\'feie dintre dou\'e3 sau mai multe \'een care numarul parametrilor efectivi coincide cu num\'e3rul parametrilor formali dar nu \'bai ca tip, \'een acest caz trebuind s\'e3 fie f\'e3cute conversii explicite.\par
+\lang1033\f0\par
+Ex. 3:\par
+void functia1( int a) \par
+\{ cout<<a;\}\par
+ void functia1 (double a)\par
+\{ cout<<a;\}\par
+ void main()\par
+\{  unsigned int g=9; functia1(g);\}\par
+\lang1048\f1\par
+\'cen acest caz apelul \ldblquote func\'feia1(g)\rdblquote  va produce eroarea:\lang1033\f0  \lang1048\f1\rdblquote  ambiguous call to overloaded function\rdblquote  deoarece compilatorul nu \'batie spre care din cele dou\'e3 defini\'feii de func\'feie s\'e3 fac\'e3 conversia, deoarece conversia se poate face spre am\'e2ndou\'e3.\par
+\lang1033\f0\tab\par
+ \lang1048\ul\f1 1.2 Polimorfism realizat prin supra\'eenc\'e3rcarea func\'feiilor \'een cadrul defini\'feiei unei clase.\lang1033\ulnone\f0\par
+\lang1048\f1 Acest tip apare ca o evolu\'feie normal\'e3 de la programarea clasic\'e3 spre cea orientat\'e3 obiect, p\'e3str\'e2ndu-\'bai \'een general acelea\'bai caracteristici de la programarea \ldblquote clasic\'e3\rdblquote .\par
+Ex. 4: (Exemplu de supra\'eenc\'e3rcare a func\'feiilor \'een programarea orientat\'e3 obiect.)\par
+\par
+\lang1033\f0 #include <stdio.h>\par
+class Afisare \par
+\{\par
+public:\par
+void afisez(int a)\par
+\{ printf("%d",a);\}\par
+ void afisez(char v[100])\par
+\{ printf("%s",v);\}\par
+\};\par
+ void main()\par
+\{Afisare a;           \tab\par
+ a.afisez(100);\par
+a.afisez(" ala bala");\}\par
+\fs20\par
+\lang1048\f1\fs24 Clasa \ldblquote Afisare\rdblquote  con\'feine dou\'e3\lang1033\f0  versiuni ale metodei \ldblquote afisez\rdblquote  una pentru tipuri de date \lang1048\f1\'eentregi \'bai una pentru \'bairuri, pentru o mai bun\'e3 \'een\'feelegere am folosit \'een interiorul acestor metode func\'feia de ie\'baire formatat\'e3 \ldblquote printf \rdblquote , func\'feie ce este apelata o dat\'e3 pentru valori \'eentregi \ldblquote %d\rdblquote  \'bai o dat\'e3 pentru \'bairuri \ldblquote %s\rdblquote . La apelul metodelor \'een \ldblquote main\rdblquote  acestea vor fi diferen\'feiate \'een func\'feie de tipul argumentului \'eentreg sau \'bair.\par
+\lang1033\f0\par
+\pard\fi721\sl360\slmult1\tx360\lang1048\f1 1.3 \ul Polimorfism realizat prin supra\'eencarcarea operatorilor \'een programarea orientat\'e3 obiect.\par
+\pard\fi721\sl360\slmult1\lang1033\ulnone\f0\par
+Spre deosebire de programare\lang1048\f1 a \ldblquote clasic\'e3\rdblquote , care nu permite supra\'eenc\'e3rcarea operatorilor de c\'e3tre programator, \'een programarea orientat\'e3 obiect acest lucru este posibil cu restric\'feia c\'e3 prin supra\'eenc\'e3rcare nu poate fi schimbat\'e3 nici aritatea nici prioritatea operatorilor predefini\'fei.\par
+\'cen C++ este posibil\'e3 supra\'eenc\'e3rcarea a aproape tuturor operatorilor:\cf1\lang1033\f0\fs64  \lang1048\f1\fs24\par
+\fs36 +\fs24 , \fs36 -\fs24 , \fs36 *\fs24 ,  \fs36 /\fs24 ,  \fs36 %\fs24 ,  \fs36 ^\fs24 ,  \fs36 &\fs24 , \fs36 |\fs24 , \fs36 ~\fs24 , \fs36 !\fs24 , \fs36 =\fs24 , \fs36 <\fs24 , \fs36 >\fs24 , \fs36 +=\fs24 , \fs36 -=\fs24 , \lang1033\f0\fs36 =\lang1048\f1\fs24 ,\fs36 *=\fs24 , \fs36 /=\fs24 , \fs36 %=\fs24 , \fs36 ^=\fs24 , \fs36 &=\fs24 , \fs36 |=\fs24 , \fs36 <<\fs24 , \fs36 >>\fs24 , \fs36 >>=\fs24 , \fs36 <<=\fs24 , \fs36 =\fs12  \fs36 =\fs24 , \fs36 !=\fs24  ,\fs36 <=\fs24 , \fs36 >=\fs24 , \fs36 &&\fs24 , \fs36 ||\fs24 ,  \fs36 ++\fs24 , \fs36 --\fs24 , \fs36 ->*\fs24  , \fs36 , \fs24 (operatorul virgul\'e3)\fs36    \fs24 ,\fs36  \fs24\par
+\pard\sl360\slmult1 inclusiv a operatorilor: \fs36 ( ) \fs24   pentru apel de func\'feie, \fs36 ( )\fs24   ca operator cast (de conversie), \fs36 [ ]\fs24 , \fs36 new\fs24 , \fs36 delete\fs24  .Operatori care nu pot fi supra\'eenc\'e3rca\'fei : \fs36 .\lang1033\f0\fs24  , \lang1048\f1\fs36 *\fs24  (operator de indirectare - unar, a nu se confunda cu \'eenmul\'feirea), \lang1033\b\f0\fs36 ::\b0\fs24 ,\b\fs36 ?\b0\fs24 .\par
+\pard\fi721\sl360\slmult1\cf0\lang1048\f1 Supra\'eenc\'e3rcarea operatorilor \'een cadrul defini\'feiei unei clase se face folosind una din urm\'e3toarele variante:\par
+\lang1033\f0 1)\lang1048\f1  \ul Folosind o func\'feie membr\'e3\lang1033\ulnone\f0 :  <tip_returnat> operator\lang1048\f1  \lang1033\f0 # (< Lista de argumente>)\par
+2) \lang1048\ul\f1 Folosind o func\'feie prieten\lang1033\ulnone\f0 : friend <tip_returnat> operator# (<Lista de argumente>)\par
+\lang1048\f1 u\lang1033\f0 nde \ldblquote operator\rdblquote  este cuv\'e2nt cheie iar \ldblquote #\rdblquote  poate fi or\lang1048\f1 i\lang1033\f0 ce op\lang1048\f1 erator din lista de mai sus, mai pu\'fein \ldblquote ( )\rdblquote - ca operator cast. \par
+\lang1033\f0 Obs. Func\lang1048\f1\'fe\lang1033\f0 iile prieten \b nu\lang1048\b0\f1  sunt considerate func\'feii membre.\par
+Ex. 5 : (supra\'eenc\'e3rcarea operatorului de adunare pentru un ra\'feional cu un \'eentreg):\par
+\par
+\lang1033\f0 #include<iostream.h>\par
+class Rational\{\par
+int numarator,numitor;\par
+public:\par
+Rational()\{\}\par
+Rational(int a,int b)\{numarator=a;numitor=b;\}\par
+Rational operator+(int c)\par
+\{ Rational d(numarator+c*numitor, numitor);\par
+   return d;\par
+\}\};\par
+\par
+\lang1048\f1 Vorbim despre supra\'eenc\'e3rcare deoarece operatorul \ldblquote +\rdblquote , pe l\'e2ng\'e3 modul clasic de folosire (suma \'eentre dou\'e3 valori de tipuri numerice predefinite), acum mai are \'bai rolul de a aduna un obiect de tipul definit de utilizator \i Rational\i0  cu o valoare de tip \i int\i0 . \par
+\lang1033\f0 Alegerea variantei \lang1048\f1  \i func\'feie membr\'e3\i0  va implica urm\'e3torul lucru: un operator binar va fi specificat ca o func\'fe\lang1033\f0 ie cu un\lang1048\f1  \lang1033\f0 singur parametru, parametru ce va indica operatorul din dreapta,\lang1048\f1  \lang1033\f0 cel din st\'e2nga fiind vizibil prin intermediul pointerului \ldblquote this\rdblquote\lang1048\f1 ,\lang1033\f0   iar un operator unar va ap\lang1048\f1\'e3\lang1033\f0 re\lang1048\f1 a\lang1033\f0  ca \lang1048\f1 o func\'feie f\'e3r\'e3 parametri. Din aceste motive operatorul din st\'e2nga va fi mereu de \lang1033\f0 tip obiect\lang1048\f1 ,\lang1033\f0  \lang1048\f1 fapt pentru care func\'feiile prieten sunt de preferat. \par
+Ex. 6: Dac\'e3 pentru exemplul de mai sus avem apelul \ldblquote b=a+3\rdblquote ; unde a \'bai b sunt de tip \lang1033\i\f0 Rational \i0 adunarea se va face\lang1048\f1  \lang1033\f0 corect, dar\lang1048\f1  \lang1033\f0 dac\lang1048\f1\'e3\lang1033\f0  avem apelul \ldblquote b=3+a\rdblquote  \lang1048\f1 se \lang1033\f0 va da eroare, operatorul\lang1048\f1  din st\'e2nga trebuind s\'e3 fie de tip\i  Rational\i0 . Pentru un apel de tipul \ldblquote b=3+a\rdblquote  este indicat ca operatorul \ldblquote +\rdblquote  s\'e3 fie supra\'eenc\'e3rcat printr-o func\'feie prieten.\par
+Ex. 7: (Supra\'eenc\'e3rcarea operatorului de adunare \ldblquote +\rdblquote  \'een clasa Complex pentru \lang1033\f0 adunarea cu un \'eentreg a\lang1048\f1  unui num\'e3r complex, accept\'e2nd parametru \'eentreg at\'e2t \'een st\'e2nga operatorului \ldblquote +\rdblquote  c\'e2t \'bai \'een dreapta)\par
+\par
+\lang1033\f0 #include <iostream.h>\par
+class Complex\par
+\{public:\par
+\tab int re,im;\par
+\tab Complex(int a,int b)\{ re=a;im=b;\}\par
+\tab Complex()\{\};\par
+\tab Complex operator+(int a);\par
+\tab friend Complex operator+(int a,Complex x);\par
+\};\par
+Complex Complex::operator +(int a)\par
+\{\tab return Complex(re+a,im);\par
+\}\par
+Complex operator+(int a,Complex x)\par
+\{ \tab return Complex(x.re+a,x.im);\par
+\}\par
+void main()\par
+\{\tab Complex x(1,1),y;\par
+\tab y=5+x;//apel catre functia prieten "operator+"\par
+\tab cout<<y.re<<" "<<y.im<<endl;\par
+\tab y=x+6;//apel catre functia membra "operator+"\par
+\tab cout<<y.re<<" "<<y.im;\par
+\}\par
+\par
+\lang1048\f1\'cen cazul definirii func\'feiei prieten \'een forma:\par
+\par
+\lang1033\i\f0 friend Complex operator+(Complex x, int a)\lang1048\i0\f1  \'eempreun\'e3 cu func\'feia membr\'e3:\par
+\lang1033\i\f0 Complex operator+(int a)\par
+\par
+\pard\sl360\slmult1\lang1048\i0\f1 l\lang1033\f0 a un apel: \lang1048\f1 y=x+5; unde x \'bai y sunt de tip Complex, compilatorul nu ar \'bati pe care din cele doua func\'feii s\'e3 o apeleze \'bai ar semnala eroare. Din acest motiv \'een exemplu este folosit\'e3 func\'feia prieten: friend Complex operator+(int a,Complex x) pentru o adunare de tipul: \lang1033\f0 y=5+x;\lang1048\f1  iar func\'feia membr\'e3: Complex operator+(int a); pentru apeluri de forma: y=x+6;\par
+\pard\fi721\sl360\slmult1 Printre operatorii ce se pot supra\'eenc\'e3rca se gasesc \'bai operatori care fac unele excep\'feii de la regul\'e3. Operatorii de incrementare \ldblquote ++\rdblquote\'bai decrementare \ldblquote  --\ldblquote  sunt unici printre operatorii C++ prin faptul c\'e3 ei pot fi folosi\'fei at\'e2t ca operatori prefix c\'e2t \'bai postfix.\par
+Ex. 8 (Supra\'eenc\'e3rcarea operatorului \ldblquote ++ \ldblquote  \'een clasa Rational)\par
+\lang1033\f0 Rational Rational::operator++()\par
+\{numarator=numarator+numitor;\par
+ return *this;\}\par
+\lang1048\f1  \'cen acest exemplu C++ nu poate face distinc\'feia \'eentre un apel de forma b++ \'bai unul de \lang1033\f0 forma ++b (unde b este de tip Rational)  consider\'e2nd ambele apeluri ca fiind apeluri de \lang1048\f1 operator prefix. Din acest motiv s-au introdus dou\'e3 modalit\'e3\'fei diferite de defini\lang1033\f0 re pentru \lang1048\f1 ace\'bati operatori.\par
+Ex. 9: (supra\'eenc\'e3rcarea operatorului ++)\par
+\lang1033\f0 #include<iostream.h>\par
+class Rational \{\par
+ int numarator,numitor;\par
+public:\par
+Rational()\{\};\par
+Rational (int i, int j)  \{ numarator=i; numitor=j;\}\par
+Rational operator++();\par
+Rational operator++(int);\par
+friend void afisez(Rational );\par
+\};\par
+Rational Rational::operator++()\par
+\{\tab  numarator=numarator+numitor;\par
+  return *this;\par
+\}\par
+Rational Rational::operator++(int i)\par
+\{ \tab Rational b(numarator,numitor);\par
+  \tab numarator=numarator+numitor;\par
+  return b;\par
+\}\par
+void afisez(Rational a)\par
+\{\tab  cout<<a.numarator<<"/"<<a.numitor<<endl;\}\par
+void main()\par
+\{ Rational a(2,3),b(2,3);\par
+  afisez(a++);afisez(a);\par
+  afisez(++b);afisez(b);\par
+\fs20\}\par
+\lang1048\f1\fs24 Parametrul \ldblquote int\rdblquote  din a doua defini\'feie a operatorului \ldblquote ++\rdblquote  este folosit pentru a indica faptul c\'e3 aceast\'e3 defini\'feie va fi folosit\'e3 pentru apelul postfixat al operatorului.\par
+Apelul \ldblquote afisez(a++)\rdblquote  va afi\'baa \ldblquote 2/3\rdblquote  deoarece \'een acest caz operatorul \ldblquote ++\rdblquote  este luat postfixat, la a doua afi\'baare \ldblquote afisez(a)\rdblquote  va fi afi\'baat\'e3 valoarea \ldblquote 5/3\rdblquote  deoarece  dup\'e3 primul apel \ldblquote a\rdblquote  a fost modificat. \'cen cazul : \ldblquote afisez(++b)\rdblquote  se va afi\'baa valoarea incrementat\'e3 \ldblquote 5/3\rdblquote  deoarece operatorul este luat ca prefix.\par
+Un alt operator mai special este operatorul de conversie explicit\'e3 \ldblquote ( )\rdblquote  , numit \'bai operator cast. Supra\'eenc\'e3rcarea acestui operator trebuie s\'e3 asigure posibilitatea conversiilor \'eentre obiecte de clase diferite sau \'eentre obiecte \'bai tipurile fundamentale. \par
+\i Func\'feia de supra\'eenc\'e3rcare trebuie s\'e3 fie totdeauna \b membr\'e3\b0  a clasei convertite.\par
+\i0 Supra\'eenc\'e3rcarea operatorului cast este u\'baor de recunoscut, deoarece prototipul func\'feiei men\'feioneaz\'e3 tipul rezultatului al\'e3turi de semnul grafic al operatorului \'bai nu \'eenaintea numelui func\'feiei, ca la toate celelalte func\'feii.\par
+Ex. 10: \'cen cadrul clasei Rational d\'e3m urmatoarea defini\'feie:\lang1033\b\f0\par
+\b0 operator double()\par
+\{ return (double)numarator/numitor;\}\par
+\lang1048\f1 La un apel de forma: \ldblquote d=(double)a;\rdblquote  unde \ldblquote a\rdblquote  este un obiect de tip Rational iar \ldblquote d\rdblquote  o variabil\'e3 de tip double se va face \'eemp\'e3r\'feirea: numarator la numitor \'bai se va returna un double. \par
+\pard\keepn\s1\fi721\sl360\slmult1 Deoarece at\'e2t numaratorul c\'e2t \'bai numitorul sunt \'eentregi, rezultat\lang1033\f0 ul ar fi fost de tip \'eentreg, de \lang1048\f1 aceea s-a mai f\'e3cut o conversie cu operatorul predefinit de conversie la double \'een interiorul metodei, f\'e3r\'e3 nici o leg\'e3tur\'e3 cu \lang1033\f0 operatorul\lang1048\f1  definit\lang1033\f0 .\par
+\pard\fi721\sl360\slmult1\lang1048\f1 Ex. 11 (Supra\'eenc\'e3rcarea operatorului \ldblquote [ ]\rdblquote )\par
+\lang1033\f0 #include <iostream.h>\par
+class Vector\par
+\{   int V[100];\par
+ public:\par
+ int& operator[](int i)\par
+\{ return V[i]; \}\par
+\};\par
+void main()\par
+\{\tab Vector q;\par
+\tab q[2]=2005;\par
+\tab cout<<q[2];\par
+\}\par
+\fs20\tab\lang1048\f1\fs24\'cen acest exemplu operatorul \ldblquote [ ]\rdblquote  returneaz\'e3 o referin\'fe\'e3, adic\'e3 un sinonim al componentei V[i], ceea ce permite at\'e2t ob\'feinerea valorii c\'e2t \'bai modificarea acesuia. Supra\'eenc\'e3rcarea acestui operator ne ofer\'e3 avantajul unui acces rapid la componentele unui obiect care sunt de tipul \'bair de numere \'eentregi.\par
+Apelul q[2] este echivalent cu apelul q.operator[](2) , lucru ce ne permite utilizarea acestui operator \'bai \'een alte scopuri decat acela de a accesa elementele unui vector, de exemplu \'een clasa Complex q[2] poate returna partea imaginar\'e3 a numarului complex.\par
+Ex 12 (Supra\'eenc\'e3rcarea operatorului \ldblquote ( )\rdblquote  numit \'bai operator apel de func\'feie.)\lang1033\b\f0\par
+\b0 #include <iostream.h>\par
+class Matrice\par
+\{   int M[100][100];\tab\par
+ public:\par
+ int& operator()(int i,int j)\par
+\{ return M[i][j];\}\par
+\};\par
+void main()\par
+\{\tab Matrice q;\par
+\tab q(2,3)=2005;\par
+\tab cout<<q(2,3);\par
+\}\b\par
+\lang1048\b0\f1 Apeleul q(2,3) este interpretat ca q.operator()(2,3) la fel ca \'bai operatorul \rdblquote []\rdblquote  operatorul \ldblquote ()\rdblquote  este supra\'eenc\'e3rcat pentru accesul mai u\'baor la elementele unui obiect. \'cen exemplul 12, este folosit pentru accesul la elementele unei matrici.\par
+Ex. 13 ( Supra\'eenc\'e3rcarea operatorilor new \'bai delete)\par
+\lang1033\f0 #include <iostream.h>\par
+#include <stdlib.h>\par
+class Complex\par
+\{   int im,re;\tab\par
+ public:\par
+\tab  Complex()\{\};\par
+\tab  Complex(int a,int b)\{re=a;im=b;\};\par
+\tab  void afisaza()\{ cout<<re<<"+"<<im<<"i";\}\par
+\tab  void *operator new(size_t dimensiune);\par
+\tab  void operator delete(void *p);\par
+\tab ~Complex()\{\};\par
+\};\par
+void* Complex::operator new(size_t dimensiune)\par
+\{\tab\tab cout<<"functie proprie new"<<endl;\par
+\tab\tab return malloc(dimensiune);\par
+\}\par
+void Complex::operator delete(void *p)\par
+\{\tab\tab  cout<<"functie delete proprie"<<endl;\par
+free(p);\par
+\}\par
+void main()\par
+\{\tab Complex *a,*b;\par
+\tab a=new Complex(1,2);\par
+\tab b=new Complex(2,3);\par
+\tab a->afisaza();\par
+\tab b->afisaza();\par
+\tab delete a;\par
+\tab delete b;\par
+\}\b\par
+\lang1048\b0\f1 Operatorul new pentru  alocarea dinamic\'e3 a memoriei \'bai operatorul delete pentru eliberarea memoriei alocat\'e3 de un operator supra\'eenc\'e3rcat cu new pot fi \'bai ei supra\'eenc\'e3rca\'fei \'een interiorul claselor, dup\'e3 cum se observ\'e3 \'een exemplul precedent, dar supra\'eenc\'e3rcarea lor de cele mai multe ori nu este necesar\'e3.\par
+ \'cen acest exemplu am folosit tipul void* care poate re\'feine adrese c\'e3tre orice tip de variabile. Pentru utilizarea efectiv\'e3 a con\'feinutului variabilelor este necesar\'e3 conversia explicit\'e3.\par
+\i Supra\'eenc\'e3rcarea operatorului = \'bai constructorul de copiere.\par
+\i0 Un constructor de copiere este apelat atunci c\'e2nd trimitem un obiect prin valoare (parametrul unei func\'feii sau rezultatul s\'e3u) \'bai \'een anumite declara\'feii. Atunci c\'e2nd prin declara\'feia de defini\'feie se aloc\'e3 spa\'feiu pentru un nou obiect \'bai prin ini\'feializare se copiaz\'e3 un obiect existent \'een spa\'feiul alocat, se apeleaz\'e3 constructorul de copiere.\par
+\lang1033\f0 Ex.14 ( Folosirea constructorului de copiere)\par
+#include<iostream.h>\par
+#include<string.h>\par
+class String\{\par
+public:\par
+ char *sir;\par
+String()\{sir=new char[20];\};\par
+String(char *c)\par
+\{     sir=new char[20];\par
+\tab\tab\tab        strcpy(sir,c);\par
+\}\par
+  String (String &c)\par
+\{\par
+\tab      sir=new char[20];\par
+\tab\tab      strcpy(sir,c.sir);\par
+\}\par
+\par
+String operator+(String);\par
+String& operator=(String &);\par
+~String()\{\par
+ \tab delete sir;\par
+\};\par
+ \};\par
+String String::operator+(String c)\par
+\{\tab  String b;\par
+ strcpy(b.sir,sir);\par
+ strcat(b.sir,c.sir);\par
+  return b;\par
+\}\par
+String& String::operator=(String &c)\par
+\{\tab  strcpy(sir,c.sir);\par
+  return *this;\par
+\}\par
+void main()\par
+\{ \par
+ String a("alabala"),b("cccccccc");\par
+ String c=a+b;\par
+ String d=a;\par
+\lang1048\f1  b\lang1033\f0 =\lang1048\f1 c;\par
+\lang1033\f0 cout<<\lang1048\f1 b\lang1033\f0 .sir;\par
+ cout<<c.sir;\par
+ cout<<d.sir;\par
+ \}\par
+\lang1048\f1\'cen cazul ini\'feializ\'e3rilor (\'een exemplul de mai sus c=a+b \'bai d=a) nu este apelat operatorul de atribuire supra\'eenc\'e3rcat  "operator=", ci constructorul de copiere "String(String &c)". At\'e2t la transmiterea prin valoare a argumentelor, c\'e2t \'bai la \'eentoarcerea prin valoare a rezultatului func\'feiilor, se invoc\'e3 de asemenea constructorul de copiere (deci la apelul a+b din exemplul de mai sus este invocat de dou\'e3 ori). Acesta este motivul pentru care \'een defini\'feia unui constructor de copiere argumentul este transmis prin\b  referin\'fe\'e3\b0 , deoarece transmiterea prin valoare ar produce apelare recursiv\'e3 infinit\'e3. Pentru atribuirea d=a se invoc\'e3 operatorul de atribuire supra\'eenc\'e3rcat  "operator=", \'een care argumentul \'bai rezultatul sunt transmise  prin referin\'fe\'e3, deci nu se invoc\'e3 constructorul de copiere. \par
+Un constructor de copiere nu are parametru de retur, are acela\'bai nume ca \'bai clasa, \'bai are un singur parametru care trebuie pasat prin referin\'fe\'e3.\par
+Operatorul \ldblquote =\rdblquote  trebuie s\'e3 aib\'e3 un singur parametru\lang1033\f0 . El \lang1048\f1 se supra\'eencarc\'e3 \lang1033\f0 de obicei \lang1048\f1\'een scopul atribuirii datelor obiectului din dreapta (parametru) c\'e3tre obiectul din st\'e2nga (obiect invocant)\lang1033\f0 .\lang1048\f1  \'cen acest caz, at\'e2t parametrul c\'e2t \'bai tipul datei returnate trebuie s\'e3 aib\'e3 acela\'bai tip cu clasa din care face parte operatorul. \'bai, dac\'e3 se dore\'bate s\'e3  permit\'e3 atribuiri multiple de forma x=y=z , trebuie s\'e3 returneze referin\'fe\'e3 la obiectul din st\'e2nga ( \lang1033\f0 *\lang1048\f1 this)\lang1033\f0 . \lang1048\f1 De cele mai multe ori parametrul este dat ca referin\'fe\'e3 pentru a nu se invoca constructorul de copiere.\par
+\lang1033\f0 Ex. 15 ( Utilizarea operatorului \ldblquote =\rdblquote )\par
+#include<iostream.h>\par
+#include<string.h>\par
+class String\{\par
+public:\par
+ char *sir;\par
+ String()\{sir=new char[20];\};\par
+ String(char *c)\par
+\{          sir=new char[20];\par
+\tab\tab\tab strcpy(sir,c);\}\par
+  String (String &c)\par
+\{\par
+\tab\tab            sir=new char[20];\par
+\tab\tab            strcpy(sir,c.sir);\par
+\}\par
+String& operator+(String&);\par
+String& operator=(String &);\par
+ ~String()\{delete sir;\};\par
+ \};\par
+String& String::operator+(String &b)\par
+\{\tab  String *c=new String;\par
+ strcpy(c->sir,sir);\par
+ strcat(c->sir,b.sir);\par
+ return *c;\par
+\}\par
+String& operator=(String &c)\par
+\{ \tab if(this!=&c)\lang1048\f1  \lang1033\f0\{\lang1048\f1  // datele se copiaza numai daca operanzii sunt diferiti\lang1033\f0\par
+           \tab\lang1048\f1   \lang1033\f0 delete sir;\par
+  \lang1048\f1             \lang1033\f0 sir=new char[20];\par
+ \lang1048\f1             \lang1033\f0  strcpy(sir,c.sir);\par
+\lang1048\f1             \lang1033\f0\}\par
+ \lang1048\f1           \lang1033\f0  return *this;\par
+\}\par
+void main()\par
+\{  String a("alabala"),b("cccccccc"),d,e;\par
+    d=a+b; cout<<d.a<<endl;\par
+    e=b=a;\par
+    cout<<b.sir<<" "<<e.sir;\par
+ \}\par
+\pard\keepn\s1\fi721\sl360\slmult1\lang1048\f1\'cen acest caz operetorul \ldblquote +\rdblquote  returneaz\'e3 o referin\'fe\'e3 din acest motiv este chemat opertorul \ldblquote =\rdblquote , iar pentru e=b=a este chemat tot operatorul \ldblquote =\rdblquote . Atribuirea se face de la dreapta la st\'e2nga, lui b i se va da valoarea lui a iar lui e valoarea lui b modificat\'e3 de a. \'cen cadrul defini\'feiei operatorului \rdblquote =\rdblquote  pentru a nu se pierde spa\'feiul ini\'feial de memorie alocat pentru variabila de tip \'bair de caractere \ldblquote sir\rdblquote  (dat\'e3 membr\'e3 a clasei) acesta este eliberat, apoi este din nou alocat \'een scopul copierii \'een el a noii valori. Aceast\'e3 opera\'feie este efectuat\'e3 numai dac\'e3 operanzii ocup\'e3 zone diferite de memorie,  altfel, \'een cazul unei declara\'feii de forma a=a spa\'feiul este eliberat \'bai o dat\'e3 cu el se pierde \'bai valoarea con\'feinut\'e3 \'een componenta \ldblquote sir\rdblquote .\par
+\pard\fi721\sl360\slmult1\lang1033\f0\tab\lang1048\i\f1 Supra\'eenc\'e3rcarea operatorului \ldblquote +=\rdblquote\par
+\lang1033\i0\f0 Operatori ca \ldblquote +=\rdblquote ,\lang1048\f1\rdblquote *=\rdblquote ,\rdblquote /=\rdblquote  returneaz\'e3 de obicei valoarea operatorului din st\'e2nga pentru atribuiri de forma a=b*=c;\par
+\tab Ex. 16 (supra\'eenc\'e3rcarea operatorului \ldblquote +=\rdblquote  \'een clasa String precedent\'e3)\par
+\lang1033\f0 String& operator+=(String &c)\par
+\{\par
+ strcat(sir,c.sir);\par
+ return *this;\par
+\}\par
+\lang1048\f1 Supra\'eenc\'e3rcarea operatorilor de extragere \'bai de inserare \'eentr-un flux de date\par
+Operatorul de extragere se supra\'eencarc\'e3 \'een general pentru a ob\'feine un control mai bun asupra intr\'e3rilor de la utilizator c\'e3tre datele membre ce alc\'e3tuiesc o clas\'e3. Forma general\'e3 a operat\lang1033\f0 orului este:\par
+\lang1048\f1\tab\tab istream &operator>>(istream &flux, tip_clas\'e3  &obiect)\par
+\{ // citirea normal\'e3 a elementelor obiectului dat ca parametru\par
+\lang1033\f0 return flux;\par
+\}\par
+\lang1048\f1 Func\'feia de extragere returneaz\'e3 o referin\'fe\'e3 la un flux de tipul istream, care este derivat din clasa \i ios\i0 , iar primul parametru este o referin\'fe\'e3 la un flux, \'een general acesta fiind cin.\par
+\tab Operatorul de inserare supra\'eenc\'e3rcat va avea urm\'e3torul format general:\par
+\tab ostream &operator<<(ostream & flux, tip_clas\'e3 obiect)\par
+\lang1033\f0\tab\{ // afisarea datelor obiectului\par
+\tab\tab  return flux;\par
+\tab\}\par
+\lang1048\f1 La fel ca la func\'feia de extragere, la supra\'eenc\'e3rcarea func\'feiei de inserare, operatorul de inserare va trebui s\'e3 returneze o referin\'fe\'e3 la un flux de Intrare/Iesire, acesta este ostream \endash  o clas\'e3 pe care C++ o deriveaz\'e3 tot din clasa ios \'bai care accept\'e3 iesirea . Primul parametru al operatorului este fluxul \'een care se va insera (de obicei cout), iar al doi-lea este obiectul care va fi afi\'baat \'een flux.\tab\tab  \par
+Ex.17 (Supra\'eenc\'e3rcarea operatorilor de extragere \'bai de inserare \'eentr-un flux de date pentru clasa Matrice)\par
+\lang1033\f0 #include <iostream.h>\par
+class Matrice \{\par
+ public:\par
+  int M[50][50],m,n;\par
+  Matrice()\{\};\par
+  Matrice(int a,int b)\{m=a;n=b;\}\par
+  friend ostream &operator<<(ostream &flux,\lang1048\f1  \lang1033\f0 Matrice A);\par
+  friend istream &operator>>(istream &flux, Matrice &A);\par
+  Matrice operator+(Matrice B);\par
+ \} ;\par
+ostream &operator<<(ostream &flux,Matrice A)\par
+\{\tab  int i,j;\par
+  for(i=0;i<A.m;i++)\par
+      \{\tab for(j=0;j<A.n;j++)\par
+\tab   cout<<A.M[i][j]<<"   " ;\par
+\tab   cout<<endl;\par
+       \}\par
+    return flux;\par
+\}\par
+istream &operator>>(istream &flux, Matrice &A)\par
+\{\tab  int i,j;\par
+cout<<"m=";cin>>A.m;\par
+cout<<"n=";cin>>A.n;\par
+for(i=0;i<A.m;i++)\par
+\tab\tab for(j=0;j<A.n;j++)\par
+\tab    \{cout<<"A["<<i<<"]["<<j<<"]=";\par
+\tab     cin>>A.M[i][j];\par
+\tab    \}\par
+  return flux;\par
+\}\par
+Matrice Matrice::operator+(Matrice A)\par
+\{ Matrice C(0,0);\par
+  int i,j;\par
+  if(m==A.m&&n==A.n)\par
+    \{      C.m=m;\par
+\tab C.n=n;\par
+\tab for (i=0;i<m;i++)\par
+\tab\tab for(j=0;j<n;j++)\par
+\tab\tab\tab\tab       C.M[i][j]=M[i][j]+A.M[i][j];\par
+      \}\par
+          return C;\par
+          \}\par
+                     void main()\par
+ \tab          \{ Matrice A,B,C;\par
+  cin>>A;\par
+  cin>>B;\par
+  C=A+B;\par
+  cout<<C;\par
+         \}\par
+\lang1048\f1 Apelul cin>>A unde A este de tip Matrice va apela func\'feia supra\'eenc\'e3rcat\'e3: \par
+istream &operator>>(istream &cin, Matrice &A) \par
+\pard\sl360\slmult1 cu primul parametru cin iar al doilea obiectul de tip matrice A. C++ nu apeleaz\'e3 func\'feia supra\'eenc\'e3rcat\'e3 atunci c\'e2nd efectueaz\'e3 opera\'feii de intrare/ie\'baire \'een cadrul supra\'eenc\'e3rc\'e3rii \'eens\'e3\'bai , ci va lucra cu operatorul de extragere/inserare obi\'banuit. Deoarece at\'e2t operatorul de extragere c\'e2t \'bai operatorul de inserare trebuie s\'e3 acceseze date ale clasei Matrice, ace\'bati operatori trebuiesc declara\'fei ca fiind friend clasei c\'e3reia i se aplic\'e3. \par
+\par
+\pard\fi721\sl360\slmult1\lang1033\ul\f0 1.4 Polimorfism realizat prin constr\'e2ngere.\ulnone\par
+\lang1048\f1 Constr\'e2ngerea reprezint\'e3 conversia implicit\'e3 de tipuri c\'e3tre tipul a\'bateptat de c\'e3tre o metod\'e3 sau un operator.\par
+\lang1033\f0 Ex.18 (Constr\'e2ngere de tipuri)\par
+#include<iostream.h>\par
+class Numar\par
+\{\par
+public:\par
+int x,y;\par
+            Numar()\{\};\par
+            Numar(int a,int b)\{x=a;y=b;\}\par
+friend void afisare(Numar c)\par
+ \{  cout<<"n="<<c.x<<","<<c.y<<endl;\par
+ \}\par
+\};\par
+class Complex : public Numar\par
+\{\par
+public:\par
+Complex()\{\};\par
+Complex(int a,int b)\{ x=a;y=b;\}\par
+Complex operator+(Complex c)\par
+\{\tab  Complex d;\par
+\tab  d.x=x+c.x;\par
+\tab  d.y=y+c.y;\par
+   return d;\par
+ \}\};\par
+void main()\par
+\{ Complex a(2,2),b(3,3),c;\par
+   c=a+b;\par
+  afisare(c);\par
+\}\b\par
+\pard\keepn\s1\fi721\sl360\slmult1\lang1048\b0\f1\'cen acest exemplu clasa Complex mo\'batene\'bate clasa Numar \'bai supra\'eencarc\'e3 operatorul \ldblquote +\rdblquote   pentru adunarea a dou\'e3 numere complexe. \'cen main() se adun\'e3 numerele complexe a \'bai b \'bai se afi\'baaz\'e3 rezultatul c utiliz\'e2nd o func\'feie ce prime\'bate ca parametru un obiecct de tip Numar.\par
+\pard\fi721\sl360\slmult1\lang1033\f0\fs20\tab\lang1048\f1\fs24 Apelul nu semnaleaz\'e3 eroare, compilatorul converte\'bate tipul Complex la tipul Numar \'bai face apelul. \'cen acest fel se realizeaz\'e3 polimorfismul prin constr\'e2ngere. Acela\'bai lucru se \'eent\'e2mpl\'e3 \'bai cu tipurile de date predefinite, care nu sunt obiecte, atunci c\'e2nd se poate face o conversie implicit\'e3, ca \'een exemplul urm\'e3tor: \par
+\lang1033\f0 #include<iostream.h>\par
+void afisare(float a)\par
+\{ cout<<a;\par
+\}\par
+void main()\par
+\{ int a=1234;\par
+ afisare(a);\par
+\fs20  \}\par
+\lang1048\f1\fs24 Func\'feia afisare cu parametru de tip float este apelat\'e3 cu un parametru de tip int, compilatorul face conversia implicit si afisaz\'e3 valoarea lui a.\par
+\lang1033\b\f0\par
+}
+ 
