@@ -1,0 +1,33 @@
+<html>
+<title>JavaScript HTML DOM</title>
+<head>
+<script>
+b=true;
+function schimba(){
+  var s=document.getElementById("schimbator").style;
+  var but=document.getElementById("buton");
+  if(b) {
+    s.left="150";
+    s.top="150";
+    s.color="#0000FF";
+    but.value="\u00EEnapoi";}
+  else {
+    s.left="300";
+    s.top="100";
+    s.color="#FF0000";
+    but.value="schimb\u0103";}
+  b=!b;
+}
+</script>
+</head>
+<body>
+<form>
+<input type="button" id="buton" value="schimb&#259;" onclick="schimba()"/>
+</form>
+Acesta este un text
+<div id="schimbator" style="position: relative; color:#FF0000; top:100; left:300">
+<h4>Titlu &icirc;n sec&#355;iune div</h4>
+<p>Paragraf &icirc;n sec&#355;iune div</p>
+</div>
+</body>
+</html>

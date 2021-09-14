@@ -1,0 +1,151 @@
+<html>
+<title>P1.8</title>
+<head>
+<script language="JavaScript">
+var tcol= ["red","yellow","blue"];
+
+function genval()
+{
+   var tbl = document.getElementById("tblid");
+   var i;
+   var j;
+   var tds;
+   var v;
+
+   var trs = tbl.getElementsByTagName("tr");
+   for (i = 0; i < trs.length; i++) {
+      tds = trs[i].getElementsByTagName("td");
+      for (j = 0; j < tds.length; j++) {
+          tds[j].innerHTML="<img src='w3c.GIF' style='width:22px; height:11px'>";
+          v=Math.floor(100*Math.random()); // generare aleatoare a numarului din celula
+         if(Math.floor(2*Math.random())) // stabilitrea aleatoare a pozitiei numarului in celula
+            tds[j].innerHTML+=v; // a doua pozitie
+         else 
+            tds[j].innerHTML=v+tds[j].innerHTML; // prima pozitie
+         tds[j].style.backgroundColor="white";
+      }
+   }
+}
+
+
+
+function selecteaza()
+{
+   var val = parseInt(document.getElementById("valid").value); // valoarea numerica din caseta text
+   var tbl = document.getElementById("tblid"); // tabel
+   var colelm = document.getElementById("colid"); // lista de culori
+   var col = colelm.options[colelm.selectedIndex].value; // culoarea selectata in lista, 
+                                                         // atribut value al optiunii selectate
+
+   var i;
+   var j;
+   var tds;
+   var tdval;
+   
+  // parcurgerea liniilor tabelului si a celulelor fiecarei linii
+   var trs = tbl.getElementsByTagName("tr");
+   for (i = 0; i < trs.length; i++) {
+      tds = trs[i].getElementsByTagName("td");
+      for (j = 0; j < tds.length; j++) {
+         tmpNode = tds[j].firstChild; // primul element din celula
+         tdval = "";
+         while (tmpNode) {
+            // se verifica daca nodul este text 
+            if (tmpNode.nodeType == 3) { tdval += tmpNode.nodeValue; } 
+            tmpNode = tmpNode.nextSibling; // urmatorul element 
+         }
+    // colorarea celulei daca numarul din ea este > cel din caseta text
+         if (val < parseInt(tdval)) {
+           tds[j].style.backgroundColor=col;
+         }
+      }
+   }
+}
+function deselecteaza()
+{
+   var val = parseInt(document.getElementById("valid").value); // valoarea numerica din caseta text
+   var tbl = document.getElementById("tblid"); // tabel
+   var col = tbl.style.backgroundColor;
+
+   var i;
+   var j;
+   var tds;
+   var tdval;
+// parcurgerea liniilor tabelului si a celulelor fiecarei linii
+   var trs = tbl.getElementsByTagName("tr");
+   for (i = 0; i < trs.length; i++) {
+      tds = trs[i].getElementsByTagName("td");
+      for (j = 0; j < tds.length; j++) {
+         tmpNode = tds[j].firstChild; // primul element din celula
+         tdval = "";
+         while (tmpNode) {
+            // se verifica daca nodul este text 
+            if (tmpNode.nodeType == 3) { tdval += tmpNode.nodeValue; } 
+            tmpNode = tmpNode.nextSibling; // urmatorul element 
+         }
+// deselectarea celulei daca numarul din ea este > cel din caseta text
+         if (val < parseInt(tdval)) {
+           tds[j].style.backgroundColor=col;
+         }
+      }
+   }
+}
+
+</script>
+
+</head>
+<body>
+<form action="" method="get">
+Val &gt; : <input type="text" name="val" id="valid" value="" />
+<br />
+Culoare:
+<select name="col" id="colid" size="1">
+<option value="red" selected> ro&#351;u </option>
+<option value="yellow"> galben </option>
+<option value="blue"> albastru </option>
+</select>
+<br />
+<input type="button" value="Genereaz&#259;" onclick="genval()">
+<input type="button" value="Selecteaz&#259;" onclick="selecteaza()">
+<input type="button" value="Deselecteaz&#259;" onclick="deselecteaza()">
+</form>
+<hr />
+<table id="tblid" border="3">
+<tr>
+<td><img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td><img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td><img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td><img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td><img src="w3c.GIF" style="width:22px; height:11px"></td>
+</tr>
+<tr>
+<td><img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td><img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td><img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td><img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td><img src="w3c.GIF" style="width:22px; height:11px"></td>
+</tr>
+<tr>
+<td><img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td><img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td><img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td><img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td><img src="w3c.GIF" style="width:22px; height:11px"></td>
+</tr>
+<tr>
+<td><img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td><img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td><img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td><img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td><img src="w3c.GIF" style="width:22px; height:11px"></td>
+</tr>
+<tr>
+<td><img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td><img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td><img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td><img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td><img src="w3c.GIF" style="width:22px; height:11px"></td>
+</tr>
+</table>
+</body>
+</html>

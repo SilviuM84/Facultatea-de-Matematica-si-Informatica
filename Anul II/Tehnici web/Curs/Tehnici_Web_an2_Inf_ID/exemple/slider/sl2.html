@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Slider</title>
+<script language=JavaScript>
+// alocarea handler-elor de evenimente in codul HTML este mai putin performanta
+var x = 0;
+var y = 0;
+var o = null;
+	
+function inceput(e)
+{
+
+   if (document.getElementById("c") == e.target.parentNode) {
+
+     o = document.getElementById("c");
+     x = e.clientX - parseInt(o.style.left);
+     y = e.clientY - parseInt(o.style.top);
+
+   }
+
+   return false;
+
+}
+
+function miscare(e)
+{
+   var b = document.getElementById("b");
+   var tmpx = e.clientX - x; 
+   var tmpy = e.clientY - y;
+   if (o &&  tmpx<=parseInt(b.style.left)+parseInt(b.width)-10 && tmpx>=parseInt(b.style.left) &&
+      tmpy==parseInt(o.style.top))  
+
+      o.style.left = tmpx + "px"; 
+      
+
+  
+		
+   return false;
+
+}
+
+
+function sfarsit()
+{ 
+
+   o = null; 
+
+   return false;
+}
+
+</script>
+</head>
+<body onmousedown = "inceput(event)" onmouseup = "sfarsit()" onmousemove = "miscare(event)">
+<img id="b" style="left: 20px; top: 80px; position: absolute" width="200" height="10" src="bara.gif">
+<span id="c" style="left: 20px; top: 70px; position: absolute">
+<img width="15" height="30" src="cursor.gif">
+</span> 
+</body>
+</html>

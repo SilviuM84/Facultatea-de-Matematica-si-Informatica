@@ -1,0 +1,114 @@
+<html> 
+<head> 
+<title> Cursa</title>
+<style type="text/CSS">
+	.p
+		{
+			position:absolute; 
+		      left:640; 
+			top:10; 
+			border-width: 5px;
+			border-style:solid;
+			border-color:blue;
+			width:20;
+			height:300;
+			background-color:red;
+		}
+	.p1
+		{
+			position:absolute; 
+			left:10; 
+			top:25; 
+			width:30;
+			height:30;
+			background-color:yellow;
+		}
+	.p2
+		{
+			position:absolute; 
+			left:10; 
+			top:70; 
+			width:30;
+			height:30;
+			background-color:green;
+		}
+	.p3
+		{
+			position:absolute; 
+			left:10; 
+			top:115; 
+			width:30;
+			height:30;
+			background-color:brown;
+		}
+	.b1
+		{
+			position:absolute; 
+			left:25; 
+			top:180;	
+		}
+
+	.b2
+		{
+			position:absolute; 
+			left:100; 
+			top:180;  
+		}
+</style>
+
+<script type="text/javascript">
+
+	var i1=10; var i2=10; var i3=10;var tm=0;
+      function s()
+            { 
+              document.getElementById("st").disabled=true;
+              c();
+            }
+	function c()	
+		{
+			if((i1<610)&&(i2<610)&&(i3<610))
+				{
+					var x1=Math.random()*5; // viteza de deplasare aleatoare
+					var x2=Math.random()*5;
+					var x3=Math.random()*5;
+					i1+=x1;
+					i2+=x2;
+					i3+=x3;
+					document.getElementById("y").style.left=i1;
+					document.getElementById("g").style.left=i2;
+					document.getElementById("br").style.left=i3;
+					tm=setTimeout("c()",30);
+				}
+			else if((i1>=610)&&(i2<610)&&(i3<610)) alert("C\u00E2\u015Ftig\u0103 GALBEN!!!!");
+			else if((i1<610)&&(i2>=610)&&(i3<610)) alert("C\u00E2\u015Ftig\u0103 VERDE!!!!");
+			else if((i1<610)&&(i2<610)&&(i3>=610)) alert("C\u00E2\u015Ftig\u0103 MARO!!!!");
+		}
+	function res()
+		{
+			i1=10;
+			i2=10;
+			i3=10;
+			document.getElementById("y").style.left=i1;
+			document.getElementById("g").style.left=i2;
+			document.getElementById("br").style.left=i3;
+			clearTimeout(tm);
+                  document.getElementById("st").disabled=false;
+
+		}
+
+</script>
+
+</head>
+
+<body>
+	<div class="p" id="stop"></div>
+	<div class="p1" id="y"></div>
+	<div class="p2" id="g"></div>
+	<div class="p3" id="br"></div>
+	
+	<form>
+		<input type="button" ID="st" class="b1" onclick="s()"  value="Porni&#355;i!">
+		<input type="button" class="b2" onclick="res()" value="&Icirc;napoi">
+	</form>
+</body>
+</html>

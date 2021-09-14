@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Limbajul JavaScript</title>
+</head>
+<body>
+<script>
+<!--
+
+function A()
+{
+    var x = 7;
+    this.GetX = function() { return x;}
+    this.SetX = function(xT) { x = xT; }
+} 
+
+obj = new A;
+obj2 = new A;
+
+document.write(obj.GetX() + ' ' + obj2.GetX());
+obj.SetX(14);
+document.write(' ' + obj.GetX() + ' ' + obj2.GetX());
+
+//-->
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+<title>P2.1</title>
+<head>
+<script language="JavaScript">
+function change()
+{
+   var txt = document.getElementById("cntid").value;
+   var szelm = document.getElementById("szid");
+   var sz = szelm.options[szelm.selectedIndex].value;
+   var colelm = document.getElementById("colid");
+   var col = colelm.options[colelm.selectedIndex].value;
+   var disp = document.getElementById("dispid");
+
+   var txtNode = document.createTextNode(txt);
+
+   disp.innerHTML="";
+   disp.appendChild(txtNode);
+   disp.style.fontSize=sz;
+   disp.style.color=col;
+   
+}
+</script>
+
+</head>
+<body>
+<form action="" method="get">
+Text: <input type="text" name="cnt" id="cntid" size="80" value="" />
+<br />
+Size:
+<select name="sz" id="szid" size="1">
+<option value="12pt" selected> 12 </option>
+<option value="14pt"> 14 </option>
+<option value="18pt"> 18 </option>
+</select>
+<br />
+Color:
+<select name="col" id="colid" size="1">
+<option value="red" selected> red </option>
+<option value="yellow"> yellow </option>
+<option value="blue"> blue </option>
+</select>
+<br />
+<input type="button" value="Schimb&#259; Textul" onclick="change()">
+</form>
+<hr />
+<div id="dispid">
+</div>
+</body>
+</html>

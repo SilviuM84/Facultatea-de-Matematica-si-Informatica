@@ -1,0 +1,73 @@
+<html>
+
+
+<head>
+      <title> Tot mai greu de atins</title>
+
+	<style>	
+	
+		.zona{position:relative; height:20; width:100;top:50;left:100; background-color:red;}
+            .buton{position:absolute; height:35; width:150;top:5;left:5}
+
+
+	</style>
+	
+	<script language="JavaScript">
+		lmax=300; 
+            tmax=200;
+		asteapta=500;
+		function rand1()
+			{
+				var x1=Math.floor(Math.random()*lmax);
+				return x1;
+			}
+
+		function rand2()
+			{
+				var x2=Math.floor(Math.random()*tmax);
+				return x2;
+			}
+
+		function fugi()
+			{
+				var y1=rand1()+40;
+				var y2=rand2()+10;
+                                document.getElementById("z").style.left=y1; 
+                                document.getElementById("z").style.top=y2;
+			}
+             function atins()
+			{
+			  var r=confirm('Ai reu\u015Fit! Felicit\u0103ri!\nCrezi c\u0103 po\u0163i mai mult?\nDac\u0103 da, apas\u0103 Ok\nDac\u0103 nu, apas\u0103 Cancel')
+                    document.getElementById("z").style.left=100; 
+                    document.getElementById("z").style.top=50;
+                    if(r)
+                      {
+                         lmax+=60;
+                         tmax+=40;
+                         asteapta*=0.8;
+                       }
+                     else
+                       {
+                         alert('E\u015Fti iar\u0103\u015Fi la \u00EEnceput.\nVei reu\u015Fi?');
+                         lmax=300; 
+                         tmax=200;
+		             asteapta=500;
+                        }
+			}
+		
+	</script>
+</head>
+
+<body onload="alert('E\u015Fti la \u00EEnceput.\nVei reu\u015Fi?')">
+
+	<div class="zona" id="z" onmouseover="setTimeout('fugi()', asteapta)" >
+		<form>
+
+			<input type="button" class="buton" value = "Atinge-m&#259;!" id="sari" onClick="atins()"/>
+			
+		</form> 
+	
+	</div>
+
+</body>
+</html>

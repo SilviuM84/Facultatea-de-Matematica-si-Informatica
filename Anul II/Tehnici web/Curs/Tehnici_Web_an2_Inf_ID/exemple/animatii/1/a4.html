@@ -1,0 +1,132 @@
+<html>
+<head>
+<title>
+	Anima&#355;ii multiple (4)
+</title>
+<script type="text/javascript">
+var x=1; var pas=2; var i=0; var n=-1; var si=new Array(); var ip=0;
+function schimba(){
+  var j;
+  var l=document.getElementById('l');
+  var d=document.getElementById('Mobil');
+  var tim = [ "w3c.GIF", "imag.jpg", "http://us.i1.yimg.com/us.yimg.com/i/ww/beta/y3.gif",
+                    "http://www.google.com/intl/ro_ALL/images/logo.gif", "http://fmi.unibuc.ro/ro/img/gif/eng.gif" ];
+  pas=2; x=1; 
+  ip=0;
+  // se selecteaza aleator imaginea si ecuatia curbei descrisa de imagine
+  document.getElementById('Im').src=tim[Math.floor(tim.length*Math.random())];
+  i=Math.floor(3*Math.random());
+  // se opreste animatia, indiferent de numarul de click-uri
+  // executate be butonul de pornire
+  // folosindu-se identificatorii memorati ai tuturor apelurilor metodei setInterval
+  for (j=0; j<=n; j++) clearInterval(si[j]); 
+  n=-1; l.innerHTML=0; // initializarea contorului de executii si 
+                       // a etchetei care il afiseaza
+  // se plaseaza in pozitia initiala stratul cu imaginea 
+  d.style.left='1px'
+  d.style.top='10px'
+}
+function stop(){
+  var j;
+  var l=document.getElementById('l');
+  var d=document.getElementById('Mobil');
+  pas=2; x=1;
+  ip=0;
+  // se opreste animatia, indiferent de numarul de click-uri
+  // executate be butonul de pornire
+  // folosindu-se identificatorii memorati ai tuturor apelurilor metodei setInterval
+  for (j=0; j<=n; j++) clearInterval(si[j]); 
+  n=-1; l.innerHTML=0; // initializarea contorului de executii si 
+                       // a etchetei care il afiseaza
+  // se plaseaza in pozitia initiala stratul cu imaginea 
+  d.style.left='1px'
+  d.style.top='10px'
+}
+function scade(){
+  var j;
+  var l=document.getElementById('l');
+  // se incetineste animatia, anulandu-se efectul ultimului click
+  // pe butonul executa
+  // folosindu-se identificatorii memorati ai tuturor apelurilor metodei setInterval
+ if (n>-1)
+ {
+   clearInterval(si[n]); 
+   n--; l.innerHTML=n+1; // decrementarea contorului de executii si 
+                         //  schimbarea etchetei care il afiseaza
+ }
+}
+function pause1(){
+  var j;
+  // se opreste animatia, indiferent de numarul de click-uri
+  // executate be butonul de pornire
+  // folosindu-se identificatorii memorati ai tuturor apelurilor metodei setInterval
+   for (j=0; j<=n; j++) clearInterval(si[j]); 
+   ip=1; // se va reporni cu aceeasi viteza
+}
+function pause2(){
+  var j;
+  var l=document.getElementById('l');
+  // se opreste animatia, indiferent de numarul de click-uri
+  // executate be butonul de pornire
+  // folosindu-se identificatorii memorati ai tuturor apelurilor metodei setInterval
+   for (j=0; j<=n; j++) clearInterval(si[j]);
+   n=-1; l.innerHTML=0; // initializarea contorului de executii si 
+                        // a etchetei care il afiseaza
+   pas=2;
+   ip=0; // se va reporni cu viteza initiala
+}
+function executa() {// la prima executie se porneste animatia
+// la urmatoarele executii, produse prin click pe butonul cu id=="b" 
+// animatia pornita devine mai rapida
+  var l=document.getElementById('l'); var j;
+  switch (ip) {
+      case 0: // la prima executie se porneste animatia
+// la urmatoarele executii, produse prin click pe butonul cu id=="b" 
+// animatia pornita devine mai rapida
+      {
+        n++; 
+        l.innerHTML=n+1; // se afiseaza numarul de ordine al executiei pornite in controlul label
+        si[n]=setInterval('anim();',16); // identificatorul de apel curent al metodei setInterval este memorat
+        break;
+      }
+      case 1: // se reporneste cu viteza avuta inaintea intreruperii
+      {
+         ip=0;
+         for (j=0; j<=n; j++) si[j]=setInterval('anim();',16);
+      }
+   }
+}
+function anim () { // modificarea pozitiei stratului cu imaginea
+   var y;
+   var cx=0.25*screen.width; 
+   var cy=0.3*screen.height;
+   var d=document.getElementById('Mobil');
+   d.style.left=x+'px'; // determinarea abscisei pozitiei stratului
+   switch (i) {
+// ordonata pozitiei stratului se calculeaza conform ecuatiei alese  
+      case 0: {y=1.5*cy+70-x; if(x>1.5*cx) x=0; break;}
+      case 1: {y=Math.floor(0.65*cy*(Math.sin(Math.PI*x/cx)+1)+70);
+               x=x+pas; if(x>2*cx) x=0; break;}
+      case 2: {y=0.8*cy+80-Math.floor((pas/Math.abs(pas))*Math.sqrt(0.49*cx*cx-Math.pow(x-0.7*cx,2)));
+	         x=x+pas; if(x>1.4*cx || x<1) pas=-pas;}
+   }
+   d.style.top=y+'px';
+   x=x+pas; // calcularea urmatoarei abscise
+}
+</script></head>
+<body>
+    <form>
+        <input type="button" value="Schimb&#259;" onclick="schimba();"/>
+        <br />
+        <input type="button" id= "b" value="Execut&#259;" onclick="executa()"/>
+        <label for="b" id="l">0</label>
+        <input type="button" id= "sv" value="Scade viteza" onclick="scade()"/><br/>
+        <input type="button" id= "p1" value="Pauz&#259;1" onclick="pause1()"/>
+        <input type="button" id= "p2" value="Pauz&#259;2" onclick="pause2()"/>
+        <input type="button" id= "s" value="Oprire" onclick="stop()"/><br/>
+    </form>
+    <div id="Mobil" style="height:100px;width:100px;position:relative;left:1px;top:10px;">
+        <img id="Im" src="w3c.GIF" style="width:100px;border-width:0px;" />
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>
+	Anima&#355;ii multiple (5)
+</title>
+<script type="text/javascript">
+var x=1; var pas=2; var i=0; var si; var e=true;
+function executa(v)
+{
+  var d=document.getElementById('Mobil');
+  var ib=document.getElementById('Imb');
+  var is=document.getElementById('Ims');
+  var tim = [ "w3c.GIF", "imag.jpg", "http://us.i1.yimg.com/us.yimg.com/i/ww/beta/y3.gif",
+                    "http://www.google.com/intl/ro_ALL/images/logo.gif", "http://fmi.unibuc.ro/ro/img/gif/eng.gif" ]; 
+  switch (v) 
+  {
+       case 0: {  // apare si  este activata imaginea pe care se poate da click pentru oprire
+                 is.src="stop.jpg";
+                 is.alt="Oprire";
+                 is.enabled=true;
+                 if (e)
+                 { // daca s-a dat click pe imaginea de executie, aceasta este inlocuita cu imaginea de pauza
+                   ib.src="pause.jpg";
+                   ib.alt="Pauz\u0103";
+                   e=false;
+                   si=setInterval('anim();',20); // animatie
+                   return;
+                 }
+                 else // daca s-a dat click pe imaginea de pauza, aceasta este inlocuita cu imaginea de executie
+
+                 {
+                   ib.src="exec.jpg";
+                   ib.alt="Execut\u0103" ;
+                   e=true;
+                   clearInterval(si); // se opreste animatia
+                   return;
+                  }
+                }
+       case 1: {// schimbare
+                // se selecteaza aleator imaginea si ecuatia curbei descrise de imagine
+                document.getElementById('Im').src=tim[Math.floor(tim.length*Math.random())];
+                i=Math.floor(3*Math.random()); 
+               }
+   }
+// de aici se executa daca s-a dat click pe imaginea pentru oprire
+     ib.src="exec.jpg";
+     ib.alt="Execut\u0103" ;
+     is.src="blank.jpg"; // dispare si  este dezactivata imaginea pe care se poate da click pentru oprire
+     is.alt="";
+     is.enabled=false; 
+     pas=2; x=1; e=true;
+     d.style.left='1px'; // se plaseaza in pozitia initiala stratul cu imaginea
+     d.style.top='10px';
+     clearInterval(si); // se opreste animatia
+}
+function anim ()  // modificarea pozitiei stratului cu imaginea
+{
+   var y;
+   var cx=0.25*screen.width; 
+   var cy=0.3*screen.height;
+   var d=document.getElementById('Mobil');
+   d.style.left=x+'px'; // determinarea abscisei pozitiei stratului
+   switch (i) {
+// ordonata pozitiei stratului se calculeaza conform ecuatiei alese  
+      case 0: {y=1.5*cy+70-x; if(x>1.5*cx) x=0; break;}
+      case 1: {y=Math.floor(0.65*cy*(Math.sin(Math.PI*x/cx)+1)+70);
+               x=x+pas; if(x>2*cx) x=0; break;}
+      case 2: {y=0.8*cy+80-Math.floor((pas/Math.abs(pas))*Math.sqrt(0.49*cx*cx-Math.pow(x-0.7*cx+1,2))+1);
+	         x=x+pas; if(x>1.4*cx || x<1) pas=-pas;}
+   }
+   d.style.top=y+'px';
+   x=x+pas; // calcularea urmatoarei abscise
+}
+</script></head>
+<body>
+    <form>
+        <input type="button" value="Schimb&#259;" onclick="executa(1);"/>
+        <br />
+        
+        <img id="Imb" alt="Execut&#259;" src="exec.jpg" style="position:relative;left:12px" onclick="executa(0);"/>
+        <img id="Ims" alt="" src="blank.jpg" enabled=false  style="position:relative;left:15px" onclick="executa(2);"/></button>
+    <br />
+    </form>
+    <div id="Mobil" style="height:100px;width:100px;position:relative;left:1px;top:10px;">
+        <img id="Im" src="w3c.GIF" alt="Text mobil" style="width:100px;border-width:0px;" />
+    </div>
+</body>
+</html>

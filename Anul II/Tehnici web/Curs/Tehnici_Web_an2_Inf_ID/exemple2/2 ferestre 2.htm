@@ -1,0 +1,29 @@
+<html>
+<title>Fereastra 1</title>
+<head>
+<script language="JavaScript">
+function gen()
+{
+   var nval=parseInt(document.getElementById("valid").value); // valoarea din caseta text
+   var i; 
+   var u="<form>";
+   var w=open("","my3","toolbar=yes, location=no, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=yes, width=300, height=300"); // se deschide fereastra noua
+   w.document.write('<script type="text/javascript" src="2f2.js"><\/script>'); // fisier cu cod JavaScript pentru fereastra noua
+   for (i = 1; i <= nval; i++)
+     u+="<input type='button' value='buton " + i+ "' onclick='f("+i+")'/><a id='a"+i+"' href='im.gif'>URL"+i+"<\/a><br/>";
+   w.alert("Fereastra noua: voi primi titlu si " +nval+" butoane"); 
+   w.document.write("<title>Fereastra 2</title>"); // titlu pentru ferastra noua
+   w.document.write(u+"<\/form>"); // se introduc butoane si ancore in fereastra noua 
+   w.document.close();
+}     
+</script>
+</head>
+<body>
+<form action="" method="get">
+<input type="text" name="val" id="valid" value="1" />
+<br />
+<br />
+<input type="button" value="Genereaz&#259;" onclick="gen()">
+</form>
+</body>
+</html>

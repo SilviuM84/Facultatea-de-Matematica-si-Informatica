@@ -1,0 +1,127 @@
+<html>
+	<head>
+	<title> P&#259;trate</title>
+		<script type="text/javascript">
+			px=200;
+			py=200;
+			tm=0;
+			jos=1;
+			misca=0;
+			function OnClickMare(event)
+			{
+			   	 var d=document.getElementById("patratMic");
+				 var st=parseInt(d.style.left); 
+				 var dr=st+100; 
+				 var s=parseInt(d.style.top); 
+				 var j=s+100; 
+				 var x=event.clientX; var y=event.clientY; 
+				 if (x<st || x>dr || y<s || y>j)
+				  {
+					alert("click \u00EEn p\u0103tratul mare");
+			
+					if(!misca) 
+				 	{
+ 						px=200;
+						py=200;
+                              	d.style.top=py;
+						d.style.left=px;
+				 	}
+				   }
+			} 
+
+			function Merge()
+			{   
+				
+			        if (py==0)
+					jos=1;
+				if (py==400)
+					jos=0;
+
+				if (jos==1)
+				{
+					d=document.getElementById("patratMic");
+					py=py+5;
+					px=px+5;
+					d.style.top=py;
+					d.style.left=px;
+					tm = setTimeout("Merge()",30);
+				}
+				else
+				{	
+					d = document.getElementById("patratMic");
+					py=py-5;
+					px=px-5;
+					d.style.top=py;
+					d.style.left=px;
+					tm = setTimeout("Merge()",30);
+				}
+				
+			}
+
+			function Stop()
+			{
+				misca=0;
+				clearTimeout(tm);
+			}
+			function OnClickMic()
+			{
+				
+				if (misca==1)
+					misca=0;
+				else
+					misca=1;
+                        
+				if (misca==1)
+				{
+				    alert('ATINS')
+                            Merge();
+					
+				}
+				else
+				{
+					Stop();
+					alert('ATINS')
+                             
+				}
+                        
+			}
+
+			
+				
+		</script>
+<style type="text/css">
+#patratMare
+{
+position:absolute; 
+left:0; 
+top:0; 
+width:500;
+height:500;
+background-color:red;
+}
+#patratMic
+{
+position:absolute; 
+left:200; 
+top:200; 
+width:100;
+height:100;
+background-color:green;
+}
+
+</style>
+	</head>
+	
+	<body>
+
+		<div id="patratMare" onclick="OnClickMare(event)">
+			
+			<div id="patratMic"  onclick="OnClickMic()"> 
+				<table  style="width: 100px; height: 100px; border: 0;  margin: 0">
+					<tr> <td align="center"> A </td> </tr>
+				</table>
+			 </div>
+		</div>
+	</body>
+
+</html>

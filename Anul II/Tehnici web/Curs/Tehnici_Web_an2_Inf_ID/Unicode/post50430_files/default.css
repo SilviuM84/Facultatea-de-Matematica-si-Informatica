@@ -1,0 +1,671 @@
+/* Color Palette
+    
+    #fff - white
+    #000 - black
+    #059 - blue (as in default hyperlinks)
+    #334 - Near Black (as in H1's)
+    #eef - Near White
+    #38C - Stylus Logo Blue
+    #9abedc - Horiz menu backround blue
+    #556 - charcoal blue grey (as in horiz menu text)
+    #d4e6f4 - pale blue
+    #efeff1 - gray in breadcrumbs
+
+*/
+
+
+body
+{
+    margin-top: 1em;
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color: #fff;
+    font-size: 12px;
+}
+
+body, body p, body ul, ol, td
+{
+    line-height: 150%;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #000;
+    font-size: 82%;
+}
+
+
+td p, td ul, ol, th ul, th ol, td td, ul li ul, ol li ol
+{
+    font-size: 100%;
+}
+
+ul.multiline li
+{
+    margin-bottom: .5em;
+}
+
+ul.plain 
+{
+    margin-left:5px;
+    padding-left:10px;
+}
+ul.plain li
+{
+    margin-bottom: .5em;
+}
+
+
+a
+{
+    color: #059;
+    text-decoration: none;
+}
+
+/* deleted 
+a.list
+{
+    color: #000;
+    text-decoration: underline;
+}
+*/
+
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+div.vidLink 
+{
+    background: #edc  url(/images/reel.gif) 5px 5px no-repeat;
+    padding: 4px 10px 4px 24px;
+    white-space: nowrap;
+    float:right;
+    margin-right:1em;
+    border: 1px solid #cba;
+    
+}
+
+div.pdfLink 
+{
+    background: #fe9  url(/images/Adobe-acrobat.gif) 5px 5px no-repeat;
+    padding: 4px 10px 4px 24px;
+    white-space: nowrap;
+    float:right;
+    margin-right:1em;
+    border: 1px solid #fcc;
+    
+}
+
+
+div.vidLink a
+{
+    color:#fc2a04;
+    font-weight:bold;
+    font-family:Arial;
+}
+
+
+
+a.extLink 
+{
+    background-image: url(/images/external.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    padding-right: 12px;
+    white-space: nowrap;
+}
+
+
+img
+{
+    border: 0;
+}
+
+
+h1, h2, h3, h4, h5, h6
+{
+    color: #334;
+    line-height:normal;
+}
+
+p
+{
+    margin-top: 0;
+}
+
+h1
+{
+    font-family: "Trebuchet MS";
+    font-size: large;
+    margin-bottom: 0.5em;
+}
+
+h2
+{
+    font-family: "Trebuchet MS";
+    font-size: medium;
+    margin-bottom: 0.2em;
+}
+
+h3, h4, h5, h6
+{
+    font-family: "Trebuchet MS";
+    font-size: small;
+    font-weight: bold;
+    margin-bottom: 0.1em;
+}
+
+hr
+{
+    height: 1px;
+    color: #ccc;
+    background-color: #ccc;
+    height: 1px;
+    border: 0 solid #ccc;
+    border-top-width: thin;
+}
+
+code 
+{
+    font-size:small;
+}
+
+#masthead
+{
+    width: 100%;
+}
+
+
+#mastheadLinks
+{
+    /* background-image: url(/images/slant1.gif);     background-repeat: no-repeat;     background-position:left top;      padding:0 3em; */
+    padding: 0 1em;
+    background-color: #38c;
+    color: #eef;
+    font-size: x-small;
+    line-height: normal;
+    margin: 0;
+}
+
+#mastheadLinks a
+{
+    color: #eef;
+    text-transform: uppercase;
+}
+
+
+/* -------- top menu strip -------- */
+
+#menustrip
+{
+    width: 100%;
+    background-color: #9abedc;
+    background-image: url(/images/grad1.gif);
+    background-repeat: repeat-x;
+    background-position: center;
+    margin: 0 0 1em 0;
+}
+
+#menustrip td
+{
+    border-right: 1px solid #eef;
+    white-space: nowrap;
+    font-size: 100%;
+}
+
+#menustrip a.menuItem, #menustrip a.menuItemActive
+{
+    text-decoration: none;
+    color: #556;
+    font-size: x-small;
+    font-weight: bold;
+    padding: 0 16px;
+    letter-spacing: 1px;
+    display: block;
+    font-family: Arial;
+    font-size: 85%;
+}
+
+#menustrip a.menuItem:hover
+{
+    color: #38c;
+    background-color: #d4e6f4;
+}
+
+
+#menustrip a.menuItemActive
+{
+    color: #eef;
+    background-color: #38c;
+}
+
+
+#menustrip a.menuAlt, #menustrip a.menuAlt:hover
+{
+    font-size: x-small;
+    margin: 0 10px;
+    color: #556;
+    text-transform: uppercase;
+}
+
+
+/* -------- main layout -------- */
+
+#mainContent
+{
+}
+
+#ContentCol
+{
+    text-align:left;
+}
+
+.LeftColFixed
+{
+    width: 160px;
+    margin-right: 1em;
+}
+
+.RightColFixed
+{
+    width: 160px;
+    margin-left: 1em;
+}
+
+/* -------- Footer -------- */
+
+#footing, #footing td
+{
+    font-size: x-small;
+    margin-top: 20px;
+    color: #556;
+    line-height:normal;
+}
+#footing1
+{
+    background-color: #ddd;
+    padding: 5px;
+    margin-bottom:5px;
+}
+
+#footing3
+{
+    float:right;
+    margin-left:5px;
+    margin-top:5px;
+}
+
+
+#footing a
+{
+    color: #556;
+}
+
+
+/* -------- Breadcrumbs -------- */
+
+.BreadCrumbs
+{
+    color: #556;
+    border-top: 1px solid #059;
+    border-bottom: 1px solid #059;
+    padding: 3px;
+    background-color: #efeff1;
+}
+
+.BreadCrumbs span
+{
+    white-space: nowrap;
+}
+
+.BreadCrumbs a
+{
+    color: #556;
+}
+
+/* -------- Navigation Menu (Top level) -------- */
+
+.NavMenuList, .NavMenuList ul
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.NavMenuList a
+{
+    font-size: 100%;
+}
+
+
+.NavMenuListItemActive, .NavMenuListItem
+{
+    line-height: 120%;
+    background-color: #d4e6f4;
+    padding: 7px 7px 7px 7px;
+    margin-top: 2px;
+}
+
+.NavMenuListItemActive
+{
+    background: #d4e6f4 url(/images/corner2.gif) no-repeat top right;
+}
+
+.NavMenuListItemActive div, .NavMenuListItem div
+{
+    padding: 5px 5px 5px 11px;
+    font-weight: bold;
+}
+
+.NavMenuListItemActive div
+{
+    background: url(/images/bullet1.png) no-repeat 0px 8px;
+}
+.NavMenuListItem div
+{
+    background: url(/images/bullet1a.png) no-repeat 0px 8px;
+}
+
+
+/* -------- Navigation Menu (2-n level) -------- */
+
+.NavMenuListItemActive li
+{
+    margin: 4px 4px 4px 9px;
+    padding-left: 11px;
+    background: url(/images/bullet0.png) no-repeat 0px 4px;
+    font-size: 100%;
+}
+
+.NavMenuListItemActive li ul li
+{
+    margin: 4px 4px 4px 0px;
+    padding-left: 11px;
+    font-size: 100%;
+}
+
+.NavMenuListItem a
+{
+    color: #000;
+}
+
+.NavMenuLinkActive a
+{
+    font-weight: bold;
+}
+
+
+.NavMenuLinkActive li a
+{
+    font-weight: normal; 
+}
+
+
+
+/* -------- Context Menu -------- */
+
+.ContextMenuArea
+{
+    font-size: 100%;
+    border: 1px solid #059;
+    padding: 4px;
+    margin: 5px 0 5px 5px;
+    width: 120px;
+    float: right;
+    background: #efeff1;
+}
+
+.ContextMenuHeader
+{
+    background: #059;
+    padding-left: 3px;
+    color: #eef;
+    font-weight: bold;
+}
+
+.ContextMenu
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ContextMenu li
+{
+    padding: 3px 4px 3px 12px;
+    background: url(/images/bullet1.png) no-repeat 0px 9px;
+}
+
+
+.ContextMenu a
+{
+    color: #059;
+}
+
+.ContextMenu li.ContextMenuItemActive
+{
+    background: url(/images/bullet1a.png) no-repeat 0px 9px;
+}
+
+.ContextMenu li.ContextMenuItemActive a
+{
+    /* text-decoration: underline; */
+    color: #666;
+    font-weight:bold;
+}
+
+
+/* -------- Callout Boxes Area -------- */
+
+
+/* callout10 is no boxes */
+div.callout10
+{
+    width: 180px;
+    margin-bottom: 10px;
+    border: 1px solid #38c;
+}
+div.callout10 h3
+{
+    display: block;
+    padding: 7px;
+    font-size: small;
+    background:#38c;
+    color: #ffe;
+}
+div.callout10 p
+{
+    padding: 8px;
+}
+
+
+/* callout0, callout1, callout2, calloutbuy, calloutfeatured, calloutfeatured1 
+are compatible with icon0. icon1, icon2 */
+div.callout0, div.callout1, div.callout2, div.calloutbuy, div.calloutfeatured, div.calloutfeatured1
+{
+    width: 153px;
+    margin: 0 0 10px 0;
+    background: #fff;
+    padding: 0 0 10px 0;
+    
+}
+
+div.callout0 h3, div.callout1 h3, div.callout2 h3, div.calloutbuy h3, div.calloutfeatured h3, div.calloutfeatured1 h3
+{
+    display: block;
+    padding: 6px 5px 6px 35px;
+    font-size: small;
+    color: #ffe;
+    margin-top:0px;
+}
+
+
+div.callout0 p, div.callout1 p, div.callout2 p, div.calloutbuy p, div.calloutfeatured p, div.calloutfeatured1 p
+{
+    padding: 10px;
+}
+
+/* featured callout (orange) */
+div.calloutbuy
+{
+    background-color: #ffe0b2;
+}
+div.calloutbuy h3
+{
+    background-color: #ff9900;
+}
+
+
+/* featured callout (blue) */
+div.calloutfeatured
+{
+    background-color: #e7cece;
+}
+div.calloutfeatured p, div.calloutfeatured a
+{
+    color: #000000;
+}
+div.calloutfeatured a
+{
+    text-decoration: underline;
+}
+
+
+div.calloutfeatured h3
+{
+    background-color: #9a2828;
+    color: #ffe;
+}
+
+
+/* alt featured callout (charcoal) */
+div.calloutfeatured1
+{
+    background-color: #d4e6f4;
+}
+div.calloutfeatured1 h3
+{
+    background-color: #059;
+}
+
+div.callout0
+{
+    background-color: #eee;
+}
+div.callout0 h3
+{
+    background-color: #556;
+}
+
+div.callout1
+{
+    background-color: #dadfdd;
+}
+div.callout1 h3
+{
+    background-color: #839690;
+}
+
+
+div.callout2
+{
+    background-color: #daa;
+}
+div.callout2 h3
+{
+    background-color: #955;
+}
+
+
+.icon0
+{
+    background-image: url(/images/callout153_arrow.gif);
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+
+.icon1
+{
+    background-image: url(/images/callout153_info.gif);
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+
+.icon2
+{
+    background-image: url(/images/callout153_hand.gif);
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+
+/* form table */
+.formTbl td, .formTbl th {font-size:100%;}
+.formTbl td {white-space:nowrap;}
+.formTbl th {text-align:right;white-space:nowrap;padding-right:10px;}
+
+
+.mostWantedCenter
+{
+    float:none;clear:both;
+    margin: 16px 5px 5px 5px;
+    padding:0px;
+    border: 1px solid #336699;
+}
+
+.mostWantedCenter h4 
+{
+    display:block; 
+    background:#336699;
+    color:#eff;
+    font: 10px arial, sans-serif;
+    margin:0px;
+    padding:0px;
+    text-align:right;
+}
+
+
+.mostWantedBox
+{
+    padding: 0px 4px 0px 4px;
+}
+
+.mostWantedEntry 
+{
+    margin-bottom:5px;
+    padding-top:5px;
+}
+
+.mostWantedEntry  p
+{
+    font: 10px arial, sans-serif;
+}
+
+
+.mostWantedEntry h3, .mostWantedEntry a 
+{
+    color: #0000ff;
+    margin:0px; padding:0px;
+    font: 11px verdana, arial, sans-serif;
+    font-weight:bold;
+}
+
+.mostWantedEntry p
+{
+    margin:0px;padding:0px;
+}
+
+.mostWantedPath 
+{
+    color:  #008000;
+}
+
+
+
+/*div.xml { font-family: monospace; font-size: medium; }*/
+
+div.xml span.comment   { color: gray; }
+div.xml span.pi        { color: brown; }
+div.xml span.text      { color: black; }
+div.xml span.attribute { color: red; }
+div.xml span.value     { color: navy; }
+div.xml span.operator  { color: blue; }
+div.xml span.element   { color: purple; }

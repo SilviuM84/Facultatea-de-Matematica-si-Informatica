@@ -1,0 +1,53 @@
+<html>
+<title>P2</title>
+<head>
+<script language="JavaScript">
+function schimba()
+{
+   var txt = document.getElementById("cntid").value;
+   var szelm = document.getElementById("szid");
+   var sz = szelm.options[szelm.selectedIndex].value;
+   var colelm = document.getElementById("colid");
+   var col = colelm.options[colelm.selectedIndex].value;
+   var disp = document.getElementById("dispid");
+
+   var txtNode = document.createTextNode(txt);
+
+   var tmpNode = disp.firstChild;
+   while (tmpNode) {
+      if (tmpNode.nodeType == 3) { disp.removeChild(tmpNode); }
+      tmpNode = tmpNode.nextSibling;
+   }
+   disp.appendChild(txtNode);
+   disp.style.fontSize=sz;
+   disp.style.color=col;
+   
+}
+</script>
+
+</head>
+<body>
+<form action="" method="get">
+Text: <input type="text" name="cnt" id="cntid" size="80" value="" />
+<br />
+M&#259;rime:
+<select name="sz" id="szid" size="1">
+<option value="12pt" selected> 12 </option>
+<option value="14pt"> 14 </option>
+<option value="18pt"> 18 </option>
+</select>
+<br />
+Culoare:
+<select name="col" id="colid" size="1">
+<option value="red" selected> ro&#351;u </option>
+<option value="yellow"> galben </option>
+<option value="blue"> albastru </option>
+</select>
+<br />
+<input type="button" value="Schimb&#259; Textul" onclick="schimba()">
+</form>
+<hr />
+<div id="dispid">
+</div>
+</body>
+</html>

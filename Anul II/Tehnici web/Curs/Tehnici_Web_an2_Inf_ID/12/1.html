@@ -1,0 +1,25 @@
+<html>
+<head>
+
+<script language="JavaScript">
+function schimba(tagid) {
+   styleObj = document.getElementById(tagid).style;
+   styleObj.color="red";
+   styleObj.fontSize="36pt";
+}
+function inapoi(tagid) {
+   styleObj = document.getElementById(tagid).style;
+   styleObj.color="black";
+   styleObj.fontSize="12pt";
+}
+
+</script>
+
+</head>
+<body>
+<p id="pactiv" style="color:black; font-size:12pt" onMouseOver="schimba('pactiv');" onMouseOut="inapoi('pactiv');">
+bau bau
+</p>
+<p>text text</p>
+</body>
+</html>

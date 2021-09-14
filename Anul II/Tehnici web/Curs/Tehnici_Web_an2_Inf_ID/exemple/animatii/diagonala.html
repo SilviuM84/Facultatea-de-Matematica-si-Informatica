@@ -1,0 +1,36 @@
+<html>
+
+<head>
+
+	<title>Diagonala</title>
+
+	<style>
+		.drept { position:absolute; background-color:red; width:585px; height:400px; left: 100px; top:100px; }
+		.pat { position:absolute; background-color:blue; width:30px; height:30px; }
+	</style>
+
+	<script language="JavaScript">
+		var top=0; var left=0; var fint=400; var finl=585; var tm=0;
+
+		function depl()
+			{
+				var x=document.getElementById("p").style;
+				if((top<=fint-35)&&(left<=finl-35))
+					{
+						top+=5;
+						left+=7.5;
+						x.top=top+"px";
+						x.left=left+"px";
+						tm=setTimeout("depl()",40);
+					}
+			}	
+	</script>
+
+<body onLoad="depl()">
+
+	<div class="drept" id="dr" />
+	<div class="pat" id="p" />
+	
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<html>
+<head>
+<script language="javascript"></script>
+<script language="javascript" src="js/dictionary.js"></script>
+<script language="javascript" src="js/morpho.js"></script>
+<script language="javascript" src="js/interface.js"></script>
+<title>Generarea formelor morfologice</title>
+</head>
+<body bgcolor="white" onLoad="updateDictList()">
+<h2>Generarea formelor morfologice ale substantivelor &#351i adjectivelor din limba rom&#226n&#x0103</h2>
+<hr>
+<p align="justify"><font size="3">
+Se ilustreaz&#x0103 formele morfologice ale substantivelor &#351i adjectivelor din limba rom&#226n&#x0103 cu utilizarea unui 
+dic&#355ionar de cuvinte selectate astfel &#238nc&#226t s&#259 fie acoperite c&#226t mai multe din variantele de forme 
+morfologice existente.
+</p>
+<table border="0" cellspacing="10">
+<tr>
+<td>
+<center>
+<form action="" method="post" onSubmit="return false;">
+<table border="0" cellspacing="0" bgcolor="darkslategray">
+<tr>
+<td colspan="2" align="center"><font color="white"><b>Dic&#355ionar - exemple</b></font></td>
+</tr>
+<tr><td colspan="2">&nbsp;</td></tr>
+<tr bgcolor="silver">
+<td colspan="2">
+<input type="radio" name="filter" ID="filter_all" value="all" onClick="changeFilter(1)" checked><font size="2"><b>toate</b></font>
+</td>
+</tr>
+<tr bgcolor="silver">
+<td>
+<input type="radio" name="filter" ID="filter_nouns" value="nouns" onClick="changeFilter(2)"><font size="2"><b>substantive</b></font>
+</td>
+<td>
+<select ID="filter_n_rule" style="width: 100%;" onChange="updateDictList()" disabled>
+<option value="all" selected>toate</option>
+<option value="1">Regula nr. 1</option>
+<option value="2">Regula nr. 2</option>
+<option value="3">Regula nr. 3</option>
+<option value="4">Regula nr. 4</option>
+<option value="4e">Regula nr. 4 (excep&#355ii)</option>
+<option value="5">Regula nr. 5</option>
+<option value="6">Regula nr. 6</option>
+<option value="7">Regula nr. 7</option>
+<option value="7e">Regula nr. 7 (excep&#355ii)</option>
+<option value="8">Regula nr. 8</option>
+<option value="9">Regula nr. 9</option>
+<option value="9e">Regula nr. 9 (excep&#355ii)</option>
+<option value="10">Regula nr. 10</option>
+</select>
+</td>
+</tr>
+<tr bgcolor="silver">
+<td>
+<input type="radio" name="filter" ID="filter_adjectives" value="adjectives" onClick="changeFilter(3)"><font size="2"><b>adjective&nbsp;</b></font>
+</td>
+<td>
+<select ID="filter_adj_rule" onChange="updateDictList()" disabled>
+<option value="all" selected>toate</option>
+<option value="1">Regula nr. 1</option>
+<option value="1e">Regula nr. 1 (excep&#355ii)</option>
+<option value="2">Regula nr. 2</option>
+<option value="3">Regula nr. 3</option>
+<option value="4">Regula nr. 4</option>
+<option value="5">Regula nr. 5</option>
+<option value="5e">Regula nr. 5 (excep&#355ii)</option>
+<option value="6">Regula nr. 6</option>
+<option value="7">Regula nr. 7</option>
+</select>
+</td>
+</tr>
+<tr><td colspan="2">&nbsp;</td></tr>
+<tr>
+<td colspan="2">
+<font size="2" color="white"><b>Caut&#x0103:</b></font>
+<td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+<input type="text" ID="searchw" value="" style="width: 90%;" onKeyup="setTimeout(locateinDictList, 1)">
+</td>
+</tr>
+<tr><td colspan="2">&nbsp;</td></tr>
+<tr>
+<td colspan="2" align="center">
+<select ID="DictList" size="10" style="width: 90%;">
+</select>
+</td>
+</tr>
+<tr><td colspan="2">&nbsp;</td></tr>
+<tr>
+<td colspan="2" align="center">
+<input type="button" value="Arat&#x0103" style="width: 90%;" onClick="showinf()">
+</td>
+</tr>
+<tr><td colspan="2">&nbsp;</td></tr>
+</table>
+</form>
+</center>
+</td>
+<td valign="top" nowrap>
+<span ID="inf" style="background-color: silver; border-style: none; padding: 20px; display: none;">
+</span>
+</td>
+</tr>
+</table>
+</body>
+</html>
+
+
+
+
+
+
+

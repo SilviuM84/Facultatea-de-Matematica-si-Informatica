@@ -1,0 +1,103 @@
+<html>
+<title>P1.2</title>
+<head>
+<script language="JavaScript">
+var tcol= ["red","yellow","blue"]; //tabloul culorilor
+function selecteaza()
+{
+   var val = parseInt(document.getElementById("valid").value); // valoarea numerica din caseta text
+   var tbl = document.getElementById("tblid"); // tabel
+   var colelm = document.getElementById("colid"); // lista de culori
+   var col = tcol[colelm.selectedIndex]; // culoarea selectata in lista, 
+                                         // element al tabloului de culori
+
+   var i;
+   var j;
+   var tds;
+   var tdval;
+
+  // identificarea textului din celulele tabelulului
+  // si colorarea celulelor care contin valori numerice 
+  // mai mari decat valoarea numerica din caseta text
+
+   var trs = tbl.getElementsByTagName("tr");
+   for (i = 0; i < trs.length; i++) {
+      tds = trs[i].getElementsByTagName("td");
+      for (j = 0; j < tds.length; j++) {
+         tdval = tds[j].innerHTML; // continutul celulei (in acest caz text)
+         if (val < parseInt(tdval)) {
+           tds[j].style.backgroundColor=col;
+         }
+      }
+   }
+}
+function deselecteaza() // deselectarea tuturor celulelor tabelului
+{
+   var tbl = document.getElementById("tblid");
+   var i;
+   var j;
+   var tds;
+   var trs = tbl.getElementsByTagName("tr");
+   for (i = 0; i < trs.length; i++) {
+      tds = trs[i].getElementsByTagName("td");
+      for (j = 0; j < tds.length; j++) 
+           tds[j].style.backgroundColor=tbl.style.backgroundColor;
+   }
+}
+</script>
+
+</head>
+<body>
+<form action="" method="get">
+Val &gt; : <input type="text" name="val" id="valid" value="" />
+<br />
+Color:
+<select name="col" id="colid" size="1">
+<option selected> ro&#351;u </option>
+<option> galben </option>
+<option>albastru </option>
+</select>
+<br />
+<input type="button" value="Selecteaz&#259" onclick="selecteaza()">
+<input type="button" value="Deselecteaz&#259" onclick="deselecteaza()">
+</form>
+<hr />
+<table id="tblid" border="3">
+<tr>
+<td>3</td>
+<td>9</td>
+<td>11</td>
+<td>20</td>
+<td>1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>2</td>
+<td>6</td>
+<td>10</td>
+<td>17</td>
+</tr>
+<tr>
+<td>2</td>
+<td>4</td>
+<td>11</td>
+<td>20</td>
+<td>10</td>
+</tr>
+<tr>
+<td>3</td>
+<td>19</td>
+<td>21</td>
+<td>0</td>
+<td>8</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>4</td>
+</tr>
+</table>
+</body>
+</html>

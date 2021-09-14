@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>
+	Anima&#355;ii multiple (2)
+</title>
+<script type="text/javascript">
+var x=1; var pas=10; var i=0; var si;
+function schimba(){
+  var d=document.getElementById('Mobil');
+  var tim = [ "w3c.GIF", "imag.jpg", "http://us.i1.yimg.com/us.yimg.com/i/ww/beta/y3.gif",
+                    "http://www.google.com/intl/ro_ALL/images/logo.gif", "http://fmi.unibuc.ro/ro/img/gif/eng.gif" ];
+  // se reactiveaza butonul care porneste animatia
+  document.getElementById('b').disabled=false;
+  pas=10; x=1;
+  // se selecteaza aleator imaginea si ecuatia curbei descrisa de imagine
+  document.getElementById('Im').src=tim[Math.floor(tim.length*Math.random())];
+  i=Math.floor(3*Math.random());
+  // se opreste animatia deoarece exista un singur apel al metodei setInterval
+  clearInterval(si);
+  // se plaseaza in pozitia initiala stratul cu imaginea 
+  d.style.left='1px'
+  d.style.top='10px'
+}
+function executa() {// se porneste animatia
+  document.getElementById('b').disabled=true; // butonul cu id=="b" 
+  // este dezactivat, deci nu este posibila decat o executie
+  si=setInterval('anim();',100); // animatie
+}
+function anim () { // modificarea pozitiei stratului cu imaginea
+   var y;
+   var cx=0.25*screen.width; 
+   var cy=0.3*screen.height;
+   var d=document.getElementById('Mobil');
+   d.style.left=x+'px'; // determinarea abscisei pozitiei stratului
+   switch (i) {
+// ordonata pozitiei stratului se calculeaza conform ecuatiei alese  
+      case 0: {y=1.5*cy+70-x; if(x>1.5*cx) x=0; break;}
+      case 1: {y=Math.floor(0.65*cy*(Math.sin(Math.PI*x/cx)+1)+70);
+               x=x+pas; if(x>2*cx) x=0; break;}
+      case 2: {y=0.8*cy+80-Math.floor((pas/Math.abs(pas))*Math.sqrt(0.49*cx*cx-Math.pow(x-0.7*cx,2)));
+	         x=x+pas; if(x>1.4*cx || x<1) pas=-pas;}
+   }
+   d.style.top=y+'px';
+   x=x+pas; // calcularea urmatoarei abscise
+}
+</script></head>
+<body>
+    <form>
+        <input type="button" value="Schimb&#259;" onclick="schimba();"/>
+        <br />
+        <input type="button" id= "b" value="Execut&#259;" onclick="executa()"/><br />
+    </form>
+    <div id="Mobil" style="height:100px;width:100px;position:relative;left:1px;top:10px;">
+        <img id="Im" src="w3c.GIF" style="width:100px;border-width:0px;" />
+    </div>
+</body>
+</html>

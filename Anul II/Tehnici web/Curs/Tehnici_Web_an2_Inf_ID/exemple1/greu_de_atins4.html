@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title> Greu de atins - 4</title>
+
+	<style>	
+	
+		.zona{position:relative; height:20; width:100;top:50;left:100; background-color:red;}
+            .buton{position:absolute; height:35; width:150;top:5;left:5}
+
+
+	</style>
+	
+	<script language="JavaScript">
+		var lmax=screen.width; 
+            var tmax=screen.height;
+		
+		function rand1()
+			{
+				var x1=Math.floor(Math.random()*lmax);
+				return x1;
+			}
+
+		function rand2()
+			{
+				var x2=Math.floor(Math.random()*tmax);
+				return x2;
+			}
+
+		function fugi()
+			{
+				var y1=rand1()-40;
+				var y2=rand2()-10;
+                                document.getElementById("z").style.left=y1; 
+                                document.getElementById("z").style.top=y2;
+			}
+	</script>
+</head>
+
+<body onload="alert('Vei reu\u015Fi?')">
+
+	<div class="zona" id="z" onmouseover="setTimeout('fugi()', 100)" >
+		<form>
+
+			<input type="button" class="buton" value = "Atinge-m&#259;!" id="sari" onmousedown="alert('Ai reu\u015Fit! Felicit\u0103ri!')" onclick="alert('Ai reu\u015Fit! Felicit\u0103ri!')"/>
+			
+		</form> 
+	
+	</div>
+
+</body>
+</html>

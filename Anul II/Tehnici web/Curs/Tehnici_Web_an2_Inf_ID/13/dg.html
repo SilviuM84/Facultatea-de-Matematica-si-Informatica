@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Deplasare prin tragere (drag and drop)</title>
+<script language=JavaScript>
+
+var x = 0;
+var y = 0;
+var o = null;
+
+document.onmousedown = inceput; // handler-ele de evenimente sunt setate ca metode
+document.onmouseup = sfarsit;
+document.onmousemove = miscare;
+	
+function inceput(e) // argumentul e este evenimentul curent (event)
+{
+
+   if (document.getElementById("obj") == e.target.parentNode) 
+   { // daca s-a apasat un buton al mouse-ului cursorul fiind pe obiectul
+     // care trebuie deplasat (drag and drop)
+     // se calculeaza coordonatele x, y ale cursorului relativ la 
+     // dreptunghiul ocupat de obiect
+     o = document.getElementById("obj"); // se memoreaza referinta la obiect
+     x = e.clientX - parseInt(o.style.left);
+     y = e.clientY - parseInt(o.style.top);
+
+   }
+
+   return false;
+
+}
+
+function miscare(e) // argumentul e este evenimentul curent (event)
+
+{
+
+   var tmpx = e.clientX - x; 
+   var tmpy = e.clientY - y;
+
+   if (o) {  // daca s-a apasat un buton al mouse-ului cursorul fiind pe obiectul
+             // care trebuie deplasat (drag and drop),
+             // si mouse-ul s-a deplasat cu butonul apasat
+             // obiectul se pozitioneaza la noua pozitie a mouse-ului
+
+
+      o.style.left = tmpx + "px"; 
+      o.style.top = tmpy + "px";
+
+   }
+		
+   return false;
+
+}
+
+
+function sfarsit()
+{ 
+
+   o = null; // la ridicarea butonului se anuleaza referinta
+             // deci continuarea deplasarii mouse-ului nu va atrage depplasarea obiectului
+
+   return false;
+}
+
+</script>
+</head>
+<body>
+<span id="obj" style="left: 0px; top: 0px; position: absolute">
+<img height="48" width="72" src="w3c.gif">
+</span> 
+</body>
+</html>

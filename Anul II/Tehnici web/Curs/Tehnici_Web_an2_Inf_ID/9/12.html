@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Limbajul JavaScript</title>
+</head>
+<body>
+<script>
+<!--
+
+function A()                        // Se defineste super-clasa
+{
+    this.x = 1;
+} 
+A.prototype.DoIt = function()        // Se defineste o metoda
+{
+    this.x += 1;
+} 
+
+B.prototype = new A;                // Se defineste sub-clasa
+B.prototype.constructor = B;
+function B()
+{
+    A.call(this);                    // Se apeleaza constructorul super-clasei (daca se doreste)    
+    this.y = 2;
+} 
+B.prototype.DoIt = function()        // Se defineste o metoda
+{
+    A.prototype.DoIt.call(this);    // Se apeleaza metoda super-clasei (daca se doreste)    
+    this.y += 1;
+} 
+
+b = new B; 
+
+document.write((b instanceof A) + ', ' + (b instanceof B) + '<BR/>');
+b.DoIt();
+document.write(b.x + ', ' + b.y);
+
+//-->
+</script>
+</body>
+</html>

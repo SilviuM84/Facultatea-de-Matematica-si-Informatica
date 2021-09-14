@@ -1,0 +1,553 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en"><head>
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Language" content="en">
+<meta name="description" content="A guide to displaying thousands of foreign and special characters in Web pages, with the aid of Unicode, plus notes on suitable multilingual browsers, fonts, editors and other utilities. Includes lists of the characters in each Unicode range that can be used to test browsers and fonts.">
+<meta name="keywords" content="Unicode, browsers, browser, Web browsers, Web browser, compliance, compatibility, support, languages, character sets, multilingual, multi-lingual, multilanguage, multi-language, fonts, Unicode fonts, scripts, resources, Unicode support">
+<meta name="author" content="Alan Wood">
+<meta name="copyright" content="Copyright © 1999-2007 Alan Wood">
+<meta name="robots" content="noodp">
+<meta name="googlebot" content="noodp">
+<meta name="msnbot" content="noodp">
+<meta name="dmoz.id" content="Computers/Software/Globalization/Character_Encoding/Unicode/">
+<link rel="stylesheet" type="text/css" href="Unicode%20and%20multilingual%20support%20in%20HTML,%20fonts,%20Web%20browsers%20and%20other%20applications_files/utilities.css">
+<link rel="up" href="http://www.alanwood.net/index.html" title="Alan Wood's Web Site">
+<link rel="contents" href="http://www.alanwood.net/unicode/sitemap.html" title="Site map for Alan Wood's Unicode Resources">
+<link rel="search" href="http://www.alanwood.net/unicode/search.html" title="Search for a Unicode character">
+<link rel="copyright" href="http://www.alanwood.net/unicode/legal.html#copyright">
+<link rel="shortcut icon" href="http://www.alanwood.net/unicode/fav_uni.ico">
+<link rel="prefetch" href="http://www.alanwood.net/unicode/appslist.html">
+<link rel="prefetch" href="http://www.alanwood.net/unicode/fontlist.html">
+<link rel="prefetch" href="http://www.alanwood.net/unicode/menu.html">
+<link rel="alternate" type="application/rss+xml" href="http://www.alanwood.net/news/unicode.rss" title="Updates to Alan Wood's Unicode Resources">
+<link rel="schema.DC" href="http://www.dublincore.org/usage/terms/dc/current-elements/">
+<meta name="DC.Creator" content="Wood, Alan Miles">
+<meta name="DC.Date.Created" scheme="ISO8601" content="19990203">
+<meta name="DC.Title" content="Alan Wood's Unicode Resources">
+<meta name="DC.Publisher" content="Alan Wood">
+<meta name="DC.Language" scheme="rfc1766" content="en">
+<meta name="DC.Rights" content="Copyright 1999-2007 Alan Wood - All rights reserved">
+<meta name="DC.Description" content="A guide to displaying thousands of foreign and special characters in Web pages, with the aid of Unicode, plus notes on suitable multilingual browsers, fonts, editors and other utilities. Includes lists of the characters in each Unicode range that can be used to test browsers and fonts.">
+<meta name="DC.Type" content="Web home page">
+<meta name="DC.Format" scheme="IMT" content="text/html">
+<meta name="DC.Identifier" content="http://www.alanwood.net/unicode/">
+<meta name="DC.Date.Updated" scheme="ISO8601" content="20070926">
+<meta name="DC.Relation.References" content="urn:isbn:0-201-61633-5">
+<script language="JavaScript" type="text/javascript">
+<!--
+menu=new Object
+menu.closed=true
+function openMenu() {menu=window.open("menu.html", "menu", "top=5,left=5,width=260,height=450,scrollbars=yes")}
+function closeMenu() {if(menu.closed==false) menu.close()}
+function openAppslist() {menu=window.open("appslist.html", "menu", "top=5,left=5,width=260,height=450,scrollbars=yes")}
+function openFontlist() {menu=window.open("fontlist.html", "menu", "top=5,left=5,width=260,height=450,scrollbars=yes")}
+// -->
+</script>
+<link rel="meta" href="http://www.alanwood.net/unicode/labels.rdf" type="application/rdf+xml" title="ICRA labels">
+<meta http-equiv="pics-Label" content="(pics-1.1 &quot;http://www.icra.org/pics/vocabularyv03/&quot; l gen true for &quot;http://alanwood.net/unicode&quot; r (n 0 s 0 v 0 l 0 oa 0 ob 0 oc 0 od 0 oe 0 of 0 og 0 oh 0 c 0) gen true for &quot;http://www.alanwood.net/unicode&quot; r (n 0 s 0 v 0 l 0 oa 0 ob 0 oc 0 od 0 oe 0 of 0 og 0 oh 0 c 0))"><title>Unicode and multilingual support in HTML, fonts, Web browsers and other applications</title></head><body onunload="closeMenu()" bgcolor="#fffff2" text="#000000"><a name="top"></a>
+
+<div align="center"><table width="600"><tbody><tr><td align="left">
+
+<h1>Alan Wood’s Unicode Resources</h1>
+
+<h2>Unicode and Multilingual Support in HTML, Fonts, Web Browsers and Other Applications</h2>
+
+<table width="100%">
+<tbody><tr valign="top">
+<td><ul>
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#links">Characters</a></li>
+<li><a href="http://www.alanwood.net/unicode/fonts.html">Fonts</a></li>
+<li><a href="http://www.alanwood.net/unicode/browsers.html">Browsers</a></li>
+<li><a href="http://www.alanwood.net/unicode/utilities.html">Applications and utilities</a></li>
+<li><a href="http://www.alanwood.net/unicode/utilities_editors.html#word97">Word 97, Word 2000 and Word 2002</a></li>
+<li><a href="http://www.alanwood.net/unicode/htmlunicode.html">Creating multilingual Web pages</a></li>
+<li><a href="#proponents">Links</a></li>
+<li><a href="http://www.alanwood.net/unicode/legal.html">Copyright, Terms and Conditions</a></li>
+<li><a href="http://www.alanwood.net/news/index.html">RSS newsfeed of updates</a> &nbsp;<a href="http://www.alanwood.net/news/unicode.rss" type="application/rss+xml"><img src="Unicode%20and%20multilingual%20support%20in%20HTML,%20fonts,%20Web%20browsers%20and%20other%20applications_files/rss-icon.gif" alt="RSS icon" title="RSS newsfeed of updates to the Unicode Resources" align="bottom" border="0" height="14" width="14"></a></li>
+</ul></td>
+<td align="right" width="215"><img src="Unicode%20and%20multilingual%20support%20in%20HTML,%20fonts,%20Web%20browsers%20and%20other%20applications_files/unianim.gif" alt="Animated GIF of various characters" border="0" height="142" width="200"></td>
+</tr>
+</tbody></table>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+document.write("<p align=\"center\"><a href=\"JavaScript:openMenu();\"><img src=\"menu.gif\" width=\"76\" height=\"25\" border=\"0\" alt=\"Menu\" title=\"Open the menu of Unicode resources in a separate window\"><\/a> \u00A0 \u00A0 \u00A0 <a href=\"sitemap.html\"><img src=\"sitemap.gif\" width=\"76\" height=\"25\" border=\"0\" alt=\"Site Map\" title=\"Go to a list of all of the pages on this Web site\"><\/a> \u00A0 \u00A0 \u00A0 <a href=\"JavaScript:openAppslist();\"><img src=\"appslist.gif\" width=\"76\" height=\"25\" border=\"0\" alt=\"Applications\" title=\"Open the menu of Unicode applications in a separate window.\"><\/a> \u00A0 \u00A0 \u00A0 <a href=\"JavaScript:openFontlist();\"><img src=\"fontlist.gif\" width=\"76\" height=\"25\" border=\"0\" alt=\"Font List\" title=\"Open the menu of Unicode fonts in a separate window\"><\/a><\/p>");
+// -->
+</script><p align="center"><a href="javascript:openMenu();"><img src="Unicode%20and%20multilingual%20support%20in%20HTML,%20fonts,%20Web%20browsers%20and%20other%20applications_files/menu.gif" alt="Menu" title="Open the menu of Unicode resources in a separate window" border="0" height="25" width="76"></a> &nbsp; &nbsp; &nbsp; <a href="http://www.alanwood.net/unicode/sitemap.html"><img src="Unicode%20and%20multilingual%20support%20in%20HTML,%20fonts,%20Web%20browsers%20and%20other%20applications_files/sitemap.gif" alt="Site Map" title="Go to a list of all of the pages on this Web site" border="0" height="25" width="76"></a> &nbsp; &nbsp; &nbsp; <a href="javascript:openAppslist();"><img src="Unicode%20and%20multilingual%20support%20in%20HTML,%20fonts,%20Web%20browsers%20and%20other%20applications_files/appslist.gif" alt="Applications" title="Open the menu of Unicode applications in a separate window." border="0" height="25" width="76"></a> &nbsp; &nbsp; &nbsp; <a href="javascript:openFontlist();"><img src="Unicode%20and%20multilingual%20support%20in%20HTML,%20fonts,%20Web%20browsers%20and%20other%20applications_files/fontlist.gif" alt="Font List" title="Open the menu of Unicode fonts in a separate window" border="0" height="25" width="76"></a></p>
+
+<noscript>
+<p align="center"><a href="sitemap.html"><img src="sitemap.gif"
+width="76" height="25" border="0" alt="Site Map" title="Go to a list of
+all of the pages on this Web site"></a> &nbsp; &nbsp; &nbsp; <a
+href="utilities.html"><img src="appslist.gif" width="76" height="25"
+border="0" alt="Applications" title="Go to a list of Unicode programs
+and utilities."></a> &nbsp; &nbsp; &nbsp; <a
+href="fontlist_noscript.html"><img src="fontlist.gif" width="76"
+height="25" border="0" alt="Font List" title="Go to a menu of Unicode
+fonts."></a></p>
+</noscript>
+
+<a name="intro"></a>
+<hr>
+
+<h3>Introduction</h3>
+
+<p>Have you ever tried to include a passage in a different alphabet in
+one of your documents, for example a quotation in Russian in an English
+document, only to find that you have no Cyrillic characters available?
+Or sent a Spanish document in electronic form to someone in Greece,
+only to be told that the accented Latin characters have been replaced
+by Greek characters? Or produced a Web page that includes technical
+symbols and found that it works with Windows but not with Mac OS or
+Unix? Problems like these arise with <a href="http://www.alanwood.net/demos/ansi.html#nonlatin">non-Latin alphabets</a> and <a href="http://www.alanwood.net/demos/symbol.html">Symbol fonts</a>
+because until recently most computers used fonts that contain a maximum
+of 256 characters. The first 128 characters (the ASCII characters) of
+most fonts include punctuation marks, numbers and the letters a-z and
+A-Z, and are not a problem. In the USA, Canada, the United Kingdom, the
+rest of the English-speaking world and much of Western Europe, the
+second set of 128 characters comprises more punctuation marks, some
+currency symbols (such as £ and ¥) and a lot of accented letters (such
+as á, ç, è, ñ, ô and ü). Older English versions of Microsoft Windows,
+and several other language editions, used this set of 256 characters,
+which is known as the <a href="http://www.alanwood.net/demos/ansi.html">ANSI character set</a>.</p>
+
+<p>If you live in a country such as Egypt, Greece, Israel, Russia or
+Thailand that uses a different alphabet, then your version of Windows
+may use a different character set. The first 128 characters will be the
+same as in ANSI, but many of the places in the second set of 128 will
+be taken by characters from the Arabic, Greek, Hebrew, Cyrillic or Thai
+alphabets. Now that documents are often transferred electronically as
+e-mail messages, e-mail attachments or Web pages, instead of on paper,
+reading documents from another country, particularly a country with a
+different alphabet, is becoming more of a problem. There are similar
+problems when moving documents between operating systems such as DOS,
+Windows, Mac OS and UNIX.</p>
+
+<p>The solution is to leave behind the assortment of 8-bit fonts with
+their limit of 256 characters, where the same character number can
+represent a different character in different alphabets, and move to a
+system that assigns a unique number to each character in each of the
+major languages of the world. Such a system has been developed and is
+known as Unicode. It is intended for use on all computer systems, not
+just Windows, and covers Chinese, Japanese and Korean as well as the
+alphabets for many other languages and scripts, plus a large number of
+special characters. Some Unicode support has been included in Microsoft
+Windows since Windows 95, and Windows NT 4, Windows 2000 and Windows XP
+are based on Unicode instead of the ANSI or WGL4 character sets. Some
+Unicode support has been included in Mac OS since Mac OS 8.5, but prior
+to Mac OS X 10 only limited use was been made of it by applications.
+Unicode is often referred to as a 16-bit system, which would allow for
+only 65,536 characters, but this is not correct, and Unicode has the
+potential to cope with over one million unique characters.</p>
+
+<p>The current version (5.0.0) of the <a href="http://www.unicode.org/unicode/standard/standard.html">Unicode Standard</a>, developed by the <a href="http://www.unicode.org/">Unicode Consortium</a>,
+assigns a unique identifier to each of 99,024 graphical and formatting
+characters, covering the scripts of the world’s principal written
+languages and many mathematical and other symbols. A previous version
+(2.1) of the Unicode Standard encompassed 38,887 characters and was
+adopted as part of the recommendations for HTML 4.0.</p>
+
+<table class="border" border="1" cellpadding="4" cellspacing="0">
+<tbody><tr>
+<th>Version</th><th>Date</th><th>Increase</th><th>Characters</th>
+</tr>
+<tr>
+<td>1.1.0</td><td>June 1993</td><td></td><td>33,979</td>
+</tr>
+<tr>
+<td>2.0.0</td><td>July 1996</td><td>4906</td><td>38,885</td>
+</tr>
+<tr>
+<td>2.1.2</td><td>May 1998</td><td>2</td><td>38,887</td>
+</tr>
+<tr>
+<td>3.0.0</td><td>September 1999</td><td>10,307</td><td>49,194</td>
+</tr>
+<tr>
+<td>3.1.0</td><td>March 2001</td><td>44,946</td><td>94,140</td>
+</tr>
+<tr>
+<td>3.2.0</td><td>March 2002</td><td>1,016</td><td>95,156</td>
+</tr>
+<tr>
+<td>4.0.0</td><td>April 2003</td><td>1,226</td><td>96,382</td>
+</tr>
+<tr>
+<td>4.1.0</td><td>March 2005</td><td>1,273</td><td>97,655</td>
+</tr>
+<tr>
+<td>5.0.0</td><td>July 2006</td><td>1,369</td><td>99,024</td>
+</tr>
+</tbody></table>
+
+
+<p>On this Web site, I have tried to gather together practical
+information about Unicode and the increasing number of applications and
+fonts that support it, intended to help people who are trying to use
+Unicode to produce standardised multilingual and technical documents.
+The pages on the site include:</p>
+
+<dl>
+<dt><a href="#links">Test pages for Unicode ranges</a></dt><dd>Lists of Unicode characters that you can use to test the Unicode support of your Web browser and fonts.</dd>
+<dt><a href="http://www.alanwood.net/unicode/search.html">Search for a Unicode character</a></dt><dd>Search the test pages to find any character that you want to use.</dd>
+<dt><a href="http://www.alanwood.net/unicode/fontsbyrange.html">Fonts for each Unicode range</a></dt><dd>A list of Unicode ranges and the fonts that support them.</dd>
+<dt>Unicode fonts</dt><dd>Lists of fonts for <a href="http://www.alanwood.net/unicode/fonts.html">Windows</a>, <a href="http://www.alanwood.net/unicode/fonts_mac.html">Mac OS 9</a>, <a href="http://www.alanwood.net/unicode/fonts_macosx.html">Mac OS X 10</a> and <a href="http://www.alanwood.net/unicode/fonts_unix.html">Unix</a>, with the Unicode ranges they support, and where to obtain them.</dd>
+<dt><a href="http://www.alanwood.net/unicode/macbrowsers.html">Browsers for Apple Macintosh computers</a></dt><dd>How to enable Unicode support in Web browsers under Mac OS 9.</dd>
+<dt><a href="http://www.alanwood.net/unicode/explorer.html">Internet Explorer for Windows</a></dt><dd>How to enable Unicode support in IE 4, IE 5, IE 5.5 and IE 6.</dd>
+<dt><a href="http://www.alanwood.net/unicode/netscape.html">Netscape for Windows</a></dt><dd>How to enable Unicode support in Netscape Communicator 4.x and 6.x.</dd>
+<dt>Editors and word processors</dt><dd>Applications for <a href="http://www.alanwood.net/unicode/utilities_editors.html">Windows</a>, <a href="http://www.alanwood.net/unicode/utilities_editors_mac.html">Mac OS 9</a>, <a href="http://www.alanwood.net/unicode/utilities_editors_macosx.html">Mac OS X 10</a> and <a href="http://www.alanwood.net/unicode/utilities_editors_unix.html">Unix</a> that can produce Unicode text, HTML and word processor documents.</dd>
+<dt>File conversion, font and keyboard utilities</dt><dd>Utilities for <a href="http://www.alanwood.net/unicode/utilities_fonts_mac.html">Mac OS 9</a>, <a href="http://www.alanwood.net/unicode/utilities_fonts_macosx.html">Mac OS X 10</a>, <a href="http://www.alanwood.net/unicode/utilities_fonts.html">Windows</a> and <a href="http://www.alanwood.net/unicode/utilities_fonts_unix.html">Unix</a>
+that can convert files to and from Unicode, view the characters in
+Unicode fonts, or re-map your keyboard to type Unicode characters.</dd>
+<dt><a href="http://www.alanwood.net/unicode/htmlunicode.html">Creating multilingual Web pages</a></dt><dd>HTML code, fonts and editors to help you produce Web pages with multiple scripts and languages</dd>
+</dl>
+
+<p>For a complete list of pages on the site, please see the <a href="http://www.alanwood.net/unicode/sitemap.html">Site Map</a>.</p>
+
+<a href="#top"><img src="Unicode%20and%20multilingual%20support%20in%20HTML,%20fonts,%20Web%20browsers%20and%20other%20applications_files/top.gif" alt="Top" title="Go to the top of the page" border="0" height="25" width="76"></a>
+
+
+<a name="links"></a>
+<hr>
+
+<h3>Test pages for Unicode character ranges</h3>
+
+<p>The pages in the following list can be used to display the ranges of
+characters defined in the Unicode 3.0 Character Database, within the
+limitations imposed by your Web browser and the proportional font that
+you are using. There is also a page with a <a href="http://www.alanwood.net/unicode/unicode_samples.html">sample of Unicode characters</a> from each range.</p>
+
+<table>
+<tbody><tr valign="top">
+<td colspan="2"><h4>General Scripts</h4></td>
+</tr>
+<tr valign="top">
+<td nowrap="nowrap" width="350">
+<ul>
+<li><a href="http://www.alanwood.net/unicode/basic_latin.html">Basic Latin</a></li>
+<li><a href="http://www.alanwood.net/unicode/latin_1_supplement.html">Latin-1 Supplement</a></li>
+<li><a href="http://www.alanwood.net/unicode/latin_extended_a.html">Latin Extended-A</a></li>
+<li><a href="http://www.alanwood.net/unicode/latin_extended_b.html">Latin Extended-B</a></li>
+<li><a href="http://www.alanwood.net/unicode/latin-extended-c.html">Latin Extended-C</a></li>
+<li><a href="http://www.alanwood.net/unicode/latin-extended-d.html">Latin Extended-D</a></li>
+<li><a href="http://www.alanwood.net/unicode/latin_extended_additional.html">Latin Extended Additional</a></li>
+<li><a href="http://www.alanwood.net/unicode/ipa_extensions.html">IPA Extensions</a></li>
+<li><a href="http://www.alanwood.net/unicode/phonetic_extensions.html">Phonetic Extensions</a></li>
+<li><a href="http://www.alanwood.net/unicode/phonetic-extensions-supplement.html">Phonetic Extensions Supplement</a></li>
+<li><a href="http://www.alanwood.net/unicode/arabic.html">Arabic</a></li>
+<li><a href="http://www.alanwood.net/unicode/arabic-supplement.html">Arabic Supplement</a></li>
+<li><a href="http://www.alanwood.net/unicode/armenian.html">Armenian</a></li>
+<li><a href="http://www.alanwood.net/unicode/balinese.html">Balinese</a></li>
+<li><a href="http://www.alanwood.net/unicode/bengali.html">Bengali</a></li>
+<li><a href="http://www.alanwood.net/unicode/buginese.html">Buginese</a></li>
+<li><a href="http://www.alanwood.net/unicode/buhid.html">Buhid</a></li>
+<li><a href="http://www.alanwood.net/unicode/unified_canadian_aboriginal_syllabics.html">Canadian Aboriginal Syllabics</a></li>
+<li><a href="http://www.alanwood.net/unicode/cherokee.html">Cherokee</a></li>
+<li><a href="http://www.alanwood.net/unicode/coptic.html">Coptic</a></li>
+<li><a href="http://www.alanwood.net/unicode/cuneiform.html">Cuneiform</a></li>
+<li><a href="http://www.alanwood.net/unicode/cuneiform-numbers-and-punctuation.html">Cuneiform Numbers and Punctuation</a></li>
+<li><a href="http://www.alanwood.net/unicode/cypriot_syllabary.html">Cypriot Syllabary</a></li>
+<li><a href="http://www.alanwood.net/unicode/cyrillic.html">Cyrillic</a></li>
+<li><a href="http://www.alanwood.net/unicode/cyrillic-supplement.html">Cyrillic Supplement</a></li>
+<li><a href="http://www.alanwood.net/unicode/deseret.html">Deseret</a></li>
+<li><a href="http://www.alanwood.net/unicode/devanagari.html">Devanagari</a></li>
+<li><a href="http://www.alanwood.net/unicode/ethiopic.html">Ethiopic</a></li>
+<li><a href="http://www.alanwood.net/unicode/ethiopic-extended.html">Ethiopic Extended</a></li>
+<li><a href="http://www.alanwood.net/unicode/ethiopic-supplement.html">Ethiopic Supplement</a></li>
+<li><a href="http://www.alanwood.net/unicode/georgian.html">Georgian</a></li>
+<li><a href="http://www.alanwood.net/unicode/georgian-supplement.html">Georgian Supplement</a></li>
+<li><a href="http://www.alanwood.net/unicode/gothic.html">Gothic</a></li>
+<li><a href="http://www.alanwood.net/unicode/glagolitic.html">Glagolitic</a></li>
+<li><a href="http://www.alanwood.net/unicode/greek.html">Greek and Coptic</a></li>
+<li><a href="http://www.alanwood.net/unicode/greek_extended.html">Greek Extended</a></li>
+<li><a href="http://www.alanwood.net/unicode/gujarati.html">Gujarati</a></li>
+<li><a href="http://www.alanwood.net/unicode/gurmukhi.html">Gurmukhi</a></li>
+<li><a href="http://www.alanwood.net/unicode/hanunoo.html">Hanunóo</a></li>
+<li><a href="http://www.alanwood.net/unicode/hebrew.html">Hebrew</a></li>
+<li><a href="http://www.alanwood.net/unicode/kannada.html">Kannada</a></li>
+</ul>
+</td>
+<td nowrap="nowrap">
+<ul>
+<li><a href="http://www.alanwood.net/unicode/kharoshthi.html">Kharoshthi</a></li>
+<li><a href="http://www.alanwood.net/unicode/khmer.html">Khmer</a></li>
+<li><a href="http://www.alanwood.net/unicode/khmer_symbols.html">Khmer Symbols</a></li>
+<li><a href="http://www.alanwood.net/unicode/lao.html">Lao</a></li>
+<li><a href="http://www.alanwood.net/unicode/limbu.html">Limbu</a></li>
+<li><a href="http://www.alanwood.net/unicode/linear_b_ideograms.html">Linear B Ideograms</a></li>
+<li><a href="http://www.alanwood.net/unicode/linear_b_syllabary.html">Linear B Syllabary</a></li>
+<li><a href="http://www.alanwood.net/unicode/malayalam.html">Malayalam</a></li>
+<li><a href="http://www.alanwood.net/unicode/mongolian.html">Mongolian</a></li>
+<li><a href="http://www.alanwood.net/unicode/myanmar.html">Myanmar</a></li>
+<li><a href="http://www.alanwood.net/unicode/new-tai-lue.html">New Tai Lue</a></li>
+<li><a href="http://www.alanwood.net/unicode/n%27ko.html">N’Ko</a></li>
+<li><a href="http://www.alanwood.net/unicode/ogham.html">Ogham</a></li>
+<li><a href="http://www.alanwood.net/unicode/old_italic.html">Old Italic</a></li>
+<li><a href="http://www.alanwood.net/unicode/old-persian.html">Old Persian</a></li>
+<li><a href="http://www.alanwood.net/unicode/oriya.html">Oriya</a></li>
+<li><a href="http://www.alanwood.net/unicode/osmanya.html">Osmanya</a></li>
+<li><a href="http://www.alanwood.net/unicode/phags-pa.html">Phags-pa</a></li>
+<li><a href="http://www.alanwood.net/unicode/phoenician.html">Phoenician</a></li>
+<li><a href="http://www.alanwood.net/unicode/runic.html">Runic</a></li>
+<li><a href="http://www.alanwood.net/unicode/shavian.html">Shavian</a></li>
+<li><a href="http://www.alanwood.net/unicode/sinhala.html">Sinhala</a></li>
+<li><a href="http://www.alanwood.net/unicode/syriac.html">Syriac</a></li>
+<li><a href="http://www.alanwood.net/unicode/syloti-nagri.html">Syloti Nagri</a></li>
+<li><a href="http://www.alanwood.net/unicode/tagalog.html">Tagalog</a></li>
+<li><a href="http://www.alanwood.net/unicode/tagbanwa.html">Tagbanwa</a></li>
+<li><a href="http://www.alanwood.net/unicode/tai_le.html">Tai Le</a></li>
+<li><a href="http://www.alanwood.net/unicode/tamil.html">Tamil</a></li>
+<li><a href="http://www.alanwood.net/unicode/telugu.html">Telugu</a></li>
+<li><a href="http://www.alanwood.net/unicode/thaana.html">Thaana</a></li>
+<li><a href="http://www.alanwood.net/unicode/thai.html">Thai</a></li>
+<li><a href="http://www.alanwood.net/unicode/tibetan.html">Tibetan</a></li>
+<li><a href="http://www.alanwood.net/unicode/tifinagh.html">Tifinagh</a></li>
+<li><a href="http://www.alanwood.net/unicode/ugaritic.html">Ugaritic</a></li>
+<li><a href="http://www.alanwood.net/unicode/yi_radicals.html">Yi Radicals</a></li>
+<li><a href="http://www.alanwood.net/unicode/yi_syllables.html">Yi Syllables</a></li>
+<li><a href="http://www.alanwood.net/unicode/combining_diacritical_marks.html">Combining Diacritical Marks</a></li>
+<li><a href="http://www.alanwood.net/unicode/combining-diacritical-marks-supplement.html">Combining Diacritical Marks Supplement</a></li>
+<li><a href="http://www.alanwood.net/unicode/modifier-tone-letters.html">Modifier Tone Letters</a></li>
+<li><a href="http://www.alanwood.net/unicode/spacing_modifier_letters.html">Spacing Modifier Letters</a></li>
+</ul>
+</td></tr>
+</tbody></table>
+
+<br>
+
+<table>
+<tbody><tr valign="top">
+<td colspan="2"><h4>Symbols</h4></td>
+</tr>
+<tr valign="top">
+<td nowrap="nowrap" width="350">
+<ul>
+<li><a href="http://www.alanwood.net/unicode/ancient-greek-musical-notation.html">Ancient Greek Musical Notation</a></li>
+<li><a href="http://www.alanwood.net/unicode/arrows.html">Arrows</a></li>
+<li><a href="http://www.alanwood.net/unicode/supplemental_arrows_a.html">Supplemental Arrows-A</a></li>
+<li><a href="http://www.alanwood.net/unicode/supplemental_arrows_b.html">Supplemental Arrows-B</a></li>
+<li><a href="http://www.alanwood.net/unicode/block_elements.html">Block Elements</a></li>
+<li><a href="http://www.alanwood.net/unicode/box_drawing.html">Box Drawing</a></li>
+<li><a href="http://www.alanwood.net/unicode/braille_patterns.html">Braille Patterns</a></li>
+<li><a href="http://www.alanwood.net/unicode/byzantine_musical_symbols.html">Byzantine Musical Symbols</a></li>
+<li><a href="http://www.alanwood.net/unicode/combining_diacritical_marks_for_symbols.html">Combining Diacritical Marks for Symbols</a></li>
+<li><a href="http://www.alanwood.net/unicode/control_pictures.html">Control Pictures</a></li>
+<li><a href="http://www.alanwood.net/unicode/currency_symbols.html">Currency Symbols</a></li>
+<li><a href="http://www.alanwood.net/unicode/dingbats.html">Dingbats</a></li>
+<li><a href="http://www.alanwood.net/unicode/enclosed_alphanumerics.html">Enclosed Alphanumerics</a></li>
+<li><a href="http://www.alanwood.net/unicode/general_punctuation.html">General Punctuation</a></li>
+<li><a href="http://www.alanwood.net/unicode/supplemental-punctuation.html">Supplemental Punctuation</a></li>
+<li><a href="http://www.alanwood.net/unicode/geometric_shapes.html">Geometric Shapes</a></li>
+</ul>
+</td>
+<td nowrap="nowrap">
+<ul>
+<li><a href="http://www.alanwood.net/unicode/letterlike_symbols.html">Letterlike Symbols</a></li>
+<li><a href="http://www.alanwood.net/unicode/mathematical_alphanumeric_symbols.html">Mathematical Alphanumeric Symbols</a></li>
+<li><a href="http://www.alanwood.net/unicode/miscellaneous_mathematical_symbols_a.html">Miscellaneous Mathematical Symbols-A</a></li>
+<li><a href="http://www.alanwood.net/unicode/miscellaneous_mathematical_symbols_b.html">Miscellaneous Mathematical Symbols-B</a></li>
+<li><a href="http://www.alanwood.net/unicode/mathematical_operators.html">Mathematical Operators</a></li>
+<li><a href="http://www.alanwood.net/unicode/supplemental_mathematical_operators.html">Supplemental Mathematical Operators</a></li>
+<li><a href="http://www.alanwood.net/unicode/miscellaneous_symbols.html">Miscellaneous Symbols</a></li>
+<li><a href="http://www.alanwood.net/unicode/miscellaneous_symbols_and_arrows.html">Miscellaneous Symbols and Arrows</a></li>
+<li><a href="http://www.alanwood.net/unicode/miscellaneous_technical.html">Miscellaneous Technical</a></li>
+<li><a href="http://www.alanwood.net/unicode/musical_symbols.html">Musical Symbols</a></li>
+<li><a href="http://www.alanwood.net/unicode/number_forms.html">Number Forms</a></li>
+<li><a href="http://www.alanwood.net/unicode/optical_character_recognition.html">Optical Character Recognition</a></li>
+<li><a href="http://www.alanwood.net/unicode/superscripts_and_subscripts.html">Superscripts and Subscripts</a></li>
+<li><a href="http://www.alanwood.net/unicode/tai_xuan_jing_symbols.html">Tai Xuan Jing Symbols</a></li>
+<li><a href="http://www.alanwood.net/unicode/yijing_hexagram_symbols.html">Yijing Hexagram Symbols</a></li>
+</ul>
+</td></tr>
+</tbody></table>
+
+<br>
+
+<table>
+<tbody><tr valign="top">
+<td nowrap="nowrap" width="350">
+<h4>Miscellaneous</h4>
+
+<ul>
+<li><a href="http://www.alanwood.net/unicode/aegean_numbers.html">Aegean Numbers</a></li>
+<li><a href="http://www.alanwood.net/unicode/alphabetic_presentation_forms.html">Alphabetic Presentation Forms</a></li>
+<li><a href="http://www.alanwood.net/unicode/ancient-greek-numbers.html">Ancient Greek Numbers</a></li>
+<li><a href="http://www.alanwood.net/unicode/arabic_presentation_forms_a.html">Arabic Presentation Forms-A</a></li>
+<li><a href="http://www.alanwood.net/unicode/arabic_presentation_forms_b.html">Arabic Presentation Forms-B</a></li>
+<li><a href="http://www.alanwood.net/unicode/combining_half_marks.html">Combining Half Marks</a></li>
+<li><a href="http://www.alanwood.net/unicode/counting-rod-numerals.html">Counting Rod Numerals</a></li>
+<li><a href="http://www.alanwood.net/unicode/halfwidth_and_fullwidth_forms.html">Halfwidth and Fullwidth Forms</a></li>
+<li><a href="http://www.alanwood.net/unicode/small_form_variants.html">Small Form Variants</a></li>
+<li><a href="http://www.alanwood.net/unicode/specials.html">Specials</a></li>
+<li><a href="http://www.alanwood.net/unicode/tags.html">Tags</a></li>
+<li><a href="http://www.alanwood.net/unicode/low_surrogates.html">Low Surrogates</a></li>
+<li><a href="http://www.alanwood.net/unicode/high_surrogates.html">High Surrogates</a></li>
+<li><a href="http://www.alanwood.net/unicode/private_use_area.html">Private Use Area</a></li>
+<li><a href="http://www.alanwood.net/unicode/private_use_high_surrogates.html">Private Use High Surrogates</a></li>
+<li><a href="http://www.alanwood.net/unicode/private_use_f0000.html">Private Use (Plane 15)</a></li>
+<li><a href="http://www.alanwood.net/unicode/private_use_100000.html">Private Use (Plane 16)</a></li>
+<li><a href="http://www.alanwood.net/unicode/variation_selectors.html">Variation Selectors</a></li>
+<li><a href="http://www.alanwood.net/unicode/variation_selectors_supplement.html">Variation Selectors Supplement</a></li>
+</ul>
+
+</td>
+<td nowrap="nowrap">
+
+<h4>Chinese, Japanese and Korean</h4>
+
+<ul>
+<li><a href="http://www.alanwood.net/unicode/bopomofo.html">Bopomofo</a></li>
+<li><a href="http://www.alanwood.net/unicode/bopomofo_extended.html">Bopomofo Extended</a></li>
+<li><a href="http://www.alanwood.net/unicode/cjk_compatibility.html">CJK Compatibility</a></li>
+<li><a href="http://www.alanwood.net/unicode/cjk_compatibility_forms.html">CJK Compatibility Forms</a></li>
+<li><a href="http://www.alanwood.net/unicode/cjk_compatibility_ideographs.html">CJK Compatibility Ideographs</a></li>
+<li><a href="http://www.alanwood.net/unicode/cjk_compatibility_ideographs_supplement.html">CJK Compatibility Ideographs Supplement</a></li>
+<li><a href="http://www.alanwood.net/unicode/cjk_radicals_supplement.html">CJK Radicals Supplement</a></li>
+<li><a href="http://www.alanwood.net/unicode/cjk-strokes.html">CJK Strokes</a></li>
+<li><a href="http://www.alanwood.net/unicode/cjk_symbols_and_punctuation.html">CJK Symbols and Punctuation</a></li>
+<li><a href="http://www.alanwood.net/unicode/cjk_unified_ideographs.html">CJK Unified Ideographs</a></li>
+<li><a href="http://www.alanwood.net/unicode/cjk_unified_ideographs_extension_a.html">CJK Unified Ideographs Extension A</a></li>
+<li><a href="http://www.alanwood.net/unicode/cjk_unified_ideographs_extension_b.html">CJK Unified Ideographs Extension B</a></li>
+<li><a href="http://www.alanwood.net/unicode/enclosed_cjk_letters_and_months.html">Enclosed CJK Letters and Months</a></li>
+<li><a href="http://www.alanwood.net/unicode/hangul_compatibility_jamo.html">Hangul Compatibility Jamo</a></li>
+<li><a href="http://www.alanwood.net/unicode/hangul_jamo.html">Hangul Jamo</a></li>
+<li><a href="http://www.alanwood.net/unicode/hangul_syllables.html">Hangul Syllables</a></li>
+<li><a href="http://www.alanwood.net/unicode/hiragana.html">Hiragana</a></li>
+<li><a href="http://www.alanwood.net/unicode/ideographic_description_characters.html">Ideographic Description Characters</a></li>
+<li><a href="http://www.alanwood.net/unicode/kanbun.html">Kanbun</a></li>
+<li><a href="http://www.alanwood.net/unicode/kangxi_radicals.html">KangXi Radicals</a></li>
+<li><a href="http://www.alanwood.net/unicode/katakana.html">Katakana</a></li>
+<li><a href="http://www.alanwood.net/unicode/katakana_phonetic_extensions.html">Katakana Phonetic Extensions</a></li>
+<li><a href="http://www.alanwood.net/unicode/vertical-forms.html">Vertical Forms</a></li>
+</ul>
+
+</td></tr>
+</tbody></table>
+
+<a href="#top"><img src="Unicode%20and%20multilingual%20support%20in%20HTML,%20fonts,%20Web%20browsers%20and%20other%20applications_files/top.gif" alt="Top" title="Go to the top of the page" border="0" height="25" width="76"></a>
+
+
+<a name="proponents"></a>
+<hr>
+
+<h3>Web sites of other Unicode proponents</h3>
+
+<dl>
+
+<!-- <dt>Alan Flavell</dt>
+<dd><a href="http://ppewww.ph.gla.ac.uk/~flavell/unicode/">Unicode test material</a></dd> -->
+
+<dt>Andrew Cunningham</dt>
+<dd><a href="http://home.vicnet.net.au/%7Eandrewc/papers/cn99.html">Multilingual Unicode web page development</a></dd>
+
+<dt>Apple Computer, Inc.</dt>
+<dd><a href="http://developer.apple.com/documentation/Carbon/Reference/Unicode_Utilities_Ref/index.html">Unicode Utilities</a></dd>
+
+<dt>Babel</dt>
+<dd><a href="http://alis.isoc.org/index.en.html">Towards communicating on the Internet in any language... </a></dd>
+
+<dt>Brian Wilson</dt>
+<dd><a href="http://www.blooberry.com/indexdot/html/tagpages/text.htm">Text in HTML...</a></dd>
+
+<dt>Bruno Haible</dt>
+<dd><a href="ftp://ftp.ilog.fr/pub/Users/haible/utf8/Unicode-HOWTO.html">The Unicode HOWTO (for Linux)</a></dd>
+
+<dt>Christoph Singer</dt>
+<dd><a href="http://www.ccss.de/slovo/index.html">Slavic Text Processing and Typography</a></dd>
+
+<dt>Daniel Tobias</dt>
+<dd><a href="http://webtips.dan.info/char.html">Dan's Web Tips: Characters and Fonts</a></dd>
+
+<dt>Frank da Cruz</dt>
+<dd><a href="http://www.columbia.edu/kermit/utf8.html">UTF-8 Sampler</a></dd>
+
+<dt>Henry Churchyard</dt>
+<dd><a href="http://www.pemberley.com/janeinfo/latin1.html">Latin 1 and Unicode characters in &amp;ampersand; entities</a></dd>
+
+<!-- <dt>IBM</dt>
+<dd><a href="http://www-128.ibm.com/developerworks/search/searchResults.jsp?searchType=1&amp;searchSite=dW&amp;searchScope=dW&amp;query=unicode">developerWorks Unicode search results</a></dd> -->
+
+<dt>James Kass</dt>
+<dd><a href="http://www.code2000.net/">Does Your Browser Support Multi-language?</a></dd>
+
+<dt>Jukka Korpela</dt>
+<dd><a href="http://www.cs.tut.fi/%7Ejkorpela/HTML/chars.html">Using national and special characters in HTML</a></dd>
+
+<!--
+<dt>Larry Stillman</dt>
+<dd><a href="http://www.vicnet.net.au/multiling/resource.htm">Multilingual World Wide Web Working Group</a></dd>
+// -->
+
+<dt>Markus Kuhn</dt>
+<dd><a href="http://www.cl.cam.ac.uk/%7Emgk25/unicode.html">UTF-8 and Unicode FAQ for Unix/Linux</a></dd>
+
+<dt>Michael Everson</dt>
+<dd><a href="http://www.evertype.com/">Evertype</a></dd>
+
+<dt>Microsoft</dt>
+<dd><a href="http://www.microsoft.com/globaldev/">Global Software Development and Computing Portal</a></dd>
+
+<dt>Nelson H. F. Beebe</dt>
+<dd><a href="http://www.math.utah.edu/%7Ebeebe/fonts/unicode.html">Fonts for the Unicode Character Set</a></dd>
+
+<dt>Oscar van Vlijmen</dt>
+<dd><a href="http://www1.tip.nl/%7Et876506/UnicodeDisplay.html">Unicode browser display</a></dd>
+
+<dt>Roman Czyborra</dt>
+<dd><a href="http://czyborra.com/">Unicode in the Unix Environment</a></dd>
+
+<dt>Sun</dt>
+<dd><a href="http://developers.sun.com/dev/gadc/unicode/solaris/index.html">Unicode Support in Solaris</a></dd>
+
+<dt>Tex Texin</dt>
+<dd><a href="http://www.i18nguy.com/">Internationalization (I18n), Localization (L10n), Standards, and Amusements</a></dd>
+
+<dt>TITUS</dt>
+<dd><a href="http://titus.uni-frankfurt.de/unicode/unitest2.htm">Titus Is Testing Unicode Scriptmanagement</a></dd>
+
+<dt>Tom Gewecke</dt>
+<dd><a href="http://homepage.mac.com/thgewecke/mlingos9.html">Unleash your Multilingual Mac</a></dd>
+
+<dt>Unicode Consortium</dt>
+<dd><a href="http://www.unicode.org/">Unicode Home Page</a></dd>
+
+<dt>Wazu Japan</dt>
+<dd><a href="http://www.wazu.jp/">Gallery of Unicode Fonts</a></dd>
+
+</dl>
+
+<hr>
+
+<div align="center">
+
+<p><a href="#top"><img src="Unicode%20and%20multilingual%20support%20in%20HTML,%20fonts,%20Web%20browsers%20and%20other%20applications_files/top.gif" alt="Top" title="Go to the top of the page" border="0" height="25" width="76"></a></p>
+
+<p><small>Copyright © 1999–2007 <a href="http://www.alanwood.net/alan-wood.html" title="Information about Alan Wood, the author of these Unicode Resources.">Alan Wood</a><br>
+<br>
+Page created 3rd February 1999 – Page last updated 11th August 2006<br>
+<br>
+Site last updated 2nd October 2007<br>
+<br>
+<a href="http://www.alanwood.net/unicode/em2aw.php" rel="nofollow">Send comments or questions to Alan Wood</a></small></p>
+
+<p class="nav"><a href="http://www.alanwood.net/index.html" title="Links to other Web sites produced by Alan Wood">Alan Wood’s Web Site</a></p>
+
+<p><a href="http://validator.w3.org/check/referer"><img src="Unicode%20and%20multilingual%20support%20in%20HTML,%20fonts,%20Web%20browsers%20and%20other%20applications_files/valid-html401.gif" alt="HTML 4.01" title="Validates as HTML 4.01 Transitional" border="0" height="31" hspace="12" width="88"></a>
+<a href="http://www.dublincore.org/"><img src="Unicode%20and%20multilingual%20support%20in%20HTML,%20fonts,%20Web%20browsers%20and%20other%20applications_files/dcuh_88x31.gif" alt="Dublin Core" border="0" height="31" hspace="12" width="88"></a>
+<a href="http://www.unicode.org/"><img src="Unicode%20and%20multilingual%20support%20in%20HTML,%20fonts,%20Web%20browsers%20and%20other%20applications_files/unienctransbord31.gif" alt="Unicode Encoded" title="Go to the Unicode, Inc. Web site" border="0" height="31" hspace="12" width="88"></a>
+<a href="http://www.icab.de/smile.html"><img src="Unicode%20and%20multilingual%20support%20in%20HTML,%20fonts,%20Web%20browsers%20and%20other%20applications_files/leticabsmile.gif" alt="iCab smiles" title="HTML validates and lets iCab smile" border="0" height="31" hspace="12" width="88"></a></p>
+
+<p><a href="http://dmoz.org/Computers/Software/Globalization/Character_Encoding/Unicode/"><img src="Unicode%20and%20multilingual%20support%20in%20HTML,%20fonts,%20Web%20browsers%20and%20other%20applications_files/odphead.gif" alt="Open Directory" title="Editor's Choice in the Unicode category of the Open Directory" border="0" height="25" width="222"></a>
+</p>
+
+</div>
+
+</td></tr></tbody></table></div>
+
+</body></html>

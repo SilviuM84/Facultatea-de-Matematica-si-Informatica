@@ -1,0 +1,131 @@
+<html>
+<head>
+
+<style type="text/css">
+.p
+		{
+			position:absolute; 
+		      left:840; 
+			top:160; 
+			border-width: 5px;
+			border-style:solid;
+			border-color:blue;
+			width:10;
+			height:320;
+			background-color:red;
+		}
+#sq1
+{
+	background-color: red;
+	
+	width: 40px;
+	height: 40px;
+	
+	position: absolute;
+	
+	left:20px;
+	top:200px
+}
+
+#sq2
+{
+	background-color: green;
+	
+	width: 40px;
+	height: 40px;
+	
+	position: absolute;
+	
+	left:20px;
+	top:300px
+}
+
+#sq3
+{
+	background-color: blue;
+	
+	width: 40px;
+	height: 40px;
+	
+	position: absolute;
+	
+	left:20px;
+	top:400px
+}
+</style>
+
+<script type="text/javascript">
+
+var spd_sq1 = 0;
+var spd_sq2 = 0;
+var spd_sq3 = 0;
+
+var sq1 = null;
+var sq2 = null;
+var sq3 = null;
+
+var ref_int = null;
+function pornire()
+{
+	spd_sq1 = Math.floor(Math.random()* 7) + 1; // viteza aleatoare intre 1 si 7 pix/sec
+	spd_sq2 = Math.floor(Math.random()* 7) + 1; 
+	spd_sq3 = Math.floor(Math.random()* 7) + 1; 
+	
+	sq1 = document.getElementById("sq1");
+	sq2 = document.getElementById("sq2");
+	sq3 = document.getElementById("sq3");	
+	
+	sq1.style.left = "20px";
+	sq2.style.left = "20px";
+	sq3.style.left = "20px";
+	
+	if(ref_int)
+		clearInterval(ref_int);
+	ref_int = setInterval("deplasare()", 50);
+}
+
+function deplasare()
+{
+	var px1 = parseInt(sq1.style.left);
+	var px2 = parseInt(sq2.style.left);
+	var px3 = parseInt(sq3.style.left);
+	
+	px1 += spd_sq1;
+	px2 += spd_sq2;
+	px3 += spd_sq3;
+	
+	sq1.style.left = px1 + 'px';
+	sq2.style.left = px2 + 'px';
+	sq3.style.left = px3 + 'px';
+
+	if(px1 >= 800)
+	{
+		clearInterval(ref_int);
+		alert("Ro\u015Fu c\u00E2\u015Ftig\u0103!");
+	}
+	if(px2 >= 800)
+	{
+		clearInterval(ref_int);
+		alert("Verde c\u00E2\u015Ftig\u0103!");
+	}
+	if(px3 >= 800)
+	{
+		clearInterval(ref_int);
+		alert("Albastru c\u00E2\u015Ftig\u0103!");
+	}
+}
+
+</script>
+
+</head>
+<body>
+<button bgcolor=Lavender onclick="pornire()"><h2 style="color:Sienna">Porni&#355;i!<h2></button>
+<div class="p" id="stop"></div>
+<div id="sq1">
+</div>
+<div id="sq2">
+</div>
+<div id="sq3">
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<title>Fereastra 1</title>
+<head>
+<script language="JavaScript">
+var a=new Array();
+var i=0 // global
+function gen()
+{
+   var i; // local
+   var u="<table><tr><td><form><select id='sel'>";
+   var w=open("","my3","toolbar=yes, location=no, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=yes, width=300, height=300"); // se deschide fereastra noua
+   w.document.write('<script type="text/javascript" src="2f3.js"><\/script>'); // fisier cu cod JavaScript pentru fereastra noua
+   for (i = 1; i <= a.length; i++)
+     u+="<option value='url " + i+ "' onclick='f("+i+")'/>"+a[i-1]+"<\/option>";
+   w.document.write("<title>Fereastra 2</title>"); // titlu pentru ferastra noua
+   w.document.write(u+"<\/select><\/form><\/td><td><a href='im.gif' id='anc'>url<\/a><\/td><\/tr><\/table>"); // se introduc lista dropdown si ancora intr-un tabel din fereastra noua  
+   w.document.close();
+}     
+</script>
+</head>
+<body>
+<form action="" method="get">
+<input type="text" name="val" id="valid" value="im.gif" />
+<br />
+<input type="button" value="Adaug&#259;" onclick="a[i++]=document.getElementById('valid').value; // textul din caseta intr-un nou element al tabloului a">
+<br />
+<input type="button" value="Genereaz&#259;" onclick="gen()">
+</form>
+</body>
+</html>

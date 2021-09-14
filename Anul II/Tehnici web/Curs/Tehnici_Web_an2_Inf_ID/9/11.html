@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Limbajul JavaScript</title>
+</head>
+<body>
+<script>
+<!--
+
+function A()
+{
+    this.x = 1;
+}
+A.prototype.DoIt = function()    // Se defineste o metoda
+{
+    this.x += 1;
+} 
+
+function B()
+{
+    this.x = 1;
+} 
+B.prototype.DoIt = function()    // Se defineste o metoda
+{
+    this.x += 2;
+} 
+
+a = new A;
+b = new B; 
+
+a.DoIt();
+b.DoIt();
+
+document.write(a.x + ', ' + b.x);
+
+//-->
+</script>
+</body>
+</html>

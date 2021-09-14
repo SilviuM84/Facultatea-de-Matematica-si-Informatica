@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Culori</title>
+<style type="text/css">
+.oriz
+{
+position:absolute;
+
+width:10px;
+height:20px;
+left:75px;
+top:7px;
+}
+</style>
+<script language="JavaScript">
+function go(ic)
+{ var t=1;
+
+for (i=0;i<32;i++)
+{ for (j=0;j<6;j++)
+ {
+   var d=document.createElement('div');
+  d.className="oriz";
+  d.style.top=((j+1)*25)+7;
+  d.style.left=((i+1)*14)+75;
+  switch (ic) {
+    case 1: d.style.backgroundColor="rgb("+(255-((i+j)*10))+",0,0)"; break;
+    case 2: d.style.backgroundColor="rgb(0,"+(255-((i+j)*10))+",0)"; break;
+    case 3: d.style.backgroundColor="rgb(0,0,"+(255-((i+j)*10))+")"; break;
+  }
+  document.body.appendChild(d);
+ }
+}
+
+ for (k=0;k<16;k++)
+ {
+
+   var e=document.createElement('div');
+  e.className="oriz";
+  e.style.top= 182;
+  e.style.left=((k+1)*14)+75;
+  switch (ic) {
+    case 1: e.style.backgroundColor="rgb("+(255-((k+j)*10))+",0,0)"; break;
+    case 2: e.style.backgroundColor="rgb(0,"+(255-((k+j)*10))+",0)"; break;
+    case 3: e.style.backgroundColor="rgb(0,0,"+(255-((k+j)*10))+")"; break;
+  }
+ document.body.appendChild(e);
+ }
+}
+
+</script>
+</head>
+<body >
+<input type="button" onclick="go(1)"  value="Ro&#351;u" style="position:absolute; left:15px; top:20px; width:62px">
+<input type="button" onclick="go(2)"  value="Verde" style="position:absolute; left:15px;top:50px; width:62px">
+<input type="button" onclick="go(3)"  value="Albastru" style="position:absolute; left:15px;top:80px; width:62px">
+
+<div style="position: absolute; left: 80px; top:20px; height:200px; width:458px; border:1px solid black">
+</div>
+</body>
+</html>

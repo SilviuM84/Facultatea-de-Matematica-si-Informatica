@@ -1,0 +1,89 @@
+<html>
+<title>P1.1</title>
+<head>
+<script language="JavaScript">
+function selecteaza()
+{
+   var val = parseInt(document.getElementById("valid").value); // valoarea numerica din caseta text
+   var tbl = document.getElementById("tblid"); // tabel
+   var colelm = document.getElementById("colid"); // lista de culori
+   var col = colelm.options[colelm.selectedIndex].value; // culoarea selectata in lista
+                                                         // atribut value al optiunii selectate
+
+
+   var i;
+   var j;
+   var tds;
+   var tdval;
+
+  // identificarea textului din celulele tabelulului
+  // si colorarea celulelor care contin valori numerice 
+  // mai mari decat valoarea numerica din caseta text
+
+   var trs = tbl.getElementsByTagName("tr");
+   for (i = 0; i < trs.length; i++) {
+      tds = trs[i].getElementsByTagName("td");
+      for (j = 0; j < tds.length; j++) {
+         tdval = tds[j].innerHTML; // continutul celulei (in acest caz text)
+         if (val < parseInt(tdval)) {
+           tds[j].style.backgroundColor=col;
+         }
+      }
+   }
+}
+</script>
+
+</head>
+<body>
+<form action="" method="get">
+Val &gt; : <input type="text" name="val" id="valid" value="" />
+<br />
+Culoare:
+<select name="col" id="colid" size="1">
+<option value="red" selected> ro&#351;u  </option>
+<option value="yellow"> galben </option>
+<option value="blue"> albastru </option>
+</select>
+<br />
+<input type="button" value="Selecteaz&#259" onclick="selecteaza()">
+</form>
+<hr />
+<table id="tblid" border="3">
+<tr>
+<td>3</td>
+<td>9</td>
+<td>11</td>
+<td>20</td>
+<td>1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>2</td>
+<td>6</td>
+<td>10</td>
+<td>17</td>
+</tr>
+<tr>
+<td>2</td>
+<td>4</td>
+<td>11</td>
+<td>20</td>
+<td>10</td>
+</tr>
+<tr>
+<td>3</td>
+<td>19</td>
+<td>21</td>
+<td>0</td>
+<td>8</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>4</td>
+</tr>
+</table>
+</body>
+</html>

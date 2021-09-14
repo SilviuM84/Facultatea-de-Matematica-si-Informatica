@@ -1,0 +1,21 @@
+<html>
+<head>
+<script type="text/javascript">
+//cand mouse-ul este deasupra imaginii
+function mouseOver()
+{
+document.getElementById("b1").src ="poza1.gif";
+}
+//cand mosue-ul iese de pe imagine
+function mouseOut()
+{
+document.getElementById("b1").src ="poza2.gif";
+}
+</script>
+</head>
+
+<body>
+<img border="0" alt="Acasa" src="poza1.gif" id="b1"
+onmouseover="mouseOver()" onmouseout="mouseOut()" />
+</body>
+</html>

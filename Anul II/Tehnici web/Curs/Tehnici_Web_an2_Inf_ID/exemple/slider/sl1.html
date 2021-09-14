@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>Slider</title>
+<script language=JavaScript>
+// se deplaseaza o imagine "cursor" de-a lungul unei imagini "bara",
+// obtinandu-se comportarea unui control grafic de tip "slider"
+var x = 0;
+var y = 0;
+var o = null;
+document.onmousedown = inceput; // handler-ele de evenimente sunt setate ca metode
+document.onmouseup = sfarsit;
+document.onmousemove = miscare;
+// fisierul s2.html contine varianta acestei aplicatii in care handler-ele
+// sunt atribuite ca valori atributelor de tip eveniment din tag-urile HTML
+	
+function inceput(e) // argumentul e este evenimentul curent (event)
+{
+
+   if (document.getElementById("c") == e.target.parentNode) 
+   { // daca s-a apasat un buton al mouse-ului cursorul fiind pe obiectul
+     // care trebuie deplasat (drag and drop)
+     // se calculeaza coordonatele x, y ale cursorului relativ la 
+     // dreptunghiul ocupat de obiect
+
+
+     o = document.getElementById("c"); // se memoreaza referinta la obiect
+
+     x = e.clientX - parseInt(o.style.left);
+     y = e.clientY - parseInt(o.style.top);
+
+   }
+
+   return false;
+
+}
+
+function miscare(e) // argumentul e este evenimentul curent (event)
+{
+   var b = document.getElementById("b");
+   var tmpx = e.clientX - x; 
+   var tmpy = e.clientY - y;
+   if (o && // daca s-a apasat un buton al mouse-ului cursorul fiind pe obiectul
+            // care trebuie deplasat (drag and drop),
+            // mouse-ul s-a deplasat cu butonul apasat
+            // si deplasarea se efectueaza intre capetele "barei"
+       tmpx>=parseInt(b.style.left) &&  
+       tmpx<=parseInt(b.style.left)+parseInt(b.width)-10 && 
+       tmpy==parseInt(o.style.top))  // pe orizontala
+// imaginea "cursor" se pozitioneaza la noua pozitie a mouse-ului
+
+      o.style.left = tmpx + "px"; 
+		
+   return false;
+
+}
+
+function sfarsit()
+{ // la ridicarea butonului se anuleaza referinta
+  // deci continuarea deplasarii mouse-ului nu va atrage depplasarea obiectului
+
+
+   o = null; 
+
+   return false;
+}
+
+</script>
+</head>
+<body>
+<img id="b" style="left: 20px; top: 80px; position: absolute" width="200" height="10" src="bara.gif">
+<span id="c" style="left: 20px; top: 70px; position: absolute">
+<img width="15" height="30" src="cursor.gif">
+</span> 
+</body>
+</html>

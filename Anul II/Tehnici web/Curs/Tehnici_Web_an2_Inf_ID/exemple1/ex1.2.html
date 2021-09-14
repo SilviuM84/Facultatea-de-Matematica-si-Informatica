@@ -1,0 +1,52 @@
+<html> <head> 
+
+<style type="text/css">
+	.p1{ background-color:red; position:absolute; width:50; height:50; left:20px; top:20px; }
+	.p2{ background-color:red; position:fixed; width:50; height:50; left:20px; top:220px; }
+	.p3{ background-color:red; position:fixed; width:50; height:50; left:520px; top:220px; }
+	.p4{ background-color:red; position:fixed; width:50; height:50; left:520px; top:20px; }
+	.p{ background-color:red; position:fixed; width:200; height:200; left:200px; top:50px; }
+
+	.b1{ position:fixed; top:80px; left: 15px; }
+	.b2{ position:fixed; top:280px; left: 15px; }
+	.b3{ position:fixed; top:280px; left: 515px; }
+	.b4{ position:fixed; top:80px; left: 515px; }
+</style>
+
+<script type="text/javascript">
+	var nr=[0, 0, 0, 0];
+	function f(i) {
+		var a=Math.round(Math.random()*255);
+		var b=Math.round(Math.random()*255);
+		var c=Math.round(Math.random()*255);
+		var d=document.getElementById("pat"+i);
+		d.style.backgroundColor="rgb("+a+", "+b+","+c+")";
+		if(nr[i-1]<10)
+			{ nr[i-1]++; // utilizat numai de butonul i
+			  document.getElementById("c"+i).value="Culoare"+i+","+nr[i-1];
+			  setTimeout('f('+i+')',1000); } // Nu functioneaza 'f(i)'. De ce?
+		else { 
+		var mare=document.getElementById("pat");
+		mare.style.backgroundColor=d.style.backgroundColor; 
+		nr[i-1]=0; }
+	}
+</script>
+</head>
+
+<body>
+
+	<div class="p1" id="pat1"/>
+	<div class="p2" id="pat2"/>
+	<div class="p3" id="pat3"/>
+	<div class="p4" id="pat4"/>
+	<div class="p" id="pat"/>
+
+
+	<form > 
+		<input type="button" onclick="f(1)"  id="c1" value="Culoare1,0" class="b1">
+		<input type="button" onclick="f(2)"  id="c2" value="Culoare2,0" class="b2">
+		<input type="button" onclick="f(3)"  id="c3" value="Culoare3,0" class="b3">
+		<input type="button" onclick="f(4)"  id="c4" value="Culoare4,0" class="b4">
+	</form>
+</body>
+</html>

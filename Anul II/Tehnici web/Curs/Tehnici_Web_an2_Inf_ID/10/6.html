@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>JavaScript HTML DOM</title>
+<script language="JavaScript">
+function astept(x)
+{
+   var i;
+   for (i = 0; i < 100000 * x; i++) 123.45 * 55 * 67.89;
+}
+
+function deschide()
+{
+   var w1 = window.open("","my1","toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, width=200, height=100, ")
+   w1.document.write("<html><body><h3>Alba !</h3></body></html>");
+   w1.document.close();
+   w1.focus();
+   var w2 = window.open("","my2","toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, width=200, height=100, ")
+   w2.document.write("<html><body><h3>Neagra !</h3></body></html>"); 
+   w2.document.close();
+   w2.focus();
+   var w3 = window.open("","my3","toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, width=300, height=300, ")
+   w3.document.write("<html><body><h3>Alba Neagra !</h3></body></html>"); 
+   w3.document.close();
+   w3.focus();
+   astept(30);
+   w3.focus();
+   astept(30);
+   w1.focus();
+   astept(30);
+   w2.focus();
+   astept(30);
+   w3.focus();
+   astept(30);
+   w1.focus();
+   astept(30);
+   w2.focus();
+   astept(30);
+   w3.focus();
+   astept(30);
+   w1.focus();
+   astept(30);
+   w2.focus();
+   astept(30);
+   w3.focus();
+}
+</script>
+
+</head>
+<body>
+
+<form>
+<input type="button" value="Alba Neagra" onclick="deschide()">
+</form>
+
+</body>
+</html>

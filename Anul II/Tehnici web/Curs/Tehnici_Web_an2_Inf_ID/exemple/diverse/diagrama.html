@@ -1,0 +1,45 @@
+<html> 
+<head> 
+<title> Diagrama</title>
+<style type="text/CSS">
+	.p
+		{
+			position:absolute; 
+		        left:15; 
+			top:10; 
+			border-width: 2px;
+			border-style:solid;
+			border-color:blue;
+                  color:green;
+			width:20;
+			height:28;
+			background-color:red;
+		}
+		
+</style>
+<script type="text/javascript">
+
+	function f()
+		{
+			var x=prompt("Introducei numerele, separate prin spatii"," ");
+			var y=x.split(" ");
+			for(var i=0; i<y.length;i++) 
+				{
+					var t=document.createElement('div');
+					t.className="p";
+					t.style.top=i*30;
+					t.style.width=y[i]*20;
+                              t.innerHTML="<b>&nbsp;"+y[i]+"</b>";
+					document.body.appendChild(t);
+				}
+		}	
+	
+</script>
+
+</head>
+
+<body onLoad="f()">
+
+	
+</body>
+</html>

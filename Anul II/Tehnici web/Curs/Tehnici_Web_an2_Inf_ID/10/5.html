@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>JavaScript HTML DOM</title>
+<script language="JavaScript">
+function deschide()
+{
+   var w1 = window.open("","my","toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, width=200, height=100, ")
+   w1.document.write("<html><body><h3>Salut, lume!</h3></body></html>");
+   w1.document.close();
+}
+</script>
+
+</head>
+<body>
+
+<form>
+<input type="button" value="Fereastr&#259; nou&#259;" onclick="deschide()">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<head>
+<title> Mouse-ul face p&#259;trate colorate</title>
+<style type="text/css">
+.oriz {position:absolute; top:205px; left:100px; width:100px; height:100px;  border-style:solid; border-width:5px; border-color:black;}
+</style>
+
+<script type="text/javascript">
+
+function f(event)
+{
+	var x=event.clientX;
+	var y=event.clientY;
+	var a=Math.round(Math.random()*255);
+	var b=Math.round(Math.random()*255);
+	var c=Math.round(Math.random()*255);
+	var d=document.createElement('div');
+	d.className="oriz";
+	d.style.top=y;
+	d.style.left=x;
+	d.style.backgroundColor="rgb("+a+", "+b+","+c+")";
+	document.body.appendChild(d);
+}
+</script>
+</head>
+<body onmousedown="f(event)">
+</body>
+</html>

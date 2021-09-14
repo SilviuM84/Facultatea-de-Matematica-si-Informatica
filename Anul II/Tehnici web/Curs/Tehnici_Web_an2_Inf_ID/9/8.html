@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Limbajul JavaScript</title>
+</head>
+<body>
+<script>
+<!--
+
+function superClass() {
+
+  this.bye = superBye;
+  this.hello = superHello;
+}
+
+function subClass() {
+  this.inheritFrom = superClass;
+  this.inheritFrom();
+  this.bye = subBye;
+}
+
+function superHello() {
+  return "Hello from superClass";
+}
+  
+function superBye() {
+  return "Bye from superClass";
+}
+
+function subBye() {
+  return "Bye from subClass";
+}
+
+var newClass = new subClass();
+alert(newClass.bye());
+alert(newClass.hello());
+
+//-->
+</script>
+</body>
+</html>

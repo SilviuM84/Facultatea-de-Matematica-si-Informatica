@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>P&#259;trate mutate &#350;i colorate</title>
+</head>
+<title>Mut&#259; Coloreaz&#259;</title>
+<style type="text/css">
+#patratel
+{
+
+	background-color: red;
+
+	width: 40px;
+	height: 40px;
+
+	position: absolute;
+
+	left: 20px;
+	top: 200px;
+
+}
+
+</style>
+
+<script type="text/javascript">
+
+var rand_left = 0;
+var rand_top = 0;
+var rand_red = 0;
+var rand_green = 0;
+var rand_blue = 0;
+
+function functie_randomize()
+{
+
+	rand_left = 20 + Math.floor(Math.random()*250+1);
+	rand_top = 100 + Math.floor(Math.random()*300+1);
+	rand_red = Math.floor(Math.random()*256);
+	rand_green = Math.floor(Math.random()*256);
+	rand_blue = Math.floor(Math.random()*256);
+
+
+	patratel = document.getElementById("patratel");
+	patratel.style.left = rand_left + "px";
+	patratel.style.top = rand_top + "px";
+	patratel.style.backgroundColor="rgb("+rand_red +", "+rand_green +","+rand_blue +")";
+}
+
+
+</script>
+
+<body>
+
+<center>
+<button onclick="functie_randomize()">Schimb&#259;</button>
+</center>
+
+<div id="patratel">
+</div>
+
+</body>
+
+</html>

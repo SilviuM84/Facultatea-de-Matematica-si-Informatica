@@ -1,0 +1,88 @@
+<html>
+<title>P1.7</title>
+<head>
+<script language="JavaScript">
+function selecteaza()
+{
+   var val = parseInt(document.getElementById("valid").value); // valoarea numerica din caseta text
+   var tbl = document.getElementById("tblid"); // tabel
+   var colelm = document.getElementById("colid"); // lista de culori
+   var col = colelm.options[colelm.selectedIndex].value; // culoarea selectata in lista,
+                                                         // atribut value al optiunii selectate
+
+   var i;
+   var j; var k; var l;
+   var tds;
+   var tmpNode;
+   var tdval;
+  // identificarea textului din celulele tabelulului (ignorarea imaginilor)
+  // si colorarea celulelor care contin valori numerice 
+  // mai mari decat valoarea numerica din caseta text
+   var trs = tbl.getElementsByTagName("tr"); // liniile tabelului
+   for (i = 0; i < trs.length; i++) {
+      tds = trs[i].getElementsByTagName("td"); // celulele unei linii
+      for (j = 0; j < tds.length; j++) {
+         tdval = tds[j].innerHTML; // tot codul HTML din celula
+         if (val < parseInt(tdval)) { // compararea numarului cu care incepe codul HTML
+                                      // din celula cu cel din caseta 
+           tds[j].style.backgroundColor=col; // colorarea celulei
+         }
+      }
+   }
+}
+</script>
+
+</head>
+<body id="doc">
+<form action="" method="get">
+Val &gt; : <input type="text" name="val" id="valid" value="" />
+<br />
+Culoare:
+<select name="col" id="colid" size="1">
+<option value="red" selected> ro&#351;u </option>
+<option value="yellow"> galben </option>
+<option value="blue"> albastru </option>
+</select>
+<br />
+<input type="button" value="Selecteaz&#259;" onclick="selecteaza()">
+</form>
+<hr />
+<table id="tblid" border="3">
+<tr>
+<td>3 <img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td>9 <img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td>11 <img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td>20 <img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td>1 <img src="w3c.GIF" style="width:22px; height:11px"></td>
+</tr>
+<tr>
+<td>5 <img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td>2 <img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td>6 <img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td>10 <img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td>17 <img src="w3c.GIF" style="width:22px; height:11px"></td>
+</tr>
+<tr>
+<td>2 <img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td>4 <img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td>11 <img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td>20 <img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td>10 <img src="w3c.GIF" style="width:22px; height:11px"></td>
+</tr>
+<tr>
+<td>3 <img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td>19 <img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td>21 <img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td>0 <img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td>8 <img src="w3c.GIF" style="width:22px; height:11px"></td>
+</tr>
+<tr>
+<td>1 <img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td>3 <img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td>5 <img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td>7 <img src="w3c.GIF" style="width:22px; height:11px"></td>
+<td>4 <img src="w3c.GIF" style="width:22px; height:11px"></td>
+</tr>
+</table>
+</body>
+</html>
