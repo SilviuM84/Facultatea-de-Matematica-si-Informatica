@@ -1,0 +1,4 @@
+http://www.w3schools.com
+http://www.php.net/
+http://www.mysql.com/
+http://www.php.net/manual/ro/index.php

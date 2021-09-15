@@ -1,0 +1,124 @@
+
+.indexBullets A:visited
+{
+    color: #0066FF;
+}
+
+h1
+{
+    margin-bottom: 9px;
+    border-bottom: 1px solid black;
+}
+
+pre 
+{
+    font-size: small;
+}
+
+ul
+{
+    font-size: 11px;
+    text-align: left;
+}
+
+img
+{
+    border: 0;
+}
+
+center
+{
+    text-align: left;
+}
+
+#mainTbl, #HomeIndexTbl
+{
+    width: 100%;
+}
+
+#mainTbladCol1
+{
+    width: 160px;
+    vertical-align: top;
+    padding-left: 6px;
+}
+
+#mainTblContentCell
+{
+    padding-right: 6px;
+    vertical-align: top;
+}
+
+
+A.kwLink, A.kwLink:visited, A.kwLink:active, A.kwLink:hover
+{
+
+    /*color: #039; */
+
+    color: #003366;
+    background-color: #D3DEFF;
+    padding-left: 2px;
+    padding-right: 2px;
+    text-decoration: none;
+    font-weight: normal;
+    border-bottom-style: dashed;
+    border-bottom-width: 1px;
+
+
+}
+
+A.kwLink:hover
+{
+    color: #000033;
+    background-color: #C3D0F0;
+    border-bottom-style: solid;
+}
+
+
+
+div.botLinks
+{
+}
+
+
+div.botLinks p
+{
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+
+div.botLinks table, div.botThread table
+{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: smaller;
+    border-collapse: collapse;
+    border-style: solid;
+    border-width: 1px; ;
+border-color:black;
+}
+
+div.botLinks th, div.botThread th
+{
+    background-color: #D8D8D8;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+div.botLinks td, div.botThread td
+{
+    padding-left: 4px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    border-right: 2px solid #D8D8D8;
+    background-color: #FFFFFF;
+}
+div.botLinks em
+{
+    font-weight: normal;
+    font-style: italic;
+}

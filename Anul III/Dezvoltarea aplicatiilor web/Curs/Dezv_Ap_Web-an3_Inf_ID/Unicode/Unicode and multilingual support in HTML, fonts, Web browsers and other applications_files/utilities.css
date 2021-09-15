@@ -1,0 +1,30 @@
+body {background-color:#fffff2;color:#000000;font-size:100%;}
+h1 {color:#000099;background-color:#fffff2;font-size:1em;font-weight:bold;text-align:center;font-family:Arial,Helvetica,Helv,sans-serif;}
+h2 {color:#000099;background-color:#fffff2;font-size:1.5em;font-weight:bold;text-align:center;font-family:Arial,Helvetica,Helv,sans-serif;}
+h3 {color:#000099;background-color:#ffff99;font-size:1.2em;font-weight:bold;text-align:left;font-family:Arial,Helvetica,Helv,sans-serif;padding-top:0.25em;padding-bottom:0.25em;padding-left:0.25em;}
+h3.range {color:#000099;background-color:#fffff2;font-size:1.05em;font-weight:bold;text-align:left;margin-bottom:0em;}
+h4 {color:#000099;background-color:#fffff2;font-size:1em;font-weight:bold;text-align:left;font-family:Arial,Helvetica,Helv,sans-serif;}
+a {color:#0000ff;text-decoration:underline;}
+a:visited {color:#800080;text-decoration:underline;}
+a:hover {color:#ff0000;text-decoration:underline;}
+a.h {color:#000099;background-color:#fffff2;text-decoration:none;}
+a.h:visited {color:#000099;background-color:#fffff2;text-decoration:none;}
+a.h:hover {color:#000099;background-color:#fffff2;text-decoration:none;}
+p.top, p.copy {text-align:center;}
+p.nav {text-align:center;color:#000000;background-color:#ffff99;border-style:solid;border-width:thin;border-color:#000099;padding-top:0.5em;padding-bottom:0.5em;font-size:0.9em;font-family:Arial,Helvetica,Helv,sans-serif;}
+p.i {margin-left:1.5em;margin-top:0.25em;}
+p.mono {font-family:"Courier New",Courier,monospace;font-size:0.8em;}
+p.small {font-size:0.8em;}
+span.a {font-weight:bold;}
+span.b {color:#000099;background-color:#fffff2;font-weight:bold;}
+span.k {font-weight:bold;}
+hr {color:#000099;background-color:#000099;height:2px;border-style:none;}
+table.index {font-size:0.95em;}
+ul.arrow li {list-style-image:url(arrow.gif);}
+table.bord {border-collapse:collapse;border:1px solid #000099;}
+table.bord th {border:1px solid #000099;}
+table.bord td {border:1px solid #000099;}
+body, html {scrollbar-arrow-color:#000099;scrollbar-3dlight-color:#000099;scrollbar-darkshadow-color:#000099;}
+table.border {border-collapse:collapse;border:1px solid #000099;}
+table.border th {border:1px solid #000099;color:#000099;background-color:#ffff99;text-align:center;}
+table.border td {border:1px solid #000099;}

@@ -1,0 +1,138 @@
+[SerializableAttribute]
+[ComVisibleAttribute(true)]
+public abstract class Array : ICloneable, 
+	IList, ICollection, IEnumerable, IStructuralComparable, IStructuralEquatable
+
+Properties
+  	IsFixedSize	Gets a value indicating whether the Array has a fixed size.
+  	IsReadOnly	Gets a value indicating whether the Array is read-only.
+  	IsSynchronized	Gets a value indicating whether access to the Array is synchronized (thread safe).
+    	Length	Gets a 32-bit integer that represents the total number of elements in all the dimensions of the Array.
+	LongLength	Gets a 64-bit integer that represents the total number of elements in all the dimensions of the Array.
+    	Rank	Gets the rank (number of dimensions) of the Array.
+  	SyncRoot	Gets an object that can be used to synchronize access to the Array.
+
+Methods
+  	AsReadOnly(Of T)	Returns a read-only wrapper for the specified array.
+  	BinarySearch(Array, Object)	Searches an entire one-dimensional sorted Array for a specific element, using the IComparable interface implemented by each element of the Array and by the specified object.
+  	BinarySearch(Array, Object, IComparer)	Searches an entire one-dimensional sorted Array for a value using the specified IComparer interface.
+  	BinarySearch(Array, Int32, Int32, Object)	Searches a range of elements in a one-dimensional sorted Array for a value, using the IComparable interface implemented by each element of the Array and by the specified value.
+    	BinarySearch(Array, Int32, Int32, Object, IComparer)	Searches a range of elements in a one-dimensional sorted Array for a value, using the specified IComparer interface.
+      	BinarySearch(Of T)(T(), T)	Searches an entire one-dimensional sorted Array for a specific element, using the IComparable(Of T) generic interface implemented by each element of the Array and by the specified object.
+      	BinarySearch(Of T)(T(), T, IComparer(Of T))	Searches an entire one-dimensional sorted Array for a value using the specified IComparer(Of T) generic interface.
+      	BinarySearch(Of T)(T(), Int32, Int32, T)	Searches a range of elements in a one-dimensional sorted Array for a value, using the IComparable(Of T) generic interface implemented by each element of the Array and by the specified value.
+      	BinarySearch(Of T)(T(), Int32, Int32, T, IComparer(Of T))	Searches a range of elements in a one-dimensional sorted Array for a value, using the specified IComparer(Of T) generic interface.
+      	Clear	Sets a range of elements in the Array to zero, to false, or to Nothing, depending on the element type.
+  	Clone	Creates a shallow copy of the Array.
+  	ConstrainedCopy	Copies a range of elements from an Array starting at the specified source index and pastes them to another Array starting at the specified destination index. Guarantees that all changes are undone if the copy does not succeed completely.
+  	ConvertAll(Of TInput, TOutput)	Converts an array of one type to an array of another type.
+      	Copy(Array, Array, Int32)	Copies a range of elements from an Array starting at the first element and pastes them into another Array starting at the first element. The length is specified as a 32-bit integer.
+  	Copy(Array, Array, Int64)	Copies a range of elements from an Array starting at the first element and pastes them into another Array starting at the first element. The length is specified as a 64-bit integer.
+      	Copy(Array, Int32, Array, Int32, Int32)	Copies a range of elements from an Array starting at the specified source index and pastes them to another Array starting at the specified destination index. The length and the indexes are specified as 32-bit integers.
+  	Copy(Array, Int64, Array, Int64, Int64)	Copies a range of elements from an Array starting at the specified source index and pastes them to another Array starting at the specified destination index. The length and the indexes are specified as 64-bit integers.
+  	CopyTo(Array, Int32)	Copies all the elements of the current one-dimensional Array to the specified one-dimensional Array starting at the specified destination Array index. The index is specified as a 32-bit integer.
+	CopyTo(Array, Int64)	Copies all the elements of the current one-dimensional Array to the specified one-dimensional Array starting at the specified destination Array index. The index is specified as a 64-bit integer.
+      	CreateInstance(Type, Int32)	Creates a one-dimensional Array of the specified Type and length, with zero-based indexing.
+    	CreateInstance(Type, Int32())	Creates a multidimensional Array of the specified Type and dimension lengths, with zero-based indexing. The dimension lengths are specified in an array of 32-bit integers.
+  	CreateInstance(Type, Int64())	Creates a multidimensional Array of the specified Type and dimension lengths, with zero-based indexing. The dimension lengths are specified in an array of 64-bit integers.
+  	CreateInstance(Type, Int32, Int32)	Creates a two-dimensional Array of the specified Type and dimension lengths, with zero-based indexing.
+  	CreateInstance(Type, Int32(), Int32())	Creates a multidimensional Array of the specified Type and dimension lengths, with the specified lower bounds.
+  	CreateInstance(Type, Int32, Int32, Int32)	Creates a three-dimensional Array of the specified Type and dimension lengths, with zero-based indexing.
+    	Equals(Object)	Determines whether the specified Object is equal to the current Object. (Inherited from Object.)
+  	Exists(Of T)	Determines whether the specified array contains elements that match the conditions defined by the specified predicate.
+    	Finalize	Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection. (Inherited from Object.)
+  	Find(Of T)	Searches for an element that matches the conditions defined by the specified predicate, and returns the first occurrence within the entire Array.
+  	FindAll(Of T)	Retrieves all the elements that match the conditions defined by the specified predicate.
+  	FindIndex(Of T)(T(), Predicate(Of T))	Searches for an element that matches the conditions defined by the specified predicate, and returns the zero-based index of the first occurrence within the entire Array.
+  	FindIndex(Of T)(T(), Int32, Predicate(Of T))	Searches for an element that matches the conditions defined by the specified predicate, and returns the zero-based index of the first occurrence within the range of elements in the Array that extends from the specified index to the last element.
+  	FindIndex(Of T)(T(), Int32, Int32, Predicate(Of T))	Searches for an element that matches the conditions defined by the specified predicate, and returns the zero-based index of the first occurrence within the range of elements in the Array that starts at the specified index and contains the specified number of elements.
+  	FindLast(Of T)	Searches for an element that matches the conditions defined by the specified predicate, and returns the last occurrence within the entire Array.
+  	FindLastIndex(Of T)(T(), Predicate(Of T))	Searches for an element that matches the conditions defined by the specified predicate, and returns the zero-based index of the last occurrence within the entire Array.
+  	FindLastIndex(Of T)(T(), Int32, Predicate(Of T))	Searches for an element that matches the conditions defined by the specified predicate, and returns the zero-based index of the last occurrence within the range of elements in the Array that extends from the first element to the specified index.
+  	FindLastIndex(Of T)(T(), Int32, Int32, Predicate(Of T))	Searches for an element that matches the conditions defined by the specified predicate, and returns the zero-based index of the last occurrence within the range of elements in the Array that contains the specified number of elements and ends at the specified index.
+  	ForEach(Of T)	Performs the specified action on each element of the specified array.
+    	GetEnumerator	Returns an IEnumerator for the Array.
+    	GetHashCode	Serves as a hash function for a particular type. (Inherited from Object.)
+    	GetLength	Gets a 32-bit integer that represents the number of elements in the specified dimension of the Array.
+	GetLongLength	Gets a 64-bit integer that represents the number of elements in the specified dimension of the Array.
+    	GetLowerBound	Gets the lower bound of the specified dimension in the Array.
+    	GetType	Gets the Type of the current instance. (Inherited from Object.)
+    	GetUpperBound	Gets the upper bound of the specified dimension in the Array.
+    	GetValue(Int32)	Gets the value at the specified position in the one-dimensional Array. The index is specified as a 32-bit integer.
+    	GetValue(Int32())	Gets the value at the specified position in the multidimensional Array. The indexes are specified as an array of 32-bit integers.
+	GetValue(Int64)	Gets the value at the specified position in the one-dimensional Array. The index is specified as a 64-bit integer.
+	GetValue(Int64())	Gets the value at the specified position in the multidimensional Array. The indexes are specified as an array of 64-bit integers.
+	GetValue(Int32, Int32)	Gets the value at the specified position in the two-dimensional Array. The indexes are specified as 32-bit integers.
+	GetValue(Int64, Int64)	Gets the value at the specified position in the two-dimensional Array. The indexes are specified as 64-bit integers.
+	GetValue(Int32, Int32, Int32)	Gets the value at the specified position in the three-dimensional Array. The indexes are specified as 32-bit integers.
+	GetValue(Int64, Int64, Int64)	Gets the value at the specified position in the three-dimensional Array. The indexes are specified as 64-bit integers.
+  	IndexOf(Array, Object)	Searches for the specified object and returns the index of the first occurrence within the entire one-dimensional Array.
+  	IndexOf(Array, Object, Int32)	Searches for the specified object and returns the index of the first occurrence within the range of elements in the one-dimensional Array that extends from the specified index to the last element.
+    	IndexOf(Array, Object, Int32, Int32)	Searches for the specified object and returns the index of the first occurrence within the range of elements in the one-dimensional Array that starts at the specified index and contains the specified number of elements.
+      	IndexOf(Of T)(T(), T)	Searches for the specified object and returns the index of the first occurrence within the entire Array.
+      	IndexOf(Of T)(T(), T, Int32)	Searches for the specified object and returns the index of the first occurrence within the range of elements in the Array that extends from the specified index to the last element.
+      	IndexOf(Of T)(T(), T, Int32, Int32)	Searches for the specified object and returns the index of the first occurrence within the range of elements in the Array that starts at the specified index and contains the specified number of elements.
+    	Initialize	Initializes every element of the value-type Array by calling the default constructor of the value type.
+  	LastIndexOf(Array, Object)	Searches for the specified object and returns the index of the last occurrence within the entire one-dimensional Array.
+  	LastIndexOf(Array, Object, Int32)	Searches for the specified object and returns the index of the last occurrence within the range of elements in the one-dimensional Array that extends from the first element to the specified index.
+    	LastIndexOf(Array, Object, Int32, Int32)	Searches for the specified object and returns the index of the last occurrence within the range of elements in the one-dimensional Array that contains the specified number of elements and ends at the specified index.
+      	LastIndexOf(Of T)(T(), T)	Searches for the specified object and returns the index of the last occurrence within the entire Array.
+      	LastIndexOf(Of T)(T(), T, Int32)	Searches for the specified object and returns the index of the last occurrence within the range of elements in the Array that extends from the first element to the specified index.
+      	LastIndexOf(Of T)(T(), T, Int32, Int32)	Searches for the specified object and returns the index of the last occurrence within the range of elements in the Array that contains the specified number of elements and ends at the specified index.
+    	MemberwiseClone	Creates a shallow copy of the current Object. (Inherited from Object.)
+      	Resize(Of T)	Changes the number of elements of an array to the specified new size.
+      	Reverse(Array)	Reverses the sequence of the elements in the entire one-dimensional Array.
+      	Reverse(Array, Int32, Int32)	Reverses the sequence of the elements in a range of elements in the one-dimensional Array.
+    	SetValue(Object, Int32)	Sets a value to the element at the specified position in the one-dimensional Array. The index is specified as a 32-bit integer.
+    	SetValue(Object, Int32())	Sets a value to the element at the specified position in the multidimensional Array. The indexes are specified as an array of 32-bit integers.
+	SetValue(Object, Int64)	Sets a value to the element at the specified position in the one-dimensional Array. The index is specified as a 64-bit integer.
+	SetValue(Object, Int64())	Sets a value to the element at the specified position in the multidimensional Array. The indexes are specified as an array of 64-bit integers.
+	SetValue(Object, Int32, Int32)	Sets a value to the element at the specified position in the two-dimensional Array. The indexes are specified as 32-bit integers.
+	SetValue(Object, Int64, Int64)	Sets a value to the element at the specified position in the two-dimensional Array. The indexes are specified as 64-bit integers.
+	SetValue(Object, Int32, Int32, Int32)	Sets a value to the element at the specified position in the three-dimensional Array. The indexes are specified as 32-bit integers.
+	SetValue(Object, Int64, Int64, Int64)	Sets a value to the element at the specified position in the three-dimensional Array. The indexes are specified as 64-bit integers.
+    	Sort(Array)	Sorts the elements in an entire one-dimensional Array using the IComparable implementation of each element of the Array.
+  	Sort(Array, Array)	Sorts a pair of one-dimensional Array objects (one contains the keys and the other contains the corresponding items) based on the keys in the first Array using the IComparable implementation of each key.
+    	Sort(Array, IComparer)	Sorts the elements in a one-dimensional Array using the specified IComparer.
+    	Sort(Array, Array, IComparer)	Sorts a pair of one-dimensional Array objects (one contains the keys and the other contains the corresponding items) based on the keys in the first Array using the specified IComparer.
+  	Sort(Array, Int32, Int32)	Sorts the elements in a range of elements in a one-dimensional Array using the IComparable implementation of each element of the Array.
+  	Sort(Array, Array, Int32, Int32)	Sorts a range of elements in a pair of one-dimensional Array objects (one contains the keys and the other contains the corresponding items) based on the keys in the first Array using the IComparable implementation of each key.
+    	Sort(Array, Int32, Int32, IComparer)	Sorts the elements in a range of elements in a one-dimensional Array using the specified IComparer.
+    	Sort(Array, Array, Int32, Int32, IComparer)	Sorts a range of elements in a pair of one-dimensional Array objects (one contains the keys and the other contains the corresponding items) based on the keys in the first Array using the specified IComparer.
+      	Sort(Of T)(T())	Sorts the elements in an entire Array using the IComparable(Of T) generic interface implementation of each element of the Array.
+      	Sort(Of T)(T(), IComparer(Of T))	Sorts the elements in an Array using the specified IComparer(Of T) generic interface.
+    	Sort(Of T)(T(), Comparison(Of T))	Sorts the elements in an Array using the specified Comparison(Of T).
+      	Sort(Of T)(T(), Int32, Int32)	Sorts the elements in a range of elements in an Array using the IComparable(Of T) generic interface implementation of each element of the Array.
+      	Sort(Of T)(T(), Int32, Int32, IComparer(Of T))	Sorts the elements in a range of elements in an Array using the specified IComparer(Of T) generic interface.
+    	Sort(Of TKey, TValue)(TKey(), TValue())	Sorts a pair of Array objects (one contains the keys and the other contains the corresponding items) based on the keys in the first Array using the IComparable(Of T) generic interface implementation of each key.
+    	Sort(Of TKey, TValue)(TKey(), TValue(), IComparer(Of TKey))	Sorts a pair of Array objects (one contains the keys and the other contains the corresponding items) based on the keys in the first Array using the specified IComparer(Of T) generic interface.
+    	Sort(Of TKey, TValue)(TKey(), TValue(), Int32, Int32)	Sorts a range of elements in a pair of Array objects (one contains the keys and the other contains the corresponding items) based on the keys in the first Array using the IComparable(Of T) generic interface implementation of each key.
+    	Sort(Of TKey, TValue)(TKey(), TValue(), Int32, Int32, IComparer(Of TKey))	Sorts a range of elements in a pair of Array objects (one contains the keys and the other contains the corresponding items) based on the keys in the first Array using the specified IComparer(Of T) generic interface.
+    	ToString	Returns a string that represents the current object. (Inherited from Object.)
+    	TrueForAll(Of T)	Determines whether every element in the array matches the conditions defined by the specified predicate.
+
+Extension Methods
+	AsParallel	Enables parallelization of a query. (Defined by ParallelEnumerable.)
+  	AsQueryable	Converts an IEnumerable to an IQueryable. (Defined by Queryable.)
+    	Cast(Of TResult)	Casts the elements of an IEnumerable to the specified type. (Defined by Enumerable.)
+    	OfType(Of TResult)	Filters the elements of an IEnumerable based on a specified type. (Defined by Enumerable.)
+
+Explicit Interface Implementations
+    	ICollection.CopyTo	Copies the elements of the Array to another Array, starting at the specified index.
+     	ICollection.Count	Gets the number of elements contained in the Array.
+    	ICollection.IsSynchronized	Gets a value that indicates whether access to the Array is synchronized (thread safe).
+    	ICollection.SyncRoot	Gets an object that can be used to synchronize access to the Array.
+     	IList.Add	Adds an item to IList.
+     	IList.Clear	Removes all items from the IList.
+     	IList.Contains	Determines whether an element is in the IList.
+     	IList.IndexOf	Determines the index of a specific item in the IList.
+     	IList.Insert	Inserts an item to the IList at the specified index.
+    	IList.IsFixedSize	Gets a value that indicates whether the Array has a fixed size.
+    	IList.IsReadOnly	Gets a value that indicates whether the Array is read-only.
+     	IList.Item	Gets or sets the element at the specified index.
+     	IList.Remove	Removes the first occurrence of a specific object from the IList.
+     	IList.RemoveAt	Removes the IList item at the specified index.
+  	IStructuralComparable.CompareTo	Determines whether the current collection object precedes, occurs in the same position as, or follows another object in the sort order.
+  	IStructuralEquatable.Equals	Determines whether an object is equal to the current instance.
+  	IStructuralEquatable.GetHashCode	Returns a hash code for the current instance.
+    

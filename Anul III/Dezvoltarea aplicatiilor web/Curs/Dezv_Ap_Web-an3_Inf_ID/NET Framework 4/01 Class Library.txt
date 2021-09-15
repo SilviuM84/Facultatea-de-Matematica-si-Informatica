@@ -1,0 +1,88 @@
+.NET Framework 4
+
+.NET Framework Class Library
+
+System
+
+System.Activities Namespaces
+
+System.AddIn Namespaces
+
+System.CodeDom Namespaces
+
+System.Collections Namespaces
+
+System.ComponentModel Namespaces
+
+System.Configuration Namespaces
+
+System.Data Namespaces
+
+System.Deployment Namespaces
+
+System.Device.Location
+
+System.Diagnostics Namespaces
+
+System.DirectoryServices Namespaces
+
+System.Drawing Namespaces
+
+System.Dynamic
+
+System.EnterpriseServices Namespaces
+
+System.Globalization
+
+System.IdentityModel Namespaces
+
+System.IO Namespaces
+
+System.Linq Namespaces
+
+System.Management Namespaces
+
+System.Media
+
+System.Messaging Namespaces
+
+System.Net Namespaces
+
+System.Numerics
+
+System.Printing Namespaces
+
+System.Reflection Namespaces
+
+System.Resources Namespaces
+
+System.Runtime Namespaces
+
+System.Security Namespaces
+
+System.ServiceModel Namespaces
+
+System.ServiceProcess Namespaces
+
+System.Speech Namespaces
+
+System.Text Namespaces
+
+System.Threading Namespaces
+
+System.Timers
+
+System.Transactions Namespaces
+
+System.Web Namespaces
+
+System.Windows Namespaces
+
+System.Workflow Namespaces
+
+System.Xaml Namespaces
+
+System.Xml Namespaces
+
+
+

@@ -1,0 +1,48 @@
+Int16 Structure
+
+[SerializableAttribute]
+[ComVisibleAttribute(true)]
+public struct Int16 : IComparable, IFormattable, 
+	IConvertible, IComparable<short>, IEquatable<short>
+
+Methods
+    	CompareTo(Int16)	Compares this instance to a specified 16-bit signed integer and returns an integer that indicates whether the value of this instance is less than, equal to, or greater than the value of the specified 16-bit signed integer.
+  	CompareTo(Object)	Compares this instance to a specified object and returns an integer that indicates whether the value of this instance is less than, equal to, or greater than the value of the object.
+    	Equals(Int16)	Returns a value indicating whether this instance is equal to a specified Int16 value.
+    	Equals(Object)	Returns a value indicating whether this instance is equal to a specified object. (Overrides ValueType.Equals(Object).)
+    	Finalize	Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection. (Inherited from Object.)
+    	GetHashCode	Returns the hash code for this instance. (Overrides ValueType.GetHashCode.)
+    	GetType	Gets the Type of the current instance. (Inherited from Object.)
+  	GetTypeCode	Returns the TypeCode for value type Int16.
+    	MemberwiseClone	Creates a shallow copy of the current Object. (Inherited from Object.)
+    	Parse(String)	Converts the string representation of a number to its 16-bit signed integer equivalent.
+    	Parse(String, NumberStyles)	Converts the string representation of a number in a specified style to its 16-bit signed integer equivalent.
+    	Parse(String, IFormatProvider)	Converts the string representation of a number in a specified culture-specific format to its 16-bit signed integer equivalent.
+      	Parse(String, NumberStyles, IFormatProvider)	Converts the string representation of a number in a specified style and culture-specific format to its 16-bit signed integer equivalent.
+    	ToString	Converts the numeric value of this instance to its equivalent string representation. (Overrides ValueType.ToString.)
+    	ToString(IFormatProvider)	Converts the numeric value of this instance to its equivalent string representation using the specified culture-specific format information.
+  	ToString(String)	Converts the numeric value of this instance to its equivalent string representation, using the specified format.
+    	ToString(String, IFormatProvider)	Converts the numeric value of this instance to its equivalent string representation using the specified format and culture-specific formatting information.
+  	TryParse(String, Int16)	Converts the string representation of a number to its 16-bit signed integer equivalent. A return value indicates whether the conversion succeeded or failed.
+
+Fields
+      	MaxValue	Represents the largest possible value of an Int16. This field is constant.
+      	MinValue	Represents the smallest possible value of Int16. This field is constant.
+
+Explicit Interface Implementations
+	IConvertible.ToBoolean	Infrastructure. For a description of this member, see IConvertible.ToBoolean.
+    	IConvertible.ToByte	Infrastructure. For a description of this member, see IConvertible.ToByte.
+    	IConvertible.ToChar	Infrastructure. For a description of this member, see IConvertible.ToChar.
+    	IConvertible.ToDateTime	Infrastructure. This conversion is not supported. Attempting to use this method throws an InvalidCastException.
+    	IConvertible.ToDecimal	Infrastructure. For a description of this member, see IConvertible.ToDecimal.
+    	IConvertible.ToDouble	Infrastructure. For a description of this member, see IConvertible.ToDouble.
+    	IConvertible.ToInt16	Infrastructure. For a description of this member, see IConvertible.ToInt16.
+    	IConvertible.ToInt32	Infrastructure. For a description of this member, see IConvertible.ToInt32.
+    	IConvertible.ToInt64	Infrastructure. For a description of this member, see IConvertible.ToInt64.
+    	IConvertible.ToSByte	Infrastructure. For a description of this member, see IConvertible.ToSByte.
+    	IConvertible.ToSingle	Infrastructure. For a description of this member, see IConvertible.ToSingle.
+    	IConvertible.ToType	Infrastructure. For a description of this member, see IConvertible.ToType.
+    	IConvertible.ToUInt16	Infrastructure. For a description of this member, see IConvertible.ToUInt16.
+    	IConvertible.ToUInt32	Infrastructure. For a description of this member, see IConvertible.ToUInt32.
+    	IConvertible.ToUInt64	Infrastructure. For a description of this member, see IConvertible.ToUInt64.
+

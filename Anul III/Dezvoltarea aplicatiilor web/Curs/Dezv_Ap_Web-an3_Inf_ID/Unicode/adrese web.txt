@@ -1,0 +1,10 @@
+http://www.alanwood.net/unicode/
+http://www.alanwood.net/unicode/basic_latin.html
+http://www.alanwood.net/unicode/latin_1_supplement.html
+http://www.alanwood.net/unicode/latin_extended_a.html
+http://www.alanwood.net/unicode/latin_extended_b.html
+http://www.alanwood.net/unicode/latin-extended-c.html
+http://www.alanwood.net/unicode/latin-extended-d.html
+http://www.alanwood.net/unicode/latin_extended_additional.html
+http://www.stylusstudio.com/xsllist/200408/post50430.html
+

@@ -1,0 +1,21 @@
+Examen PD (programare declarativa) (L. Dinu)
+15 probleme in Haskell
+alese din PDF-ul trimis de L. Dinu -----------> (Graham Hutton - Programming in Haskell)
+de la finalul fiecarui capitol
+nu toate din acelasi capitol
+din cat mai multe capitole pt nota buna
+
+8 - pt nota 5
+13 - pt nota 9
+15 - pt 10
+
+enuntul problemei
+rezolvarea problemei
+comentarii in cod
+
+intr-un fisier pdf prin email
+de pe emailul institutional
+
+trimise pe toate adresele preferabil pt ca nu se stie unde/daca vor ajunge :))
+
+pana in ultima zi din sesiune

@@ -1,0 +1,515 @@
+System
+
+_AppDomain Interface
+
+AccessViolationException Class
+
+Action Delegate
+
+Action(T) Delegate
+
+Action(T1, T2, T3, T4, T5, T6, T7, T8, T9, T10) Delegate
+
+Action(T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11) Delegate
+
+Action(T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12) Delegate
+
+Action(T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13) Delegate
+
+Action(T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14) Delegate
+
+Action(T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15) Delegate
+
+Action(T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16) Delegate
+
+Action(T1, T2) Delegate
+
+Action(T1, T2, T3) Delegate
+
+Action(T1, T2, T3, T4) Delegate
+
+Action(T1, T2, T3, T4, T5) Delegate
+
+Action(T1, T2, T3, T4, T5, T6) Delegate
+
+Action(T1, T2, T3, T4, T5, T6, T7) Delegate
+
+Action(T1, T2, T3, T4, T5, T6, T7, T8) Delegate
+
+Action(T1, T2, T3, T4, T5, T6, T7, T8, T9) Delegate
+
+ActivationContext Class
+
+ActivationContext.ContextForm Enumeration
+
+Activator Class
+
+AggregateException Class
+
+AppDomain Class
+
+AppDomainInitializer Delegate
+
+AppDomainManager Class
+
+AppDomainManagerInitializationOptions Enumeration
+
+AppDomainSetup Class
+
+AppDomainUnloadedException Class
+
+ApplicationException Class
+
+ApplicationId Class
+
+ApplicationIdentity Class
+
+ArgIterator Structure
+
+ArgumentException Class
+
+ArgumentNullException Class
+
+ArgumentOutOfRangeException Class
+
+ArithmeticException Class
+
+Array Class
+
+ArraySegment(T) Structure
+
+ArrayTypeMismatchException Class
+
+AssemblyLoadEventArgs Class
+
+AssemblyLoadEventHandler Delegate
+
+AsyncCallback Delegate
+
+Attribute Class
+
+AttributeTargets Enumeration
+
+AttributeUsageAttribute Class
+
+BadImageFormatException Class
+
+Base64FormattingOptions Enumeration
+
+BitConverter Class
+
+Boolean Structure
+
+Buffer Class
+
+Byte Structure
+
+CannotUnloadAppDomainException Class
+
+Char Structure
+
+CharEnumerator Class
+
+CLSCompliantAttribute Class
+
+Comparison(T) Delegate
+
+Console Class
+
+ConsoleCancelEventArgs Class
+
+ConsoleCancelEventHandler Delegate
+
+ConsoleColor Enumeration
+
+ConsoleKey Enumeration
+
+ConsoleKeyInfo Structure
+
+ConsoleModifiers Enumeration
+
+ConsoleSpecialKey Enumeration
+
+ContextBoundObject Class
+
+ContextMarshalException Class
+
+ContextStaticAttribute Class
+
+Convert Class
+
+Converter(TInput, TOutput) Delegate
+
+CrossAppDomainDelegate Delegate
+
+DataMisalignedException Class
+
+DateTime Structure
+
+DateTimeKind Enumeration
+
+DateTimeOffset Structure
+
+DayOfWeek Enumeration
+
+DBNull Class
+
+Decimal Structure
+
+Delegate Class
+
+DivideByZeroException Class
+
+DllNotFoundException Class
+
+Double Structure
+
+DuplicateWaitObjectException Class
+
+EntryPointNotFoundException Class
+
+Enum Class
+
+Environment Class
+
+Environment.SpecialFolder Enumeration
+
+Environment.SpecialFolderOption Enumeration
+
+EnvironmentVariableTarget Enumeration
+
+EventArgs Class
+
+EventHandler Delegate
+
+EventHandler(TEventArgs) Delegate
+
+Exception Class
+
+ExecutionEngineException Class
+
+FieldAccessException Class
+
+FileStyleUriParser Class
+
+FlagsAttribute Class
+
+FormatException Class
+
+FtpStyleUriParser Class
+
+Func(TResult) Delegate
+
+Func(T1, T2, T3, T4, T5, T6, T7, T8, T9, TResult) Delegate
+
+Func(T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, TResult) Delegate
+
+Func(T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, TResult) Delegate
+
+Func(T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, TResult) Delegate
+
+Func(T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, TResult) Delegate
+
+Func(T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, TResult) Delegate
+
+Func(T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, TResult) Delegate
+
+Func(T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, TResult) Delegate
+
+Func(T, TResult) Delegate
+
+Func(T1, T2, TResult) Delegate
+
+Func(T1, T2, T3, TResult) Delegate
+
+Func(T1, T2, T3, T4, TResult) Delegate
+
+Func(T1, T2, T3, T4, T5, TResult) Delegate
+
+Func(T1, T2, T3, T4, T5, T6, TResult) Delegate
+
+Func(T1, T2, T3, T4, T5, T6, T7, TResult) Delegate
+
+Func(T1, T2, T3, T4, T5, T6, T7, T8, TResult) Delegate
+
+GC Class
+
+GCCollectionMode Enumeration
+
+GCNotificationStatus Enumeration
+
+GenericUriParser Class
+
+GenericUriParserOptions Enumeration
+
+GopherStyleUriParser Class
+
+Guid Structure
+
+HttpStyleUriParser Class
+
+IAppDomainSetup Interface
+
+IAsyncResult Interface
+
+ICloneable Interface
+
+IComparable Interface
+
+IComparable(T) Interface
+
+IConvertible Interface
+
+ICustomFormatter Interface
+
+IDisposable Interface
+
+IEquatable(T) Interface
+
+IFormatProvider Interface
+
+IFormattable Interface
+
+IndexOutOfRangeException Class
+
+InsufficientExecutionStackException Class
+
+InsufficientMemoryException Class
+
+Int16 Structure
+
+Int32 Structure
+
+Int64 Structure
+
+IntPtr Structure
+
+InvalidCastException Class
+
+InvalidOperationException Class
+
+InvalidProgramException Class
+
+InvalidTimeZoneException Class
+
+IObservable(T) Interface
+
+IObserver(T) Interface
+
+IServiceProvider Interface
+
+Lazy(T) Class
+
+Lazy(T, TMetadata) Class
+
+LdapStyleUriParser Class
+
+LoaderOptimization Enumeration
+
+LoaderOptimizationAttribute Class
+
+LocalDataStoreSlot Class
+
+MarshalByRefObject Class
+
+Math Class
+
+MemberAccessException Class
+
+MethodAccessException Class
+
+MidpointRounding Enumeration
+
+MissingFieldException Class
+
+MissingMemberException Class
+
+MissingMethodException Class
+
+ModuleHandle Structure
+
+MTAThreadAttribute Class
+
+MulticastDelegate Class
+
+MulticastNotSupportedException Class
+
+NetPipeStyleUriParser Class
+
+NetTcpStyleUriParser Class
+
+NewsStyleUriParser Class
+
+NonSerializedAttribute Class
+
+NotFiniteNumberException Class
+
+NotImplementedException Class
+
+NotSupportedException Class
+
+Nullable Class
+
+Nullable(T) Structure
+
+NullReferenceException Class
+
+Object Class
+
+ObjectDisposedException Class
+
+ObsoleteAttribute Class
+
+OperatingSystem Class
+
+OperationCanceledException Class
+
+OutOfMemoryException Class
+
+OverflowException Class
+
+ParamArrayAttribute Class
+
+PlatformID Enumeration
+
+PlatformNotSupportedException Class
+
+Predicate(T) Delegate
+
+Random Class
+
+RankException Class
+
+ResolveEventArgs Class
+
+ResolveEventHandler Delegate
+
+RuntimeArgumentHandle Structure
+
+RuntimeFieldHandle Structure
+
+RuntimeMethodHandle Structure
+
+RuntimeTypeHandle Structure
+
+SByte Structure
+
+SerializableAttribute Class
+
+Single Structure
+
+StackOverflowException Class
+
+STAThreadAttribute Class
+
+String Class
+
+StringComparer Class
+
+StringComparison Enumeration
+
+StringSplitOptions Enumeration
+
+SystemException Class
+
+ThreadStaticAttribute Class
+
+TimeoutException Class
+
+TimeSpan Structure
+
+TimeZone Class
+
+TimeZoneInfo Class
+
+TimeZoneInfo.AdjustmentRule Class
+
+TimeZoneInfo.TransitionTime Structure
+
+TimeZoneNotFoundException Class
+
+Tuple Class
+
+Tuple(T1) Class
+
+Tuple(T1, T2) Class
+
+Tuple(T1, T2, T3) Class
+
+Tuple(T1, T2, T3, T4) Class
+
+Tuple(T1, T2, T3, T4, T5) Class
+
+Tuple(T1, T2, T3, T4, T5, T6) Class
+
+Tuple(T1, T2, T3, T4, T5, T6, T7) Class
+
+Tuple(T1, T2, T3, T4, T5, T6, T7, TRest) Class
+
+Type Class
+
+TypeAccessException Class
+
+TypeCode Enumeration
+
+TypedReference Structure
+
+TypeInitializationException Class
+
+TypeLoadException Class
+
+TypeUnloadedException Class
+
+UInt16 Structure
+
+UInt32 Structure
+
+UInt64 Structure
+
+UIntPtr Structure
+
+UnauthorizedAccessException Class
+
+UnhandledExceptionEventArgs Class
+
+UnhandledExceptionEventHandler Delegate
+
+Uri Class
+
+UriBuilder Class
+
+UriComponents Enumeration
+
+UriFormat Enumeration
+
+UriFormatException Class
+
+UriHostNameType Enumeration
+
+UriIdnScope Enumeration
+
+UriKind Enumeration
+
+UriParser Class
+
+UriPartial Enumeration
+
+UriTemplate Class
+
+UriTemplateEquivalenceComparer Class
+
+UriTemplateMatch Class
+
+UriTemplateMatchException Class
+
+UriTemplateTable Class
+
+UriTypeConverter Class
+
+ValueType Class
+
+Version Class
+
+Void Structure
+
+WeakReference Class

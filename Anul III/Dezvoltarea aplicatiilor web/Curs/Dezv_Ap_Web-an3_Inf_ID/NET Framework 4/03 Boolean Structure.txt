@@ -1,0 +1,43 @@
+[SerializableAttribute]
+[ComVisibleAttribute(true)]
+public struct Boolean : IComparable, IConvertible, 
+	IComparable<bool>, IEquatable<bool>
+
+Methods
+
+	CompareTo(Boolean)	Compares this instance to a specified Boolean object and returns an integer that indicates their relationship to one another.
+  	CompareTo(Object)	Compares this instance to a specified object and returns an integer that indicates their relationship to one another.
+    	Equals(Boolean)	Returns a value indicating whether this instance is equal to a specified Boolean object.
+    	Equals(Object)	Returns a value indicating whether this instance is equal to a specified object. (Overrides ValueType.Equals(Object).)
+    	Finalize	Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection. (Inherited from Object.)
+    	GetHashCode	Returns the hash code for this instance. (Overrides ValueType.GetHashCode.)
+    	GetType	Gets the Type of the current instance. (Inherited from Object.)
+  	GetTypeCode	Returns the TypeCode for value type Boolean.
+    	MemberwiseClone	Creates a shallow copy of the current Object. (Inherited from Object.)
+      	Parse	Converts the specified string representation of a logical value to its Boolean equivalent, or throws an exception if the string is not equivalent to the value of Boolean.TrueString or Boolean.FalseString.
+    	ToString	Converts the value of this instance to its equivalent string representation (either "True" or "False"). (Overrides ValueType.ToString.)
+  	ToString(IFormatProvider)	Converts the value of this instance to its equivalent string representation (either "True" or "False").
+    	TryParse	Tries to convert the specified string representation of a logical value to its Boolean equivalent. A return value indicates whether the conversion succeeded or failed.
+
+Fields
+	FalseString	Represents the Boolean value false as a string. This field is read-only.
+      	TrueString	Represents the Boolean value true as a string. This field is read-only
+
+Explicit Interface Implementations
+    	IConvertible.ToBoolean	Infrastructure. For a description of this member, see IConvertible.ToBoolean.
+    	IConvertible.ToByte	Infrastructure. For a description of this member, see IConvertible.ToByte.
+    	IConvertible.ToChar	Infrastructure. This conversion is not supported. Attempting to use this method throws an InvalidCastException.
+    	IConvertible.ToDateTime	Infrastructure. This conversion is not supported. Attempting to use this method throws an InvalidCastException.
+    	IConvertible.ToDecimal	Infrastructure. For a description of this member, see IConvertible.ToDecimal..
+    	IConvertible.ToDouble	Infrastructure. For a description of this member, see IConvertible.ToDouble..
+    	IConvertible.ToInt16	Infrastructure. For a description of this member, see IConvertible.ToInt16.
+    	IConvertible.ToInt32	Infrastructure. For a description of this member, see IConvertible.ToInt32.
+    	IConvertible.ToInt64	Infrastructure. For a description of this member, see IConvertible.ToInt64.
+    	IConvertible.ToSByte	Infrastructure. For a description of this member, see IConvertible.ToSByte.
+    	IConvertible.ToSingle	Infrastructure. For a description of this member, see IConvertible.ToSingle..
+    	IConvertible.ToType	Infrastructure. For a description of this member, see IConvertible.ToType.
+    	IConvertible.ToUInt16	Infrastructure. For a description of this member, see IConvertible.ToUInt16.
+    	IConvertible.ToUInt32	Infrastructure. For a description of this member, see IConvertible.ToUInt32.
+    	IConvertible.ToUInt64	Infrastructure. For a description of this member, see IConvertible.ToUInt64.
+
+
